@@ -29,19 +29,18 @@ class AvailableProductController extends Controller
 
     public function StoreAvailableProduct()
     {
-        // AvailableProduct::create([
-        //     'category_id' => 1,
-        //     'product_id' => 1,
-        //     'product_name' => request('product_name'),
-        //     'product_price' => request(''),
-        //     'product_rating' => request(''),
-        //     'product_image' => request(''),
-        //     'product_stock'=> request(''),
-        //     'product_brand'=> request(''),
-        //     'product_desc' => request('')
-        // ])
-        // 'category_id','product_id', 'product_name', 'product_price', 'product_rating', 'product_image', 'product_stock', 'product_brand', 'product_desc'
-        // return view('admin.availableproduct.index');
+        AvailableProduct::create([
+            'category_id' => 1,
+            'product_id' => 1,
+            'product_name' => request('product_name'),
+            'product_price' => request('product_price'),
+            'product_rating' => "sssss",
+            'product_image' => "request('product_image')",
+            'product_stock'=> request('product_stock'),
+            'product_brand'=> request('product_brand'),
+            'product_desc' => request('product_description')
+        ]);
+        return view('admin.availableproduct.index');
     }
     
 }

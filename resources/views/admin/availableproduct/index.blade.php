@@ -15,7 +15,8 @@
             </div>
             </div>
         <!--begin::Form-->
-        <form class="m-form m-form--fit m-form--label-align-right" id="m_form_1">
+        <form class="m-form m-form--fit m-form--label-align-right" id="m_form_1" method="POST" action="{{ route('admin.StoreAvailProduct') }}">
+        {{ csrf_field() }}
             <div class="m-portlet__body">
                 <div class="m-form__content">
                     <div class="m-alert m-alert--icon alert alert-danger m--hide" role="alert" id="m_form_1_msg">
