@@ -57,18 +57,18 @@ License: You must have a valid license purchased only from themeforest(the above
 									Sign In To Admin
 								</h3>
 							</div>
-							<form class="m-login__form m-form" action="{{ route('login') }}">
+							<form class="m-login__form m-form" method="POST" action="{{ route('login') }}">
                             {{ csrf_field() }}
-								<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} m-form__group">
-									<input id="email" class="form-control m-input"   type="text" placeholder="Email" value="{{ old('email') }}" name="email" autocomplete="off">
+								<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+									<input id="email" class="form-control m-input"   type="email" placeholder="Email" value="{{ old('email') }}" name="email" autocomplete="off">
                                     @if ($errors->has('email'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('email') }}</strong>
                                         </span>
                                     @endif
 								</div>
-								<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }} m-form__group">
-									<input class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password">
+								<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+									<input id="password" class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password">
                                     @if ($errors->has('password'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('password') }}</strong>
@@ -96,7 +96,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</form>
 						</div>
-						<div class="m-login__signup">
+						<!-- <div class="m-login__signup">
 							<div class="m-login__head">
 								<h3 class="m-login__title">
 									Sign Up
@@ -175,7 +175,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<a href="javascript:;" id="m_login_signup" class="m-link m-link--light m-login__account-link">
 								Sign Up
 							</a>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>

@@ -1,74 +1,3 @@
-<!-- @extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection -->
-
-
 <!DOCTYPE html>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4
@@ -128,10 +57,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									Sign In To Admin
 								</h3>
 							</div>
-							<form class="m-login__form m-form" action="{{ route('login') }}">
+							<form class="m-login__form m-form" method="POST" action="{{ route('login') }}">
                             {{ csrf_field() }}
 								<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} m-form__group">
-									<input id="email" class="form-control m-input"   type="text" placeholder="Email" value="{{ old('email') }}" name="email" autocomplete="off">
+									<input id="email" class="form-control m-input"   type="email" placeholder="Email" value="{{ old('email') }}" name="email" autocomplete="off">
                                     @if ($errors->has('email'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('email') }}</strong>
@@ -139,7 +68,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     @endif
 								</div>
 								<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }} m-form__group">
-									<input class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password">
+									<input id="password" class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password">
                                     @if ($errors->has('password'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('password') }}</strong>
@@ -257,7 +186,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="../../../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
 		<!--end::Base Scripts -->   
         <!--begin::Page Snippets -->
-		<script src="../../../assets/snippets/custom/pages/user/login.js" type="text/javascript"></script>
+		<!-- <script src="../../../assets/snippets/custom/pages/user/login.js" type="text/javascript"></script> -->
 		<!--end::Page Snippets -->
 	</body>
 	<!-- end::Body -->
