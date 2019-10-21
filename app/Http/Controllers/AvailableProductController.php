@@ -30,9 +30,9 @@ class AvailableProductController extends Controller
     public function StoreAvailableProduct()
     {
         // AvailableProduct::create([
-        //     'category_id' => request(''),
-        //     'product_id' => request(''),
-        //     'product_name' => request(''),
+        //     'category_id' => 1,
+        //     'product_id' => 1,
+        //     'product_name' => request('product_name'),
         //     'product_price' => request(''),
         //     'product_rating' => request(''),
         //     'product_image' => request(''),
