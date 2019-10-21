@@ -16,7 +16,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<head>
 		<meta charset="utf-8" />
 		<title>
-			Metronic | Dashboard
+        {{ config('app.name', 'Laravel') }}
 		</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,12 +34,14 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Web font -->
         <!--begin::Base Styles -->  
         <!--begin::Page Vendors -->
-		<link href="assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+		<!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
+
+		<link href="{{ asset('assets/vendors/custom/fullcalendar/fullcalendar.bundle.css') }}" rel="stylesheet" type="text/css" />
 		<!--end::Page Vendors -->
-		<link href="assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('assets/vendors/base/vendors.bundle.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('assets/demo/default/base/style.bundle.css') }}" rel="stylesheet" type="text/css" />
 		<!--end::Base Styles -->
-		<link rel="shortcut icon" href="assets/demo/default/media/img/logo/favicon.ico" />
+		<link rel="shortcut icon" href="{{ asset('assets/demo/default/media/img/logo/favicon.ico') }}" />
 	</head>
 	<!-- end::Head -->
     <!-- end::Body -->
@@ -55,7 +57,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="m-stack m-stack--ver m-stack--general">
 								<div class="m-stack__item m-stack__item--middle m-brand__logo">
 									<a href="index.html" class="m-brand__logo-wrapper">
-										<img alt="" src="assets/demo/default/media/img/logo/logo_default_dark.png"/>
+										<img alt="" src="{{ asset('assets/demo/default/media/img/logo/logo_default_dark.png') }}"/>
 									</a>
 								</div>
 								<div class="m-stack__item m-stack__item--middle m-brand__tools">
@@ -194,45 +196,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																				<span class="m-nav__link-text">
 																					My Profile
 																				</span>
-																				<span class="m-nav__link-badge">
-																					<span class="m-badge m-badge--success">
-																						2
-																					</span>
-																				</span>
 																			</span>
-																		</span>
-																	</a>
-																</li>
-																<li class="m-nav__item">
-																	<a href="header/profile.html" class="m-nav__link">
-																		<i class="m-nav__link-icon flaticon-share"></i>
-																		<span class="m-nav__link-text">
-																			Activity
-																		</span>
-																	</a>
-																</li>
-																<li class="m-nav__item">
-																	<a href="header/profile.html" class="m-nav__link">
-																		<i class="m-nav__link-icon flaticon-chat-1"></i>
-																		<span class="m-nav__link-text">
-																			Messages
-																		</span>
-																	</a>
-																</li>
-																<li class="m-nav__separator m-nav__separator--fit"></li>
-																<li class="m-nav__item">
-																	<a href="header/profile.html" class="m-nav__link">
-																		<i class="m-nav__link-icon flaticon-info"></i>
-																		<span class="m-nav__link-text">
-																			FAQ
-																		</span>
-																	</a>
-																</li>
-																<li class="m-nav__item">
-																	<a href="header/profile.html" class="m-nav__link">
-																		<i class="m-nav__link-icon flaticon-lifebuoy"></i>
-																		<span class="m-nav__link-text">
-																			Support
 																		</span>
 																	</a>
 																</li>
@@ -279,8 +243,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		 m-menu-scrollable="0" m-menu-dropdown-timeout="500"  
 		>
 						<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
-							<li class="m-menu__item  m-menu__item--active" aria-haspopup="true" >
-								<a  href="index.html" class="m-menu__link ">
+							<li class="m-menu__item " aria-haspopup="true" >
+								<a  href="{{ route('admin.VWAvailProduct') }}" class="m-menu__link ">
 									<i class="m-menu__link-icon flaticon-line-graph"></i>
 									<span class="m-menu__link-title">
 										<span class="m-menu__link-wrap">
@@ -367,6 +331,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 						</div>
 					</div>
+
+                    @yield('content')
 
 					
 				</div>
@@ -599,14 +565,14 @@ License: You must have a valid license purchased only from themeforest(the above
 		</div>
 		<!-- begin::Quick Nav -->	
     	<!--begin::Base Scripts -->
-		<script src="assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
-		<script src="assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+		<script src="{{ asset('assets/vendors/base/vendors.bundle.js') }}" type="text/javascript"></script>
+		<script src="{{ asset('assets/demo/default/base/scripts.bundle.js') }}" type="text/javascript"></script>
 		<!--end::Base Scripts -->   
         <!--begin::Page Vendors -->
-		<script src="assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+		<script src="{{ asset('assets/vendors/custom/fullcalendar/fullcalendar.bundle.js') }}" type="text/javascript"></script>
 		<!--end::Page Vendors -->  
         <!--begin::Page Snippets -->
-		<script src="assets/app/js/dashboard.js" type="text/javascript"></script>
+		<script src="{{ asset('assets/app/js/dashboard.js') }}" type="text/javascript"></script>
 		<!--end::Page Snippets -->
 	</body>
 	<!-- end::Body -->
