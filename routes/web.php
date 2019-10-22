@@ -26,6 +26,19 @@ Route::prefix('admin')->group(function() {
     // Produk Jadi
     Route::get('/VWAvailableProduct', 'AvailableProductController@VWAvailableProduct')->name('admin.VWAvailProduct');
     Route::post('/VWAvailableProduct', 'AvailableProductController@StoreAvailableProduct')->name('admin.StoreAvailProduct');
+    // Custom Cardigan
+    Route::get('/addcustomcardigan', 'CustomCardiganController@FormAddCustomCardigan')->name('admin.addcustomcardigan');
+    // Custom Hoodie
+    Route::get('/addcustomhoodie', 'CustomHoodieController@FormAddCustomHoodie')->name('admin.addcustomhoodie');
+    // Custom Jacket
+    Route::get('/addcustomjacket', 'CustomJacketController@FormAddCustomJacket')->name('admin.addcustomjacket');
+    // Custom Shirt
+    Route::get('/addcustomshirt', 'CustomShirtController@FormAddCustomShirt')->name('admin.addcustomshirt');
     // Custom Shoes
     Route::get('/addcustomshoes', 'CustomShoesController@FormAddCustomShoes')->name('admin.addcustomshoes');
+    // Custom Sweater
+    Route::get('/addcustomsweater', 'CustomSweaterController@FormAddCustomSweater')->name('admin.addcustomsweater');
+    // Custom Tshirt
+    Route::get('/addcustomtshirt', 'CustomTshirtController@FormAddCustomTshirt')->name('admin.addcustomtshirt');
+    
   });
