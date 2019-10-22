@@ -15,7 +15,7 @@
             </div>
             </div>
         <!--begin::Form-->
-        <form class="m-form m-form--fit m-form--label-align-right" id="m_form_1" method="POST" action="{{ route('admin.StoreAvailProduct') }}">
+        <form class="m-form m-form--fit m-form--label-align-right" id="m_form_1" method="POST" action="{{ route('admin.StoreAvailProduct') }}" enctype="multipart/form-data">
         {{ csrf_field() }}
             <div class="m-portlet__body">
                 <div class="m-form__content">
@@ -122,6 +122,14 @@
                         <span class="m-form__help">
                             Please enter a Description of Product
                         </span>
+                    </div>
+                </div>
+                <div class="form-group m-form__group row">
+                    <label class="col-form-label col-lg-3 col-sm-12">
+                        Product Photo
+                    </label>
+                    <div class="col-lg-4 col-md-9 col-sm-12">
+                        <input type="file" name="product_image">
                     </div>
                 </div>
                 <!-- <div class="form-group m-form__group row">
