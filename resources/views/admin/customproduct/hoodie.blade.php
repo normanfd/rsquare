@@ -14,7 +14,7 @@
             </div>
             </div>
         <!--begin::Form-->
-        <form class="m-form m-form--fit m-form--label-align-right" id="m_form_1" method="POST" action="{{ route('admin.StoreAvailProduct') }}" enctype="multipart/form-data">
+        <form class="m-form m-form--fit m-form--label-align-right" id="m_form_1" method="POST" action="{{ route('admin.Storeaddcustomhoodie') }}" enctype="multipart/form-data">
         {{ csrf_field() }}
             <div class="m-portlet__body">
                 <div class="m-form__content">
@@ -71,7 +71,7 @@
                         Hoodie Description *
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
-                        <textarea class="form-control m-input" name="hoodie_description" placeholder="Enter a description"></textarea>
+                        <textarea class="form-control m-input" name="hoodie_desc" placeholder="Enter a description"></textarea>
                         <span class="m-form__help">
                             Please enter a Description of Hoodie
                         </span>
@@ -82,7 +82,7 @@
                         Product Hoodie Image
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
-                        <input type="file" name="product_image">
+                        <input type="file" name="hoodie_image">
                     </div>
                 </div>
             </div>
