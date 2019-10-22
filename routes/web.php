@@ -37,6 +37,7 @@ Route::prefix('admin')->group(function() {
     Route::post('/addcustomjacket', 'CustomJacketController@StoreFormAddCustomJacket')->name('admin.Storeaddcustomjacket');
     // Custom Shirt
     Route::get('/addcustomshirt', 'CustomShirtController@FormAddCustomShirt')->name('admin.addcustomshirt');
+    Route::post('/addcustomshirt', 'CustomShirtController@StoreFormAddCustomShirt')->name('admin.Storeaddcustomshirt');
     // Custom Shoes
     Route::get('/addcustomshoes', 'CustomShoesController@FormAddCustomShoes')->name('admin.addcustomshoes');
     // Custom Sweater
