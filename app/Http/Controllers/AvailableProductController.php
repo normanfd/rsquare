@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\AvailableProduct;
+use App\ProductCategory;
 
 class AvailableProductController extends Controller
 {
@@ -24,13 +25,21 @@ class AvailableProductController extends Controller
      */
     public function VWAvailableProduct()
     {
-        return view('admin.availableproduct.index');
-    }
+        // untuk mendapatkan data dari DB kategori produk
+        $categories = ProductCategory::all();
 
+        // dd($categories); ini buat check ada ga sih data category nya
+        return view('admin.availableproduct.index', compact('categories'));
+    }
+    // Fungsi untuk menyimpan data kedalam database available product
     public function StoreAvailableProduct()
     {
+        // untuk mendapatkan data dari DB kategori produk
+        $categories = ProductCategory::all();
+
+        // membuat row baru pada db
         AvailableProduct::create([
-            'category_id' => 1,
+            'category_id' => request('category_id'),
             'product_id' => 1,
             'product_name' => request('product_name'),
             'product_price' => request('product_price'),
@@ -40,7 +49,7 @@ class AvailableProductController extends Controller
             'product_brand'=> request('product_brand'),
             'product_desc' => request('product_description')
         ]);
-        return view('admin.availableproduct.index');
+        return view('admin.availableproduct.index', compact('categories'));
     }
     
 }

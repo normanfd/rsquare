@@ -36,7 +36,7 @@
                         Produk ID *
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
-                        <input type="text" class="form-control m-input" name="produk_id" placeholder="Enter your produk ID" data-toggle="m-tooltip" title="Input Produk ID">
+                        <input type="text" class="form-control m-input" name="product_id" placeholder="Enter your produk ID" data-toggle="m-tooltip" title="Input Produk ID">
                     </div>
                 </div>
                 <div class="form-group m-form__group row">
@@ -44,25 +44,13 @@
                         Category ID *
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
-                        <select class="form-control m-input" name="category_id">
-                            <option value="">
-                                Select
+                        <select class="form-control m-input" name="category_id" id="category_id">
+                            <!-- perulangan data category -->
+                            @foreach ($categories as $cat)
+                            <option value="{{ $cat->id }}">
+                                {{ $cat->category_name }}
                             </option>
-                            <option>
-                                1
-                            </option>
-                            <option>
-                                2
-                            </option>
-                            <option>
-                                3
-                            </option>
-                            <option>
-                                4
-                            </option>
-                            <option>
-                                5
-                            </option>
+                            @endforeach
                         </select>
                         <span class="m-form__help">
                             Please select an option.
