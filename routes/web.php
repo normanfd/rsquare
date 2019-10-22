@@ -31,10 +31,13 @@ Route::prefix('admin')->group(function() {
     Route::post('/addcustomcardigan', 'CustomCardiganController@StoreFormAddCustomCardigan')->name('admin.Storeaddcustomcardigan');
     // Custom Hoodie
     Route::get('/addcustomhoodie', 'CustomHoodieController@FormAddCustomHoodie')->name('admin.addcustomhoodie');
+    Route::post('/addcustomhoodie', 'CustomHoodieController@StoreFormAddCustomHoodie')->name('admin.Storeaddcustomhoodie');
     // Custom Jacket
     Route::get('/addcustomjacket', 'CustomJacketController@FormAddCustomJacket')->name('admin.addcustomjacket');
+    Route::post('/addcustomjacket', 'CustomJacketController@StoreFormAddCustomJacket')->name('admin.Storeaddcustomjacket');
     // Custom Shirt
     Route::get('/addcustomshirt', 'CustomShirtController@FormAddCustomShirt')->name('admin.addcustomshirt');
+    Route::post('/addcustomshirt', 'CustomShirtController@StoreFormAddCustomShirt')->name('admin.Storeaddcustomshirt');
     // Custom Shoes
     Route::get('/addcustomshoes', 'CustomShoesController@FormAddCustomShoes')->name('admin.addcustomshoes');
     // Custom Sweater

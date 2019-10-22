@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// use App\AvailableProduct;
-// use App\ProductCategory;
+use App\Hoodie;
 
 class CustomHoodieController extends Controller
 {
@@ -26,33 +25,23 @@ class CustomHoodieController extends Controller
     public function FormAddCustomHoodie()
     {
         return view('admin.customproduct.hoodie');
-        // untuk mendapatkan data dari DB kategori produk
-        // $categories = ProductCategory::all();
-
-        // dd($categories); ini buat check ada ga sih data category nya
-        // return view('admin.availableproduct.index', compact('categories'));
     }
-    // Fungsi untuk menyimpan data kedalam database available product
-    // public function StoreAvailableProduct(Request $request)
-    // {
-    //     // untuk mendapatkan data dari DB kategori produk
-    //     $categories = ProductCategory::all();
-    //     // cara dapetin lokasi path photo
-    //     $photo = $request->file('product_image')->store('product_images');
-    //     // dd($photo);
-    //     // membuat row baru pada db
-    //     AvailableProduct::create([
-    //         'category_id' => request('category_id'),
-    //         'product_id' => 1,
-    //         'product_name' => request('product_name'),
-    //         'product_price' => request('product_price'),
-    //         'product_rating' => "sssss",
-    //         'product_image' => $photo,
-    //         'product_stock'=> request('product_stock'),
-    //         'product_brand'=> request('product_brand'),
-    //         'product_desc' => request('product_description')
-    //     ]);
-    //     return view('admin.availableproduct.index', compact('categories'));
-    // }
+    
+    public function StoreFormAddCustomHoodie(Request $request)
+    {
+        // cara dapetin lokasi path photo
+        $photo = $request->file('hoodie_image')->store('hoodie_images');
+        // dd($photo);
+        // membuat row baru pada db
+        Hoodie::create([
+            'category_id' => 2,
+            'hoodie_id' => request('hoodie_id'),
+            'hoodie_name' => request('hoodie_name'),
+            'hoodie_price' => request('hoodie_price'),
+            'hoodie_desc' => request('hoodie_desc'),
+            'hoodie_image' => $photo
+        ]);
+        return view('admin.customproduct.hoodie');
+    }
     
 }
