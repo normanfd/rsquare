@@ -115,8 +115,8 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="text-container">
-                            <h1><span class="turquoise">StartUp Landing</span> Page Template Free</h1>
-                            <p class="p-large">Use Evolo free landing page template to promote your business startup and generate leads for the offered services</p>
+                            <h1><span class="turquoise">Rsquare Store</span> Custom Style Sesuka Mu ^_^</h1>
+                            <p class="p-large">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis molestiae numquam minima, maiores eaque blanditiis fugiat harum ullam tempora veritatis ut a, minus dolorum nam asperiores inventore, modi suscipit quam?</p>
                             <a class="btn-solid-lg page-scroll" href="{{ route('admin.dashboard') }}">LOGIN ADMIN</a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->

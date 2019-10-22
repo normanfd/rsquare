@@ -286,7 +286,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</span>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/utils/session-timeout.html" class="m-menu__link ">
+											<a  href="{{ route('admin.addcustomshoes') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
