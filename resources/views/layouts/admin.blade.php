@@ -286,7 +286,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</span>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/utils/session-timeout.html" class="m-menu__link ">
+											<a  href="{{ route('admin.addcustomshoes') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
@@ -296,7 +296,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/utils/idle-timer.html" class="m-menu__link ">
+											<a  href="{{ route('admin.addcustomshirt') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
@@ -306,7 +306,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/utils/idle-timer.html" class="m-menu__link ">
+											<a  href="{{ route('admin.addcustomjacket') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
@@ -316,7 +316,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/utils/idle-timer.html" class="m-menu__link ">
+											<a  href="{{ route('admin.addcustomhoodie') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
@@ -326,7 +326,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/utils/idle-timer.html" class="m-menu__link ">
+											<a  href="{{ route('admin.addcustomsweater') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
@@ -336,7 +336,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/utils/idle-timer.html" class="m-menu__link ">
+											<a  href="{{ route('admin.addcustomcardigan') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
@@ -346,7 +346,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/utils/idle-timer.html" class="m-menu__link ">
+											<a  href="{{ route('admin.addcustomtshirt') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
