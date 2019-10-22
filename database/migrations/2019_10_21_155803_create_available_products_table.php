@@ -20,7 +20,7 @@ class CreateAvailableProductsTable extends Migration
             $table->string('product_name');
             $table->string('product_price');
             $table->string('product_rating');
-            $table->string('product_image')->nullable->default(null);
+            $table->string('product_image')->nullable();
             $table->string('product_stock');
             $table->string('product_brand');
             $table->string('product_desc');
