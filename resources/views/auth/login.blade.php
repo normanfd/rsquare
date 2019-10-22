@@ -60,7 +60,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<form class="m-login__form m-form" method="POST" action="{{ route('login') }}">
                             {{ csrf_field() }}
 								<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} m-form__group">
-									<input id="email" class="form-control m-input"   type="email" placeholder="Email" value="{{ old('email') }}" name="email" autocomplete="off">
+									<input id="email" class="form-control m-input"   type="email" placeholder="Email" value="{{ old('email') }}" name="email">
                                     @if ($errors->has('email'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('email') }}</strong>
