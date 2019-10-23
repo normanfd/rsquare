@@ -36,4 +36,11 @@ class UserController extends Controller
         // dd($cardigan);
         return view('user.detailproduct.cardigan_detail', compact('cardigan'));
     }
+
+    public function FormOrderCardigan($id)
+    {
+        $cardigan = cardigan::find($id);
+        // dd($cardigan);
+        return view('user.customorderform.cardiganorder', compact('cardigan'));
+    }
 }

@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/cardigan', 'UserController@VWCardigan')->name('user.cardigan');
 Route::get('/cardigan/detail/{id}', 'UserController@DetailCardigan')->name('user.detail.cardigan');
+Route::get('/cardigan/detail/order/{id}', 'UserController@FormOrderCardigan')->name('user.order.cardigan');
 
 Route::prefix('admin')->group(function() {
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
