@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/cardigan', 'UserController@VWCardigan');
 
 Route::prefix('admin')->group(function() {
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
@@ -32,6 +33,7 @@ Route::prefix('admin')->group(function() {
     Route::post('/addcustomcardigan', 'CustomCardiganController@StoreFormAddCustomCardigan')->name('admin.Storeaddcustomcardigan');
     Route::get('/editcardigan/{id}', 'CustomCardiganController@EditCustomCardigan')->name('admin.Editcustomcardigan');
     Route::patch('/editcardigan/{id}', 'CustomCardiganController@PostEditCustomCardigan')->name('admin.PostEditcustomcardigan');
+    Route::delete('/deletecardigan/{id}', 'CustomCardiganController@DeleteCustomCardigan')->name('admin.Deletecustomcardigan');
     // Custom Hoodie
     Route::get('/addcustomhoodie', 'CustomHoodieController@FormAddCustomHoodie')->name('admin.addcustomhoodie');
     Route::post('/addcustomhoodie', 'CustomHoodieController@StoreFormAddCustomHoodie')->name('admin.Storeaddcustomhoodie');

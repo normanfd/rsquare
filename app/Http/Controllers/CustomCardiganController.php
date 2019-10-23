@@ -26,6 +26,7 @@ class CustomCardiganController extends Controller
     {
         return view('admin.customproduct.cardigan');
     }
+    // ------------------------CARDIGAN ADMIN-------------------------------------
     // Fungsi untuk menyimpan data kedalam database available product
     public function StoreFormAddCustomCardigan(Request $request)
     {
@@ -63,4 +64,11 @@ class CustomCardiganController extends Controller
         ]);
         return view('admin.customproduct.cardigan');
     }
+
+    // ------------------- CARDIGAN USER --------------------------------
+    public function VWCardigan()
+    {
+        return view('user.customproduct.cardigan');
+    }
+
 }
