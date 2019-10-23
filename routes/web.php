@@ -26,6 +26,7 @@ Route::prefix('admin')->group(function() {
     // Produk Jadi
     Route::get('/VWAvailableProduct', 'AvailableProductController@VWAvailableProduct')->name('admin.VWAvailProduct');
     Route::post('/VWAvailableProduct', 'AvailableProductController@StoreAvailableProduct')->name('admin.StoreAvailProduct');
+    Route::get('/listavailableproduct', 'AvailableProductController@TableAvailableProduct')->name('admin.tableavailableproduct');
     // Custom Cardigan
     Route::get('/addcustomcardigan', 'CustomCardiganController@FormAddCustomCardigan')->name('admin.addcustomcardigan');
     Route::post('/addcustomcardigan', 'CustomCardiganController@StoreFormAddCustomCardigan')->name('admin.Storeaddcustomcardigan');

@@ -53,5 +53,10 @@ class AvailableProductController extends Controller
         ]);
         return view('admin.availableproduct.index', compact('categories'));
     }
+
+    public function TableAvailableProduct()
+    {
+        return view('admin.viewavailableproduct.vwavailableproduct');
+    }
     
 }
