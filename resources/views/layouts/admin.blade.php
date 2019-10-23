@@ -252,13 +252,19 @@ License: You must have a valid license purchased only from themeforest(the above
 		 m-menu-scrollable="0" m-menu-dropdown-timeout="500"  
 		>
 						<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
+							<li class="m-menu__section">
+								<h4 class="m-menu__section-text">
+									Add Product
+								</h4>
+								<i class="m-menu__section-icon flaticon-more-v3"></i>
+							</li>
 							<li class="m-menu__item " aria-haspopup="true" >
 								<a  href="{{ route('admin.VWAvailProduct') }}" class="m-menu__link ">
 									<i class="m-menu__link-icon flaticon-line-graph"></i>
 									<span class="m-menu__link-title">
 										<span class="m-menu__link-wrap">
 											<span class="m-menu__link-text">
-												Add Available Product
+												Available Product
 											</span>
 										</span>
 									</span>
@@ -358,59 +364,41 @@ License: You must have a valid license purchased only from themeforest(the above
 												</span>
 											</a>
 										</li>
-										
-										
 									</ul>
 								</div>
 							</li>
 							<li class="m-menu__section">
 								<h4 class="m-menu__section-text">
-									Components
+									View Product
 								</h4>
 								<i class="m-menu__section-icon flaticon-more-v3"></i>
 							</li>
-							
-							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  m-menu-submenu-toggle="hover">
-								<a  href="javascript:;" class="m-menu__link m-menu__toggle">
-									<i class="m-menu__link-icon flaticon-signs-2"></i>
-									<span class="m-menu__link-text">
-										Utils
-									</span>
-									<i class="m-menu__ver-arrow la la-angle-right"></i>
-								</a>
-								<div class="m-menu__submenu ">
-									<span class="m-menu__arrow"></span>
-									<ul class="m-menu__subnav">
-										<li class="m-menu__item  m-menu__item--parent" aria-haspopup="true" >
-											<span class="m-menu__link">
-												<span class="m-menu__link-text">
-													Utils
-												</span>
+							<li class="m-menu__item " aria-haspopup="true" >
+								<a  href="{{ route('admin.VWAvailProduct') }}" class="m-menu__link ">
+									<i class="m-menu__link-icon flaticon-line-graph"></i>
+									<span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Available Product
 											</span>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="{{ asset('components/utils/session-timeout.html') }}" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Session Timeout
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/utils/idle-timer.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Idle Timer
-												</span>
-											</a>
-										</li>
-									</ul>
-								</div>
+										</span>
+									</span>
+								</a>
 							</li>
+							<li class="m-menu__item " aria-haspopup="true" >
+								<a  href="{{ route('admin.VWAvailProduct') }}" class="m-menu__link ">
+									<i class="m-menu__link-icon flaticon-line-graph"></i>
+									<span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Custom Product
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							
+							
 						</ul>
 					</div>
 					<!-- END: Aside Menu -->
@@ -669,6 +657,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Page Vendors -->  
         <!--begin::Page Snippets -->
 		<script src="{{ asset('assets/app/js/dashboard.js') }}" type="text/javascript"></script>
+		<script src="{{ asset('js/data-json.js')}}" type="text/javascript"></script>
+
 		<!--end::Page Snippets -->
 	</body>
 	<!-- end::Body -->
