@@ -296,23 +296,19 @@
                             </div>
                         </div>
                         <!-- Recycler View Product -->
+                        @foreach($cardigan as $cardigans)
                         <div class="col-lg-4 col-sm-6">
                             <div class="single_category_product">
                                 <div class="single_category_img">
-                                    <img src="{{asset('winter/img/category/category_1.png')}}" alt="">
-                                    <div class="category_social_icon">
-                                        <ul>
-                                            <li><a href="#"><i class="ti-heart"></i></a></li>
-                                            <li><a href="#"><i class="ti-bag"></i></a></li>
-                                        </ul>
-                                    </div>
+                                    <img src="../storage/{{$cardigans->cardigan_image}}" alt="ini gambar cardigan">
                                     <div class="category_product_text">
-                                        <a href="single-product.html"><h5>Long Sleeve TShirt</h5></a>
-                                        <p>$150.00</p>
+                                        <a href="single-product.html"><h5>{{$cardigans->cardigan_name}}</h5></a>
+                                        <p>{{$cardigans->cardigan_price}}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                         
                         <div class="col-lg-12 text-center">
                             <a href="#" class="btn_2">More Items</a>

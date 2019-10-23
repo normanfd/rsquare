@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\cardigan;
 
 class UserController extends Controller
 {
@@ -24,6 +25,7 @@ class UserController extends Controller
     // ------------------- CARDIGAN USER --------------------------------
     public function VWCardigan()
     {
-        return view('user.customproduct.cardigan');
+        $cardigan = cardigan::all();
+        return view('user.customproduct.cardigan', compact('cardigan'));
     }
 }
