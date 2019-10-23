@@ -48,6 +48,7 @@ class CustomProductController extends Controller
         return view('admin.editproduct.editcardigan', compact('cardigan'));
     }
 
+    //fungsi untuk menyimpan cardigan yang telah diedit
     public function PostEditCustomCardigan($id, Request $request){
         $cardigan = cardigan::find($id);
         $photo = $request->file('cardigan_image')->store('cardigan_images');
@@ -59,7 +60,7 @@ class CustomProductController extends Controller
             'cardigan_desc' => request('cardigan_desc'),
             'cardigan_image' => $photo
         ]);
-        return view('admin.customproduct.cardigan');
+        return redirect('admin/');
     }
 
     //hoodie
