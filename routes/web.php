@@ -47,5 +47,4 @@ Route::prefix('admin')->group(function() {
     // Custom Tshirt
     Route::get('/addcustomtshirt', 'CustomTshirtController@FormAddCustomTshirt')->name('admin.addcustomtshirt');
     Route::post('/addcustomtshirt', 'CustomTshirtController@StoreFormAddCustomTshirt')->name('admin.Storeaddcustomtshirt');
-
   });
