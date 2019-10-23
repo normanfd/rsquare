@@ -29,6 +29,8 @@ Route::prefix('admin')->group(function() {
     // Custom Cardigan
     Route::get('/addcustomcardigan', 'CustomCardiganController@FormAddCustomCardigan')->name('admin.addcustomcardigan');
     Route::post('/addcustomcardigan', 'CustomCardiganController@StoreFormAddCustomCardigan')->name('admin.Storeaddcustomcardigan');
+    Route::get('/editcardigan/{id}', 'CustomCardiganController@EditCustomCardigan')->name('admin.Editcustomcardigan');
+    Route::patch('/editcardigan/{id}', 'CustomCardiganController@PostEditCustomCardigan')->name('admin.PostEditcustomcardigan');
     // Custom Hoodie
     Route::get('/addcustomhoodie', 'CustomHoodieController@FormAddCustomHoodie')->name('admin.addcustomhoodie');
     Route::post('/addcustomhoodie', 'CustomHoodieController@StoreFormAddCustomHoodie')->name('admin.Storeaddcustomhoodie');

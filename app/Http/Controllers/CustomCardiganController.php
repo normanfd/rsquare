@@ -43,10 +43,24 @@ class CustomCardiganController extends Controller
         ]);
         return view('admin.customproduct.cardigan');
     }
-
-    public function ListCardiganAPI(cardigan $cardigan){
-        $cardigans = $cardigan->all();
-        return response()->json($cardigans);
-    }
     
+    //fungsi buat get data cardigan
+    public function EditCustomCardigan($id){
+        $cardigan = cardigan::find($id);
+        return view('admin.editproduct.editcardigan', compact('cardigan'));
+    }
+
+    public function PostEditCustomCardigan($id, Request $request){
+        $cardigan = cardigan::find($id);
+        $photo = $request->file('cardigan_image')->store('cardigan_images');
+        $cardigan->update([
+            'category_id' => 2,
+            'cardigan_id' => request('cardigan_id'),
+            'cardigan_name' => request('cardigan_name'),
+            'cardigan_price' => request('cardigan_price'),
+            'cardigan_desc' => request('cardigan_desc'),
+            'cardigan_image' => $photo
+        ]);
+        return view('admin.customproduct.cardigan');
+    }
 }
