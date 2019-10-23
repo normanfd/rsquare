@@ -48,7 +48,6 @@ class CustomProductController extends Controller
         return view('admin.editproduct.editcardigan', compact('cardigan'));
     }
 
-    //fungsi untuk menyimpan cardigan yang telah diedit
     public function PostEditCustomCardigan($id, Request $request){
         $cardigan = cardigan::find($id);
         $photo = $request->file('cardigan_image')->store('cardigan_images');
@@ -63,7 +62,7 @@ class CustomProductController extends Controller
         return redirect('admin/');
     }
 
-    //hoodie
+    //================HOODIE=================================================================================
     public function FormAddCustomHoodie()
     {
         return view('admin.customproduct.hoodie');
@@ -86,7 +85,27 @@ class CustomProductController extends Controller
         return view('admin.customproduct.hoodie');
     }
 
-    //jacket
+    public function EditCustomHoodie($id){
+        $hoodie = Hoodie::find($id);
+        return view('admin.editproduct.edithoodie', compact('hoodie'));
+    }
+
+    public function PostEditCustomHoodie($id, Request $request){
+        $hoodie = Hoodie::find($id);
+        $photo = $request->file('hoodie_image')->store('hoodie_images');
+        $hoodie->update([
+            'category_id' => 2,
+            'hoodie_id' => request('hoodie_id'),
+            'hoodie_name' => request('hoodie_name'),
+            'hoodie_price' => request('hoodie_price'),
+            'hoodie_desc' => request('hoodie_desc'),
+            'hoodie_image' => $photo
+        ]);
+        redirect('admin/');
+    }
+    
+
+    //=====================================jacket=================================================================
     public function FormAddCustomJacket()
     {
         return view('admin.customproduct.jacket');
@@ -110,7 +129,26 @@ class CustomProductController extends Controller
         return view('admin.customproduct.jacket');
     }
 
-    //shirt
+    public function EditCustomJacket($id){
+        $jacket = Jacket::find($id);
+        return view('admin.editproduct.editjacket', compact('jacket'));
+    }
+
+    public function PostEditCustomJacket($id, Request $request){
+        $jacket = Jacket::find($id);
+        $photo = $request->file('jacket_image')->store('jacket_images');
+        $jacket->update([
+            'category_id' => 2,
+            'jacket_id' => request('jacket_id'),
+            'jacket_name' => request('jacket_name'),
+            'jacket_price' => request('jacket_price'),
+            'jacket_desc' => request('jacket_desc'),
+            'jacket_image' => $photo
+        ]);
+        return redirect('admin/');
+    }
+
+    //============================shirt=================================================================
     public function FormAddCustomShirt()
     {
         return view('admin.customproduct.shirt');
@@ -134,13 +172,32 @@ class CustomProductController extends Controller
         return view('admin.customproduct.shirt');
     }
 
-    //shoes
+    public function EditCustomShirt($id){
+        $shirt = Shirt::find($id);
+        return view('admin.editproduct.editshirt', compact('shirt'));
+    }
+
+    public function PostEditCustomShirt($id, Request $request){
+        $shirt = Shirt::find($id);
+        $photo = $request->file('shirt_image')->store('shirt_images');
+        $shirt->update([
+            'category_id' => 2,
+            'shirt_id' => request('shirt_id'),
+            'shirt_name' => request('shirt_name'),
+            'shirt_price' => request('shirt_price'),
+            'shirt_desc' => request('shirt_desc'),
+            'shirt_image' => $photo
+        ]);
+        return redirect('admin/');
+    }
+
+    //========================================shoes=======================================================
     public function FormAddCustomShoes()
     {
         return view('admin.customproduct.shoes');
         
     }
-    
+
     // Fungsi untuk menyimpan data kedalam database available product
     
     public function StoreFormAddCustomShoes(Request $request)
@@ -160,6 +217,7 @@ class CustomProductController extends Controller
         return view('admin.customproduct.shoes');
     }
 
+    //===============================================Sweater==================================================
     public function FormAddCustomSweater()
     {
         return view('admin.customproduct.sweater');
