@@ -5,25 +5,25 @@
     <title>winter</title>
     <link rel="icon" href="img/favicon.png">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('winter/css/bootstrap.min.css')}}">
     <!-- animate CSS -->
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="{{asset('winter/css/animate.css')}}">
     <!-- owl carousel CSS -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{asset('winter/css/owl.carousel.min.css')}}">
     <!-- font awesome CSS -->
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="{{asset('winter/css/all.css')}}">
+    <link rel="stylesheet" href="{{asset('winter/css/nice-select.css')}}">
     <!-- flaticon CSS -->
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="{{asset('winter/css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('winter/css/themify-icons.css')}}">
     <!-- font awesome CSS -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="{{asset('winter/css/magnific-popup.css')}}">
     <!-- swiper CSS -->
-    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="{{asset('winter/css/slick.css')}}">
     <!-- swiper CSS -->
-    <link rel="stylesheet" href="css/price_rangs.css">
+    <link rel="stylesheet" href="{{asset('winter/css/price_rangs.css')}}">
     <!-- style CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{asset('winter/css/style.css')}}">
 </head>
 
 <body class="bg-white">
@@ -295,10 +295,11 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Recycler View Product -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single_category_product">
                                 <div class="single_category_img">
-                                    <img src="img/category/category_1.png" alt="">
+                                    <img src="{{asset('winter/img/category/category_1.png')}}" alt="">
                                     <div class="category_social_icon">
                                         <ul>
                                             <li><a href="#"><i class="ti-heart"></i></a></li>
@@ -312,193 +313,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_category_product">
-                                <div class="single_category_img">
-                                    <img src="img/category/category_2.png" alt="">
-                                    <div class="category_social_icon">
-                                        <ul>
-                                            <li><a href="#"><i class="ti-heart"></i></a></li>
-                                            <li><a href="#"><i class="ti-bag"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="category_product_text">
-                                        <a href="single-product.html"><h5>Long Sleeve TShirt</h5></a>
-                                        <p>$150.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_category_product">
-                                <div class="single_category_img">
-                                    <img src="img/category/category_3.png" alt="">
-                                    <div class="category_social_icon">
-                                        <ul>
-                                            <li><a href="#"><i class="ti-heart"></i></a></li>
-                                            <li><a href="#"><i class="ti-bag"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="category_product_text">
-                                        <a href="single-product.html"><h5>Long Sleeve TShirt</h5></a>
-                                        <p>$150.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_category_product">
-                                <div class="single_category_img">
-                                    <img src="img/category/category_4.png" alt="">
-                                    <div class="category_social_icon">
-                                        <ul>
-                                            <li><a href="#"><i class="ti-heart"></i></a></li>
-                                            <li><a href="#"><i class="ti-bag"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="category_product_text">
-                                        <a href="single-product.html"><h5>Long Sleeve TShirt</h5></a>
-                                        <p>$150.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_category_product">
-                                <div class="single_category_img">
-                                    <img src="img/category/category_5.png" alt="">
-                                    <div class="category_social_icon">
-                                        <ul>
-                                            <li><a href="#"><i class="ti-heart"></i></a></li>
-                                            <li><a href="#"><i class="ti-bag"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="category_product_text">
-                                        <a href="single-product.html"><h5>Long Sleeve TShirt</h5></a>
-                                        <p>$150.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_category_product">
-                                <div class="single_category_img">
-                                    <img src="img/category/category_6.png" alt="">
-                                    <div class="category_social_icon">
-                                        <ul>
-                                            <li><a href="#"><i class="ti-heart"></i></a></li>
-                                            <li><a href="#"><i class="ti-bag"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="category_product_text">
-                                        <a href="single-product.html"><a href="single-product.html"><h5>Long Sleeve TShirt</h5></a></a>
-                                        <p>$150.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_category_product">
-                                <div class="single_category_img">
-                                    <img src="img/category/category_7.png" alt="">
-                                    <div class="category_social_icon">
-                                        <ul>
-                                            <li><a href="#"><i class="ti-heart"></i></a></li>
-                                            <li><a href="#"><i class="ti-bag"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="category_product_text">
-                                        <a href="single-product.html"><h5>Long Sleeve TShirt</h5></a>
-                                        <p>$150.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_category_product">
-                                <div class="single_category_img">
-                                    <img src="img/category/category_8.png" alt="">
-                                    <div class="category_social_icon">
-                                        <ul>
-                                            <li><a href="#"><i class="ti-heart"></i></a></li>
-                                            <li><a href="#"><i class="ti-bag"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="category_product_text">
-                                        <a href="single-product.html"><h5>Long Sleeve TShirt</h5></a>
-                                        <p>$150.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_category_product">
-                                <div class="single_category_img">
-                                    <img src="img/category/category_9.png" alt="">
-                                    <div class="category_social_icon">
-                                        <ul>
-                                            <li><a href="#"><i class="ti-heart"></i></a></li>
-                                            <li><a href="#"><i class="ti-bag"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="category_product_text">
-                                        <a href="single-product.html"><h5>Long Sleeve TShirt</h5></a>
-                                        <p>$150.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_category_product">
-                                <div class="single_category_img">
-                                    <img src="img/category/category_10.png" alt="">
-                                    <div class="category_social_icon">
-                                        <ul>
-                                            <li><a href="#"><i class="ti-heart"></i></a></li>
-                                            <li><a href="#"><i class="ti-bag"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="category_product_text">
-                                        <a href="single-product.html"><h5>Long Sleeve TShirt</h5></a>
-                                        <p>$150.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_category_product">
-                                <div class="single_category_img">
-                                    <img src="img/category/category_11.png" alt="">
-                                    <div class="category_social_icon">
-                                        <ul>
-                                            <li><a href="#"><i class="ti-heart"></i></a></li>
-                                            <li><a href="#"><i class="ti-bag"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="category_product_text">
-                                        <a href="single-product.html"><h5>Long Sleeve TShirt</h5></a>
-                                        <p>$150.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_category_product">
-                                <div class="single_category_img">
-                                    <img src="img/category/category_12.png" alt="">
-                                    <div class="category_social_icon">
-                                        <ul>
-                                            <li><a href="#"><i class="ti-heart"></i></a></li>
-                                            <li><a href="#"><i class="ti-bag"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="category_product_text">
-                                        <a href="single-product.html"><h5>Long Sleeve TShirt</h5></a>
-                                        <p>$150.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="col-lg-12 text-center">
                             <a href="#" class="btn_2">More Items</a>
                         </div>
@@ -652,32 +467,32 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!--::footer_part end::-->
 
     <!-- jquery plugins here-->
-    <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="{{asset('winter/js/jquery-1.12.1.min.js')}}"></script>
     <!-- popper js -->
-    <script src="js/popper.min.js"></script>
+    <script src="{{asset('winter/js/popper.min.js')}}"></script>
     <!-- bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{asset('winter/js/bootstrap.min.js')}}"></script>
     <!-- easing js -->
-    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="{{asset('winter/js/jquery.magnific-popup.js')}}"></script>
     <!-- swiper js -->
-    <script src="js/swiper.min.js"></script>
+    <script src="{{asset('winter/js/swiper.min.js')}}"></script>
     <!-- swiper js -->
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/price_rangs.js"></script>
+    <script src="{{asset('winter/js/mixitup.min.js')}}"></script>
+    <script src="{{asset('winter/js/price_rangs.js')}}"></script>
     <!-- particles js -->
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="{{asset('winter/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('winter/js/jquery.nice-select.min.js')}}"></script>
     <!-- slick js -->
-    <script src="js/slick.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/contact.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/mail-script.js"></script>
+    <script src="{{asset('winter/js/slick.min.js')}}"></script>
+    <script src="{{asset('winter/js/jquery.counterup.min.js')}}"></script>
+    <script src="{{asset('winter/js/waypoints.min.js')}}"></script>
+    <script src="{{asset('winter/js/contact.js')}}"></script>
+    <script src="{{asset('winter/js/jquery.ajaxchimp.min.js')}}"></script>
+    <script src="{{asset('winter/js/jquery.form.js')}}"></script>
+    <script src="{{asset('winter/js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('winter/js/mail-script.js')}}"></script>
     <!-- custom js -->
-    <script src="js/custom.js"></script>
+    <script src="{{asset('winter/js/custom.js')}}"></script>
 </body>
 
 </html>
