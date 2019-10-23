@@ -302,7 +302,7 @@
                                 <div class="single_category_img">
                                     <img src="../storage/{{$cardigans->cardigan_image}}" alt="ini gambar cardigan">
                                     <div class="category_product_text">
-                                        <a href="single-product.html"><h5>{{$cardigans->cardigan_name}}</h5></a>
+                                        <a href="{{ route('user.detail.cardigan', $cardigans->id) }}"><h5>{{$cardigans->cardigan_name}}</h5></a>
                                         <p>{{$cardigans->cardigan_price}}</p>
                                     </div>
                                 </div>

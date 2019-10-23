@@ -23,9 +23,17 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     // ------------------- CARDIGAN USER --------------------------------
+    //fungsi buat nampilin index cardigan
     public function VWCardigan()
     {
         $cardigan = cardigan::all();
         return view('user.customproduct.cardigan', compact('cardigan'));
+    }
+
+    //fungsi buat nampilin detail
+    public function DetailCardigan($id){
+        $cardigan = cardigan::find($id);
+        // dd($cardigan);
+        return view('user.detailproduct.cardigan_detail', compact('cardigan'));
     }
 }
