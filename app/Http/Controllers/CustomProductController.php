@@ -217,6 +217,25 @@ class CustomProductController extends Controller
         return view('admin.customproduct.shoes');
     }
 
+    public function EditCustomShoes($id){
+        $shoes = Shoes::find($id);
+        return view('admin.editproduct.editshoes', compact('shoes'));
+    }
+
+    public function PostEditCustomShoes($id, Request $request){
+        $shoes = Shoes::find($id);
+        $photo = $request->file('shoes_image')->store('shoes_images');
+        $shoes->update([
+            'category_id' => 2,
+            'shoes_id' => request('shoes_id'),
+            'shoes_name' => request('shoes_name'),
+            'shoes_price' => request('shoes_price'),
+            'shoes_desc' => request('shoes_desc'),
+            'shoes_image' => $photo
+        ]);
+        return redirect('admin/');
+    }
+
     //===============================================Sweater==================================================
     public function FormAddCustomSweater()
     {
@@ -240,6 +259,68 @@ class CustomProductController extends Controller
 
         return view('admin.customproduct.sweater');
         
+    }
+
+    public function EditCustomSweater($id){
+        $sweater = Sweater::find($id);
+        return view('admin.editproduct.editsweater', compact('sweater'));
+    }
+
+    public function PostEditCustomSweater($id, Request $request){
+        $sweater = Sweater::find($id);
+        $photo = $request->file('sweater_image')->store('sweater_images');
+        $sweater->update([
+            'category_id' => 2,
+            'sweater_id' => request('sweater_id'),
+            'sweater_name' => request('sweater_name'),
+            'sweater_price' => request('sweater_price'),
+            'sweater_desc' => request('sweater_desc'),
+            'sweater_image' => $photo
+        ]);
+        return redirect('admin/');
+    }
+    
+    //============================tshirt=================================================================
+    public function FormAddCustomTshirt()
+    {
+        return view('admin.customproduct.tshirt');
+    }
+    // Fungsi untuk menyimpan data kedalam database available product
+    // Fungsi untuk menyimpan data kedalam database available product
+    public function StoreFormAddCustomTshirt(Request $request)
+    {
+        // cara dapetin lokasi path photo
+        $photo = $request->file('tshirt_image')->store('tshirt_images');
+        // dd($photo);
+        // membuat row baru pada db
+        Tshirt::create([
+            'category_id' => 2,
+            'tshirt_id' => request('tshirt_id'),
+            'tshirt_name' => request('tshirt_name'),
+            'tshirt_price' => request('tshirt_price'),
+            'tshirt_desc' => request('tshirt_desc'),
+            'tshirt_image' => $photo
+        ]);
+        return view('admin.customproduct.tshirt');
+    }
+
+    public function EditCustomTshirt($id){
+        $tshirt = Tshirt::find($id);
+        return view('admin.editproduct.edittshirt', compact('tshirt'));
+    }
+
+    public function PostEditCustomTshirt($id, Request $request){
+        $tshirt = Tshirt::find($id);
+        $photo = $request->file('tshirt_image')->store('tshirt_images');
+        $tshirt->update([
+            'category_id' => 2,
+            'tshirt_id' => request('tshirt_id'),
+            'tshirt_name' => request('tshirt_name'),
+            'tshirt_price' => request('tshirt_price'),
+            'tshirt_desc' => request('tshirt_desc'),
+            'tshirt_image' => $photo
+        ]);
+        return redirect('admin/');
     }
 
 }
