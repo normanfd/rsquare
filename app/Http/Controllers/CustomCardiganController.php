@@ -43,5 +43,10 @@ class CustomCardiganController extends Controller
         ]);
         return view('admin.customproduct.cardigan');
     }
+
+    public function ListCardiganAPI(cardigan $cardigan){
+        $cardigans = $cardigan->all();
+        return response()->json($cardigans);
+    }
     
 }
