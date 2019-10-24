@@ -158,7 +158,7 @@
                     <div class="single_feature_post_text">
                         <img src="{{asset('winter/img/feature_2.png')}}" alt="#">
                         <div class="hover_text">
-                            <a href="single-product.html" class="btn_2">shop for male</a>
+                            <a href="single-product.html" class="btn_2">Costum Hoddie</a>
                         </div>
                     </div>
                 </div>
