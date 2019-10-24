@@ -158,7 +158,7 @@
                     <div class="single_feature_post_text">
                         <img src="{{asset('winter/img/feature_2.png')}}" alt="#">
                         <div class="hover_text">
-                            <a href="single-product.html" class="btn_2">Costum Hoddie</a>
+                            <a href="{{ route('user.hoodie') }}" class="btn_2">Costum Hoddie</a>
                         </div>
                     </div>
                 </div>
@@ -166,7 +166,39 @@
                     <div class="single_feature_post_text">
                         <img src="{{asset('winter/img/feature_3.png')}}" alt="#">
                         <div class="hover_text">
-                            <a href="single-product.html" class="btn_2">shop for male</a>
+                            <a href="{{ route('user.jacket') }}" class="btn_2">Costum Jacket</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <img src="{{asset('winter/img/feature_2.png')}}" alt="#">
+                        <div class="hover_text">
+                            <a href="{{ route('user.shirt') }}" class="btn_2">Costum Shirt</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <img src="{{asset('winter/img/feature_2.png')}}" alt="#">
+                        <div class="hover_text">
+                            <a href="{{ route('user.shoes') }}" class="btn_2">Costum Shoes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <img src="{{asset('winter/img/feature_2.png')}}" alt="#">
+                        <div class="hover_text">
+                            <a href="{{ route('user.sweater') }}" class="btn_2">Costum Sweater</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <img src="{{asset('winter/img/feature_2.png')}}" alt="#">
+                        <div class="hover_text">
+                            <a href="{{ route('user.tshirt') }}" class="btn_2">Costum Tshirt</a>
                         </div>
                     </div>
                 </div>
