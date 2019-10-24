@@ -320,16 +320,6 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</li>
 
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="{{ route('admin.addcustomtshirt') }}" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													T-Shirt
-												</span>
-											</a>
-										</li>
 										
 										<li class="m-menu__item " aria-haspopup="true" >
 											<a  href="{{ route('admin.addcustomshirt') }}" class="m-menu__link ">
@@ -361,6 +351,16 @@ License: You must have a valid license purchased only from themeforest(the above
 												</i>
 												<span class="m-menu__link-text">
 													Sweater
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="{{ route('admin.addcustomtshirt') }}" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													T-Shirt
 												</span>
 											</a>
 										</li>
