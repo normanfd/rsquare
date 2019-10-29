@@ -254,10 +254,7 @@
 {{$cardigan->cardigan_name }} <br>
 {{$cardigan->cardigan_price }} <br>
 {{$cardigan->cardigan_desc }} <br>
-<<<<<<< HEAD
 {{$cardigan->cardigan_image }} <br>
 user_id : {{ Auth::getUser()->id}} <br>
 cardigan_id : {{$cardigan->id }} <br>
-=======
 {{$cardigan->cardigan_image }} <br> -->
->>>>>>> 36e37827c6ae3f889f9b9632a89e2ecb0b4bd84e
