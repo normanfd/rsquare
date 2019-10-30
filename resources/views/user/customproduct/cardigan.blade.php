@@ -13,9 +13,28 @@
                         <div class="widgets_inner">
                             <ul class="list">
                                 <li>
-                                    <a href="#">Fruits and Vegetables</a>
+                                    <a href="{{ route('user.cardigan') }}">Cardigan</a>
                                 </li>
-                                <li class="sub-menu">
+                                <li>
+                                    <a href="{{ route('user.hoodie') }}">Hoodie</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('user.jacket') }}">Jacket</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('user.shirt') }}">Shirt</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('user.shoes') }}">Shoes</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('user.sweater') }}">Sweater</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('user.tshirt') }}">T-Shirt</a>
+                                </li>
+
+                                <!-- <li class="sub-menu">
                                     <a href="#Electronics" class=" d-flex justify-content-between">
                                         Electronics
                                         <div class="right ti-plus"></div>
@@ -40,16 +59,8 @@
                                             <a href="#Electronics">Appliances</a>
                                         </li>
                                     </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Cooking</a>
-                                </li>
-                                <li>
-                                    <a href="#">Beverages</a>
-                                </li>
-                                <li>
-                                    <a href="#">Home and Cleaning</a>
-                                </li>
+                                </li> -->
+                            
                             </ul>
                         </div>
                     </aside>
@@ -60,9 +71,10 @@
                     <div class="col-lg-12">
                         <div class="product_top_bar d-flex justify-content-between align-items-center">
                             <div class="single_product_menu product_bar_item">
-                                <h2>Womans (12)</h2>
+                                <h2>Cardigan</h2>
                             </div>
-                            <div class="product_top_bar_iner product_bar_item d-flex">
+                            <!-- Filtering -->
+                            <!-- <div class="product_top_bar_iner product_bar_item d-flex">
                                 <div class="product_bar_single">
                                     <select class="wide">
                                         <option data-display="Default sorting">Default sorting</option>
@@ -78,7 +90,7 @@
                                         <option value="2">Show 30</option>
                                     </select>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <!-- Recycler View Product -->

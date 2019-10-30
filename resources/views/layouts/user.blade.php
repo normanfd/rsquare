@@ -2,10 +2,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>winter</title>
-    <link rel="icon" href="img/favicon.png">
+    <title>RSQuare</title>
+    <link rel="icon" href="{{asset('winter/img/favicon.png')}}">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ asset('winter/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('winter/css/bootstrap.min.css')}}">
     <!-- animate CSS -->
     <link rel="stylesheet" href="{{asset('winter/css/animate.css')}}">
     <!-- owl carousel CSS -->
@@ -33,7 +33,7 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-11">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="logo"> </a>
+                        <a class="navbar-brand" href="index.html"> <img src="{{asset('winter/img/logo.png')}}" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -91,17 +91,17 @@
                             </ul>
                         </div>
                         <div class="hearer_icon d-flex">
-                            <div class="dropdown cart">
+                            <!-- <div class="dropdown cart">
                                 <a class="dropdown-toggle" href="#" id="navbarDropdown3" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="ti-bag"></i>
                                 </a>
-                                <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <div class="single_product">
     
                                     </div>
-                                </div> -->
-                            </div>
+                                </div>
+                            </div> -->
                             <a id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
                         </div>
                     </nav>
@@ -129,7 +129,7 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb_iner">
                         <div class="breadcrumb_iner_item">
-                            <p>Home / Category</p>
+                            <!-- <p></p> -->
                         </div>
                     </div>
                 </div>
@@ -149,28 +149,28 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="single_shopping_details">
-                        <img src="img/icon/icon_1.png" alt="">
+                        <img src="{{asset('winter/img/icon/icon_1.png')}}" alt="">
                         <h4>Free shipping</h4>
                         <p>Divided face for bearing the divide unto seed winged divided light Forth.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single_shopping_details">
-                        <img src="img/icon/icon_2.png" alt="">
+                        <img src="{{asset('winter/img/icon/icon_2.png')}}" alt="">
                         <h4>Free shipping</h4>
                         <p>Divided face for bearing the divide unto seed winged divided light Forth.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single_shopping_details">
-                        <img src="img/icon/icon_3.png" alt="">
+                        <img src="{{asset('winter/img/icon/icon_3.png')}}" alt="">
                         <h4>Free shipping</h4>
                         <p>Divided face for bearing the divide unto seed winged divided light Forth.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single_shopping_details">
-                        <img src="img/icon/icon_4.png" alt="">
+                        <img src="{{asset('winter/img/icon/icon_4.png')}}" alt="">
                         <h4>Free shipping</h4>
                         <p>Divided face for bearing the divide unto seed winged divided light Forth.</p>
                     </div>
@@ -187,23 +187,23 @@
                 <div class="col-lg-12">
                     <div class="instagram_photo_iner">
                         <div class="single_instgram_photo">
-                            <img src="img/instagram/inst_1.png" alt="">
+                            <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="">
                             <a href="#"><i class="ti-instagram"></i></a> 
                         </div>
                         <div class="single_instgram_photo">
-                            <img src="img/instagram/inst_2.png" alt="">
+                            <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="">
                             <a href="#"><i class="ti-instagram"></i></a> 
                         </div>
                         <div class="single_instgram_photo">
-                            <img src="img/instagram/inst_3.png" alt="">
+                            <img src="{{asset('winter/img/instagram/inst_3.png')}}" alt="">
                             <a href="#"><i class="ti-instagram"></i></a> 
                         </div>
                         <div class="single_instgram_photo">
-                            <img src="img/instagram/inst_4.png" alt="">
+                            <img src="{{asset('winter/img/instagram/inst_4.png')}}" alt="">
                             <a href="#"><i class="ti-instagram"></i></a> 
                         </div>
                         <div class="single_instgram_photo">
-                            <img src="img/instagram/inst_5.png" alt="">
+                            <img src="{{asset('winter/img/instagram/inst_5.png')}}" alt="">
                             <a href="#"><i class="ti-instagram"></i></a> 
                         </div>
                     </div>
