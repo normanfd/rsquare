@@ -163,7 +163,7 @@ class UserController extends Controller
             'user_id' => request('user_id'),
             'color' => "request('color')",
             'material' => request('selector_material'),
-            'size' => 12,
+            'size' => request('size'),
             'amount' => request('amount'),
             'wa_number' => request('wa_number'),
             'note' => request('note')
