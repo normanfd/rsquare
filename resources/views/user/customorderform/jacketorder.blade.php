@@ -218,10 +218,10 @@
                 </div>
                 <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
               </div>
-              <div class="col-md-3 form-group jacket_zipper">
+              <div class="col-md-3 form-group jacket_button">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option-zipper-3" name="selector_zipper" value="kanva2"/>
-                  <label for="f-option-zipper-3">Z model</label>
+                  <input type="radio" id="f-option-button-3" name="selector_button" value="kanva2"/>
+                  <label for="f-option-button-3">Z model</label>
                   <div class="check"></div>
                 </div>
                 <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
@@ -230,7 +230,7 @@
               
 
               <div class="col-md-12 form-group p_star">
-                <h4>Cardigan Size</h4>
+                <h4>Jacket Size</h4>
                 <select class="form-check" id="size" name="size">
                   <option value="S">S</option>
                   <option value="M">M</option>
