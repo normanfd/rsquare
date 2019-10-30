@@ -12,7 +12,7 @@
             <form class="row contact_form" action="{{ route('post.user.order.cardigan', $cardigan->id) }}" method="post" novalidate="novalidate">
               {{ csrf_field() }}
               <div class="col-md-6 form-group p_star">
-                <input type="text" class="form-control" id="wa_number" name="wa_number" value="{{$cardigan->id}}"/>
+                <input type="text" class="form-control" id="wa_number" name="wa_number"/>
                 <span class="placeholder" data-placeholder="Whatsapp number"></span>
               </div>
               <div class="col-md-6 form-group p_star">
