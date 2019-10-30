@@ -40,13 +40,13 @@ input:focus {
 
 /* line 25, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_common.scss */
 .section_padding {
-  padding: 140px 0px;
+  padding: 70px 0px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   /* line 25, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_common.scss */
   .section_padding {
-    padding: 100px 0px;
+    padding: 70px 0px;
   }
 }
 
