@@ -206,25 +206,6 @@
                   <option value="XXL">XXL</option>
                 </select>
               </div>
-              <h4 class="col-md-12"> Cardigan Bordir/Sablon or No</h4>
-              <div class="col-md-3 form-group cardigan_opsi">
-                <div class="radion_btn">
-                  <input type="radio" id="f-option-opsi-1" name="selector_opsi" value="kanva1"/>
-                  <label for="f-option-opsi-1">yes</label>
-                  <div class="check"></div>
-                </div>
-                <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
-              </div>
-              <div class="col-md-3 form-group cardigan_opsi">
-                <div class="radion_btn">
-                  <input type="radio" id="f-option-opsi-2" name="selector_opsi" value="kanva2"/>
-                  <label for="f-option-opsi-2">no</label>
-                  <div class="check"></div>
-                </div>
-                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
-              </div>
-      
-
 
 
               <!-- <div class="col-md-12 form-group">
@@ -233,6 +214,7 @@
               <button type="submit" class="btn btn-success">
                 Create
               </button>
+              
               <input type="text" class="form-control" id="user_id" name="user_id" value="{{ Auth::getUser()->id}}" hidden/>
             </form>
           </div>
