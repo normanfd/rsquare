@@ -8,11 +8,11 @@
       <div class="billing_details">
         <div class="row">
           <div class="col-lg-8">
-            <h4>Order Cardigan Details</h4>
-            <form class="row contact_form" action="{{ route('post.user.order.cardigan', $cardigan->id) }}" method="post" novalidate="novalidate">
+            <h4>Order Jacket Details</h4>
+            <form class="row contact_form" action="{{ route('post.user.order.jacket', $jacket->id) }}" method="post" novalidate="novalidate">
               {{ csrf_field() }}
               <div class="col-md-6 form-group p_star">
-                <input type="text" class="form-control" id="wa_number" name="wa_number" value="{{$cardigan->id}}"/>
+                <input type="text" class="form-control" id="wa_number" name="wa_number" value="{{$jacket->id}}"/>
                 <span class="placeholder" data-placeholder="Whatsapp number"></span>
               </div>
               <div class="col-md-6 form-group p_star">
@@ -20,14 +20,14 @@
                 <span class="placeholder" data-placeholder="Email Address"></span>
               </div>
               <div class="col-md-6 form-group p_star">
-                <input type="text" class="form-control" id="user_id" name="user_id" value="{{ Auth::getUser()->name}}" readonly/>
+                <input type="text" class="form-control" id="user_id" name="user_id" value="{{ Auth::getUser()->id}}" readonly/>
               </div>
               <div class="col-md-6 form-group p_star">
                 <input type="text" class="form-control" id="amount" name="amount" />
                 <span class="placeholder" data-placeholder="Order Amount"></span>
               </div>
 
-              <h4 class="col-md-12"> Cardigan Material</h4>
+              <h4 class="col-md-12"> Jacket Material</h4>
               <div class="col-md-3 form-group cardigan_material">
                 <div class="radion_btn">
                   <input type="radio" id="f-option-material-1" name="selector_material" value="kanva1"/>
@@ -44,8 +44,16 @@
                 </div>
                 <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
               </div>
+              <div class="col-md-3 form-group cardigan_material">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-material-2" name="selector_material" value="kanva2"/>
+                  <label for="f-option-material-2">Katun</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
 
-              <h4 class="col-md-12"> Cardigan Color</h4>
+              <h4 class="col-md-12"> Jacket Color</h4>
               <div class="col-md-3 form-group cardigan_color">
                 <div class="radion_btn">
                   <input type="radio" id="f-option1" name="selector_color" />
@@ -70,11 +78,19 @@
                 </div>
                 <img src="{{asset('winter/img/instagram/inst_3.png')}}" alt="" style="width:200px;height:200px;">
               </div>
+              <div class="col-md-3 form-group cardigan_color">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option3" name="selector_color" />
+                  <label for="f-option3">Cyan</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/instagram/inst_3.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
 
               <h4 class="col-md-12"> Cardigan Collar</h4>
               <div class="col-md-3 form-group cardigan_collar">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option-collar-1" name="selector_collar" value="kanva1"/>
+                  <input type="radio" id="f-option-material-1" name="selector_collar" value="kanva1"/>
                   <label for="f-option-material-1">V model</label>
                   <div class="check"></div>
                 </div>
@@ -82,7 +98,7 @@
               </div>
               <div class="col-md-3 form-group cardigan_collar">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option-collar-2" name="selector_collar" value="kanva2"/>
+                  <input type="radio" id="f-option-material-2" name="selector_collar" value="kanva2"/>
                   <label for="f-option-material-2">O model</label>
                   <div class="check"></div>
                 </div>
@@ -90,7 +106,7 @@
               </div>
               <div class="col-md-3 form-group cardigan_collar">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option-collar-3" name="selector_collar" value="kanva2"/>
+                  <input type="radio" id="f-option-material-2" name="selector_collar" value="kanva2"/>
                   <label for="f-option-material-2">Z model</label>
                   <div class="check"></div>
                 </div>
