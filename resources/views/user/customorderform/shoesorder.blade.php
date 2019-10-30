@@ -20,7 +20,7 @@
                 <span class="placeholder" data-placeholder="Email Address"></span>
               </div>
               <div class="col-md-6 form-group p_star">
-                <input type="text" class="form-control" id="user_id" name="user_id" value="{{ Auth::getUser()->id}}" readonly/>
+                <input type="text" class="form-control" value="{{ Auth::getUser()->name}}" readonly/>
               </div>
               <div class="col-md-6 form-group p_star">
                 <input type="text" class="form-control" id="amount" name="amount" />
@@ -30,7 +30,7 @@
               <h4 class="col-md-12"> Shoes Color</h4>
               <div class="col-md-3 form-group shoes_color">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option1" name="selector_color" />
+                  <input type="radio" id="f-option1" name="selector_color" value="red"/>
                   <label for="f-option1">Red</label>
                   <div class="check"></div>
                 </div>
@@ -38,7 +38,7 @@
               </div>
               <div class="col-md-3 form-group shoes_color">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option2" name="selector_color" />
+                  <input type="radio" id="f-option2" name="selector_color" value="blue"/>
                   <label for="f-option2">Blue</label>
                   <div class="check"></div>
                 </div>
@@ -46,7 +46,7 @@
               </div>
               <div class="col-md-3 form-group shoes_color">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option3" name="selector_color" />
+                  <input type="radio" id="f-option3" name="selector_color" value="green"/>
                   <label for="f-option3">Green</label>
                   <div class="check"></div>
                 </div>
@@ -56,7 +56,7 @@
               <h4 class="col-md-12"> Shoes Material</h4>
               <div class="col-md-3 form-group shoes_material">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option-material-1" name="selector_material" value="kanva1"/>
+                  <input type="radio" id="f-option-material-1" name="selector_material" value="kain"/>
                   <label for="f-option-material-1">Kain</label>
                   <div class="check"></div>
                 </div>
@@ -64,7 +64,7 @@
               </div>
               <div class="col-md-3 form-group shoes_material">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option-material-2" name="selector_material" value="kanva2"/>
+                  <input type="radio" id="f-option-material-2" name="selector_material" value="kulit"/>
                   <label for="f-option-material-2">Kulit</label>
                   <div class="check"></div>
                 </div>
@@ -72,7 +72,7 @@
               </div>
               <div class="col-md-3 form-group shoes_material">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option-material-3" name="selector_material" value="kanva3"/>
+                  <input type="radio" id="f-option-material-3" name="selector_material" value="plastik"/>
                   <label for="f-option-material-3">Plastik</label>
                   <div class="check"></div>
                 </div>
