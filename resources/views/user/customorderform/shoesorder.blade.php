@@ -97,13 +97,9 @@
                 <textarea class="form-control" name="note" id="message" rows="1"
                   placeholder="Order Notes"></textarea>
               </div>
-              <!-- <div class="col-md-12 form-group">
-                <a class="btn_3 form-group" type=submit >Proceed</a>
-              </div> -->
-              <button type="submit" class="btn btn-success">
-                Create
-              </button>
-              <input type="text" class="form-control" id="user_id" name="user_id" value="{{ Auth::getUser()->id}}" hidden/>
+              <div class="col-md-12 form-group">
+                <button type="submit" class="btn_3">Submit</button>
+              </div>
             </form>
           </div>
         </div>
