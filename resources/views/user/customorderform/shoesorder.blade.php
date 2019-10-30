@@ -20,7 +20,7 @@
                 <span class="placeholder" data-placeholder="Email Address"></span>
               </div>
               <div class="col-md-6 form-group p_star">
-                <input type="text" class="form-control" value="{{ Auth::getUser()->name}}" readonly/>
+                <input type="text" class="form-control" value="{{ Auth::getUser()->name}}" name="name" readonly/>
               </div>
               <div class="col-md-6 form-group p_star">
                 <input type="text" class="form-control" id="amount" name="amount" />
@@ -100,6 +100,7 @@
               <div class="col-md-12 form-group">
                 <button type="submit" class="btn_3">Submit</button>
               </div>
+              <input type="text" class="form-control" id="user_id" name="user_id" value="{{ Auth::getUser()->id}}" hidden/>
             </form>
           </div>
         </div>

@@ -15,7 +15,7 @@
                     <h4>order info</h4>
                     <ul>
                         <li>
-                            <p>order number</p><span>: 60235</span>
+                            <p>Name</p><span>{{$wa_number}}</span>
                         </li>
                         <li>
                             <p>data</p><span>: Oct 03, 2017</span>

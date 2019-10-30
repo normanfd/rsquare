@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/confirmation', 'HomeController@confirmation')->name('confirmation');
+
 ##cardigan
 Route::prefix('/cardigan')->group(function(){
     Route::get('/cardigan', 'UserController@VWCardigan')->name('user.cardigan');

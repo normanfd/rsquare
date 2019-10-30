@@ -158,6 +158,7 @@ class UserController extends Controller
 
     public function CreateShoesOrder($id)
     {
+        $wa_number = request('wa_number');
         ShoesOrder::create([
             'shoes_id' => $id,
             'user_id' => request('user_id'),
@@ -168,6 +169,8 @@ class UserController extends Controller
             'wa_number' => request('wa_number'),
             'note' => request('note')
         ]);
+
+        return view('confirmation', compact( 'wa_number'));
     }
 // ------------------------------------TSHIRT--------------------------------------------
     //fungsi buat nampilin index Tshirt
