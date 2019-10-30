@@ -9,10 +9,10 @@
         <div class="row">
           <div class="col-lg-8">
             <h4>Order Cardigan Details</h4>
-            <form class="row contact_form" action="{{ route('post.user.order.shoes', $shoes->id) }}" method="post" novalidate="novalidate">
+            <form class="row contact_form" action="{{ route('post.user.order.cardigan', $cardigan->id) }}" method="post" novalidate="novalidate">
               {{ csrf_field() }}
               <div class="col-md-6 form-group p_star">
-                <input type="text" class="form-control" id="wa_number" name="wa_number" value="{{$shoes->id}}"/>
+                <input type="text" class="form-control" id="wa_number" name="wa_number" value="{{$cardigan->id}}"/>
                 <span class="placeholder" data-placeholder="Whatsapp number"></span>
               </div>
               <div class="col-md-6 form-group p_star">
@@ -26,9 +26,27 @@
                 <input type="text" class="form-control" id="amount" name="amount" />
                 <span class="placeholder" data-placeholder="Order Amount"></span>
               </div>
-            
-              <h4 class="col-md-12"> Shoes Color</h4>
-              <div class="col-md-3 form-group shoes_color">
+
+              <h4 class="col-md-12"> Cardigan Material</h4>
+              <div class="col-md-3 form-group cardigan_material">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-material-1" name="selector_material" value="kanva1"/>
+                  <label for="f-option-material-1">Kain</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
+              <div class="col-md-3 form-group cardigan_material">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-material-2" name="selector_material" value="kanva2"/>
+                  <label for="f-option-material-2">Kulit</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
+
+              <h4 class="col-md-12"> Cardigan Color</h4>
+              <div class="col-md-3 form-group cardigan_color">
                 <div class="radion_btn">
                   <input type="radio" id="f-option1" name="selector_color" />
                   <label for="f-option1">Red</label>
@@ -36,7 +54,7 @@
                 </div>
                 <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
               </div>
-              <div class="col-md-3 form-group shoes_color">
+              <div class="col-md-3 form-group cardigan_color">
                 <div class="radion_btn">
                   <input type="radio" id="f-option2" name="selector_color" />
                   <label for="f-option2">Blue</label>
@@ -44,7 +62,7 @@
                 </div>
                 <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
               </div>
-              <div class="col-md-3 form-group shoes_color">
+              <div class="col-md-3 form-group cardigan_color">
                 <div class="radion_btn">
                   <input type="radio" id="f-option3" name="selector_color" />
                   <label for="f-option3">Green</label>
@@ -53,50 +71,162 @@
                 <img src="{{asset('winter/img/instagram/inst_3.png')}}" alt="" style="width:200px;height:200px;">
               </div>
 
-              <h4 class="col-md-12"> Shoes Material</h4>
-              <div class="col-md-3 form-group shoes_material">
+              <h4 class="col-md-12"> Cardigan Collar</h4>
+              <div class="col-md-3 form-group cardigan_collar">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option-material-1" name="selector_material" value="kanva1"/>
-                  <label for="f-option-material-1">Kain</label>
+                  <input type="radio" id="f-option-material-1" name="selector_collar" value="kanva1"/>
+                  <label for="f-option-material-1">V model</label>
                   <div class="check"></div>
                 </div>
                 <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
               </div>
-              <div class="col-md-3 form-group shoes_material">
+              <div class="col-md-3 form-group cardigan_collar">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option-material-2" name="selector_material" value="kanva2"/>
-                  <label for="f-option-material-2">Kulit</label>
+                  <input type="radio" id="f-option-material-2" name="selector_collar" value="kanva2"/>
+                  <label for="f-option-material-2">O model</label>
                   <div class="check"></div>
                 </div>
                 <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
               </div>
-              <div class="col-md-3 form-group shoes_material">
+              <div class="col-md-3 form-group cardigan_collar">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option-material-3" name="selector_material" value="kanva3"/>
-                  <label for="f-option-material-3">Plastik</label>
+                  <input type="radio" id="f-option-material-2" name="selector_collar" value="kanva2"/>
+                  <label for="f-option-material-2">Z model</label>
                   <div class="check"></div>
                 </div>
-                <img src="{{asset('winter/img/instagram/inst_3.png')}}" alt="" style="width:200px;height:200px;">
+                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
               </div>
+
+              <h4 class="col-md-12"> Cardigan Zipper</h4>
+              <div class="col-md-3 form-group cardigan_zipper">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-material-1" name="selector_zipper" value="kanva1"/>
+                  <label for="f-option-material-1">V model</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
+              <div class="col-md-3 form-group cardigan_zipper">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-material-2" name="selector_zipper" value="kanva2"/>
+                  <label for="f-option-material-2">O model</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
+
+              <h4 class="col-md-12"> Cardigan Button</h4>
+              <div class="col-md-3 form-group cardigan_button">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-material-1" name="selector_button" value="kanva1"/>
+                  <label for="f-option-material-1">V model</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
+              <div class="col-md-3 form-group cardigan_button">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-material-2" name="selector_button" value="kanva2"/>
+                  <label for="f-option-material-2">O model</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
+
+              <h4 class="col-md-12"> Cardigan Arm</h4>
+              <div class="col-md-3 form-group cardigan_arm">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-material-1" name="selector_arm" value="kanva1"/>
+                  <label for="f-option-material-1">Short</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
+              <div class="col-md-3 form-group cardigan_arm">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-material-2" name="selector_arm" value="kanva2"/>
+                  <label for="f-option-material-2">Long</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
+
+              <h4 class="col-md-12"> Cardigan Arm Modl</h4>
+              <div class="col-md-3 form-group cardigan_armmodel">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-material-1" name="selector_armmodel" value="kanva1"/>
+                  <label for="f-option-material-1">karet</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
+              <div class="col-md-3 form-group cardigan_armmodel">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-material-2" name="selector_armmodel" value="kanva2"/>
+                  <label for="f-option-material-2">biasa</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
+
+              <h4 class="col-md-12"> Cardigan Bag</h4>
+              <div class="col-md-3 form-group cardigan_bag">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-material-1" name="selector_bag" value="kanva1"/>
+                  <label for="f-option-material-1">Kana</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
+              <div class="col-md-3 form-group cardigan_bag">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-material-2" name="selector_bag" value="kanva2"/>
+                  <label for="f-option-material-2">kiri</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
+              <div class="col-md-3 form-group cardigan_bag">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-material-2" name="selector_bag" value="kanva2"/>
+                  <label for="f-option-material-2">kirikanan</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
+
 
               <div class="col-md-12 form-group p_star">
-                <h4>Shoes Size</h4>
+                <h4>Cardigan Size</h4>
                 <select class="form-check" id="size" name="size">
-                  <option value="38">38</option>
-                  <option value="39">39</option>
-                  <option value="40">40</option>
-                  <option value="41">41</option>
-                  <option value="42">42</option>
-                  <option value="43">43</option>
-                  <option value="44">44</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
                 </select>
               </div>
-
-              <div class="col-md-12 form-group">
-                <h4>Order Shoes Note</h4>
-                <textarea class="form-control" name="note" id="message" rows="1"
-                  placeholder="Order Notes"></textarea>
+              <h4 class="col-md-12"> Cardigan Bordir/Sablon or No</h4>
+              <div class="col-md-3 form-group cardigan_opsi">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-material-1" name="selector_opsi" value="kanva1"/>
+                  <label for="f-option-material-1">yes</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
               </div>
+              <div class="col-md-3 form-group cardigan_opsi">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-material-2" name="selector_opsi" value="kanva2"/>
+                  <label for="f-option-material-2">no</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
+      
+
+
+
               <!-- <div class="col-md-12 form-group">
                 <a class="btn_3 form-group" type=submit >Proceed</a>
               </div> -->
