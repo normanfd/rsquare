@@ -10,6 +10,7 @@ use App\shirt;
 use App\shoes;
 use App\sweater;
 use App\tshirt;
+use App\ShoesOrder;
 
 class UserController extends Controller
 {
@@ -49,7 +50,7 @@ class UserController extends Controller
         // dd($cardigan);
         return view('user.customorderform.cardiganorder', compact('cardigan'));
     }
-
+// -----------------------------HOODIE---------------------------------------------------
     //fungsi buat nampilin index hoodie
     public function VWHoodie()
     {
@@ -112,7 +113,7 @@ class UserController extends Controller
         
         return view('user.customorderform.shirtorder', compact('shirt'));
     }
-
+// ---------------------------------SHOES---------------------------------------
     //fungsi buat nampilin index shoes
     public function VWShoes()
     {
@@ -155,6 +156,20 @@ class UserController extends Controller
         return view('user.customorderform.sweaterorder', compact('sweater'));
     }
 
+    public function CreateShoesOrder($id)
+    {
+        ShoesOrder::create([
+            'shoes_id' => $id,
+            'user_id' => request('user_id'),
+            'color' => "request('color')",
+            'material' => request('selector_material'),
+            'size' => 12,
+            'amount' => request('amount'),
+            'wa_number' => request('wa_number'),
+            'note' => request('note')
+        ]);
+    }
+// ------------------------------------TSHIRT--------------------------------------------
     //fungsi buat nampilin index Tshirt
     public function VWTshirt()
     {

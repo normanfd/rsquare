@@ -34,9 +34,12 @@ Route::get('/shirt', 'UserController@VWShirt')->name('user.shirt');
 Route::get('/shirt/detail/{id}', 'UserController@DetailShirt')->name('user.detail.shirt');
 Route::get('/shirt/detail/order/{id}', 'UserController@FormOrderShirt')->name('user.order.shirt');
 ##Shoes
-Route::get('/shoes', 'UserController@VWShoes')->name('user.shoes');
-Route::get('/shoes/detail/{id}', 'UserController@DetailShoes')->name('user.detail.shoes');
-Route::get('/shoes/detail/order/{id}', 'UserController@FormOrderShoes')->name('user.order.shoes');
+Route::prefix('/shoes')->group(function(){
+    Route::get('/', 'UserController@VWShoes')->name('user.shoes');
+    Route::get('/detail/{id}', 'UserController@DetailShoes')->name('user.detail.shoes');
+    Route::get('/detail/order/{id}', 'UserController@FormOrderShoes')->name('user.order.shoes');
+    Route::post('/detail/order/{id}', 'UserController@CreateShoesOrder')->name('post.user.order.shoes');
+});
 ##Sweater
 Route::get('/sweater', 'UserController@VWSweater')->name('user.sweater');
 Route::get('/sweater/detail/{id}', 'UserController@DetailSweater')->name('user.detail.sweater');
