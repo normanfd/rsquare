@@ -44,7 +44,7 @@
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
                         <div class="input-group">
-                            <input type="text" class="form-control m-input" name="sweater_name" placeholder="Enter your Category">
+                            <input type="text" class="form-control m-input" name="sweater_name" placeholder="Enter your product name">
                         </div>
                     </div>
                 </div>

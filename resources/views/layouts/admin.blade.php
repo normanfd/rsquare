@@ -407,7 +407,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!-- END: Left Aside -->
 				<div class="m-grid__item m-grid__item--fluid m-wrapper">
 					<!-- BEGIN: Subheader -->
-					<div class="m-subheader ">
+					<!-- <div class="m-subheader ">
 						<div class="d-flex align-items-center">
 							<div class="mr-auto">
 								<h3 class="m-subheader__title ">
@@ -415,7 +415,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</h3>
 							</div>
 						</div>
-					</div>
+					</div> -->
 
                     @yield('content')
 

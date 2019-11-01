@@ -40,11 +40,11 @@
                 </div>
                 <div class="form-group m-form__group row">
                     <label class="col-form-label col-lg-3 col-sm-12">
-                        Shoes Name Category*
+                        Shoes Name*
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
                         <div class="input-group">
-                            <input type="text" class="form-control m-input" name="shoes_name" placeholder="Enter your Category">
+                            <input type="text" class="form-control m-input" name="shoes_name" placeholder="Enter your product name">
                         </div>
                     </div>
                 </div>
