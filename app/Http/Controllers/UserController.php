@@ -12,6 +12,7 @@ use App\sweater;
 use App\tshirt;
 use App\ShoesOrder;
 use App\CardiganOrder;
+use App\JacketOrder;
 
 class UserController extends Controller
 {
@@ -99,7 +100,7 @@ class UserController extends Controller
     
         return view('user.customorderform.hoodieorder', compact('hoodie'));
     }
-
+// --------------------------------jacket--------------------------------------
     //fungsi buat nampilin index jacket
     public function VWJacket()
     {
@@ -121,6 +122,33 @@ class UserController extends Controller
         return view('user.customorderform.jacketorder', compact('jacket'));
     }
 
+    public function CreateJacketOrder($id)
+    {
+        $wa_number = request('wa_number');
+        $name = request('name');
+        $note = request('note');
+
+
+        JacketOrder::create([
+            'jacket_id' => $id,
+            'user_id' => request('user_id'),
+            'color' => request('selector_color'),
+            'collar' => request('selector_collar'),
+            'material' => request('selector_material'),
+            'buttons' => request('selector_button'),
+            'sleeve' => request('selector_arm'),
+            'sleeve_model' => request('selector_armmodel'),
+            'size' => request('size'), //ubah db jadi string
+            'amount' => request('amount'),
+            'wa_number' => request('wa_number'),
+            'note' => "request('note')",
+            'pocket' => request('selector_bag'),
+            'upload_design' => request('selector_bag')
+        ]);
+
+        return view('confirmation', compact('wa_number', 'name', 'note'));
+    }
+//------------------------------------------------SHIRT--------------------------------
     //fungsi buat nampilin index shirt
     public function VWShirt()
     {
@@ -141,6 +169,7 @@ class UserController extends Controller
         
         return view('user.customorderform.shirtorder', compact('shirt'));
     }
+    
 // ---------------------------------SHOES---------------------------------------
     //fungsi buat nampilin index shoes
     public function VWShoes()
