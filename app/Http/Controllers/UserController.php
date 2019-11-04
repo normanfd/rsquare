@@ -11,6 +11,7 @@ use App\shoes;
 use App\sweater;
 use App\tshirt;
 use App\ShoesOrder;
+use App\CardiganOrder;
 
 class UserController extends Controller
 {
@@ -49,6 +50,33 @@ class UserController extends Controller
         $cardigan = cardigan::find($id);
         // dd($cardigan);
         return view('user.customorderform.cardiganorder', compact('cardigan'));
+    }
+
+    public function CreateCardiganOrder($id)
+    {
+        $wa_number = request('wa_number');
+        $name = request('name');
+        $note = request('note');
+
+
+        CardiganOrder::create([
+            'cardigan_id' => $id,
+            'user_id' => request('user_id'),
+            'color' => request('selector_color'),
+            'collar' => request('selector_collar'),
+            'material' => request('selector_material'),
+            'buttons' => request('selector_button'),
+            'sleeve' => request('selector_arm'),
+            'sleeve_model' => request('selector_armmodel'),
+            'size' => request('size'), //ubah db jadi string
+            'amount' => request('amount'),
+            'wa_number' => request('wa_number'),
+            'note' => "request('note')",
+            'pocket' => request('selector_bag'),
+            'upload_design' => request('selector_bag')
+        ]);
+
+        return view('confirmation', compact('wa_number', 'name', 'note'));
     }
 // -----------------------------HOODIE---------------------------------------------------
     //fungsi buat nampilin index hoodie
