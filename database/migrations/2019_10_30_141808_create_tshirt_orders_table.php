@@ -20,7 +20,7 @@ class CreateTshirtOrdersTable extends Migration
             $table->string('material');
             $table->string('color');
             $table->string('sleeve');
-            $table->integer('size');
+            $table->string('size');
             $table->string('upload_design');
             $table->integer('amount');
             $table->string('wa_number');

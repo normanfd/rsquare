@@ -14,6 +14,9 @@ use App\ShoesOrder;
 use App\CardiganOrder;
 use App\JacketOrder;
 use App\HoodieOrder;
+use App\ShirtOrder;
+use App\SweaterOrder;
+use App\TshirtOrder;
 
 class UserController extends Controller
 {
@@ -197,6 +200,32 @@ class UserController extends Controller
         return view('user.customorderform.shirtorder', compact('shirt'));
     }
     
+    public function CreateShirtOrder($id)
+    {
+        $wa_number = request('wa_number');
+        $name = request('name');
+        $note = request('note');
+
+
+        ShirtOrder::create([
+            'shirt_id' => $id,
+            'user_id' => request('user_id'),
+            'color' => request('selector_color'),
+            'collar' => request('selector_collar'),
+            'material' => request('selector_material'),
+            'buttons' => request('selector_button'),
+            'sleeve' => request('selector_arm'),
+            'sleeve_model' => request('selector_armmodel'),
+            'size' => request('size'), //ubah db jadi string
+            'amount' => request('amount'),
+            'wa_number' => request('wa_number'),
+            'note' => "request('note')",
+            'pocket' => request('selector_bag'),
+            'upload_design' => request('selector_bag')
+        ]);
+
+        return view('confirmation', compact('wa_number', 'name', 'note'));
+    }
 // ---------------------------------SHOES---------------------------------------
     //fungsi buat nampilin index shoes
     public function VWShoes()
@@ -219,6 +248,27 @@ class UserController extends Controller
         return view('user.customorderform.shoesorder', compact('shoes'));
     }
 
+    public function CreateShoesOrder($id)
+    {
+        $wa_number = request('wa_number');
+        $name = request('name');
+        $note = request('note');
+
+
+        ShoesOrder::create([
+            'shoes_id' => $id,
+            'user_id' => request('user_id'),
+            'color' => "request('color')",
+            'material' => request('selector_material'),
+            'size' => request('size'),
+            'amount' => request('amount'),
+            'wa_number' => request('wa_number'),
+            'note' => request('note')
+        ]);
+
+        return view('confirmation', compact('wa_number', 'name', 'note'));
+    }
+// --------------------------------SWEATER--------------------------------------
     //fungsi buat nampilin index sweater
     public function VWSweater()
     {
@@ -240,26 +290,31 @@ class UserController extends Controller
         return view('user.customorderform.sweaterorder', compact('sweater'));
     }
 
-    public function CreateShoesOrder($id)
+    public function CreateSweaterOrder($id)
     {
         $wa_number = request('wa_number');
         $name = request('name');
         $note = request('note');
 
 
-        ShoesOrder::create([
-            'shoes_id' => $id,
+        SweaterOrder::create([
+            'sweater_id' => $id,
             'user_id' => request('user_id'),
-            'color' => "request('color')",
+            'color' => request('selector_color'),
+            'collar' => request('selector_collar'),
             'material' => request('selector_material'),
+            'sleeve' => request('selector_arm'),
+            'sleeve_model' => request('selector_armmodel'),
             'size' => request('size'),
             'amount' => request('amount'),
             'wa_number' => request('wa_number'),
-            'note' => request('note')
+            'note' => "request('note')",
+            'pocket' => request('selector_bag'),
+            'upload_design' => request('selector_bag')
         ]);
 
         return view('confirmation', compact('wa_number', 'name', 'note'));
-    }
+    }    
 // ------------------------------------TSHIRT--------------------------------------------
     //fungsi buat nampilin index Tshirt
     public function VWTshirt()
@@ -280,5 +335,28 @@ class UserController extends Controller
         $tshirt = tshirt::find($id);
         
         return view('user.customorderform.tshirtorder', compact('tshirt'));
+    }
+
+    public function CreateTshirtOrder($id)
+    {
+        $wa_number = request('wa_number');
+        $name = request('name');
+        $note = request('note');
+
+
+        TshirtOrder::create([
+            'tshirt_id' => $id,
+            'user_id' => request('user_id'),
+            'color' => request('selector_color'),
+            'material' => request('selector_material'),
+            'sleeve' => request('selector_arm'),
+            'size' => request('size'),
+            'amount' => request('amount'),
+            'wa_number' => request('wa_number'),
+            'note' => "request('note')",
+            'upload_design' => "request('selector_bag')"
+        ]);
+
+        return view('confirmation', compact('wa_number', 'name', 'note'));
     }
 }

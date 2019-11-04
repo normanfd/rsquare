@@ -23,7 +23,7 @@ class CreateSweaterOrdersTable extends Migration
             $table->string('sleeve');
             $table->string('sleeve_model');
             $table->string('pocket');
-            $table->integer('size');
+            $table->string('size');
             $table->string('upload_design');
             $table->integer('amount');
             $table->string('wa_number');
