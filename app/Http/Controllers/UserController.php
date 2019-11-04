@@ -13,6 +13,7 @@ use App\tshirt;
 use App\ShoesOrder;
 use App\CardiganOrder;
 use App\JacketOrder;
+use App\HoodieOrder;
 
 class UserController extends Controller
 {
@@ -99,6 +100,32 @@ class UserController extends Controller
         $hoodie = hoodie::find($id);
     
         return view('user.customorderform.hoodieorder', compact('hoodie'));
+    }
+
+    public function CreateHoodieOrder($id)
+    {
+        $wa_number = request('wa_number');
+        $name = request('name');
+        $note = request('note');
+
+
+        HoodieOrder::create([
+            'hoodie_id' => $id,
+            'user_id' => request('user_id'),
+            'color' => request('selector_color'),
+            'collar' => request('selector_collar'),
+            'material' => request('selector_material'),
+            'sleeve' => request('selector_arm'),
+            'sleeve_model' => request('selector_armmodel'),
+            'size' => request('size'),
+            'amount' => request('amount'),
+            'wa_number' => request('wa_number'),
+            'note' => "request('note')",
+            'pocket' => request('selector_bag'),
+            'upload_design' => request('selector_bag')
+        ]);
+
+        return view('confirmation', compact('wa_number', 'name', 'note'));
     }
 // --------------------------------jacket--------------------------------------
     //fungsi buat nampilin index jacket

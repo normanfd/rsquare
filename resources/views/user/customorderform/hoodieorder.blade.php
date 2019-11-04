@@ -9,7 +9,7 @@
         <div class="row">
           <div class="col-lg-8">
             <h4>Order Hoodie Details</h4>
-            <form class="row contact_form" action="{{ route('post.user.order.jacket', $hoodie->id) }}" method="post" novalidate="novalidate">
+            <form class="row contact_form" action="{{ route('post.user.order.hoodie', $hoodie->id) }}" method="post" novalidate="novalidate">
               {{ csrf_field() }}
               <div class="col-md-6 form-group p_star">
                 <input type="text" class="form-control" id="wa_number" name="wa_number" value=""/>
