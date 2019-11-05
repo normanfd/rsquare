@@ -10,7 +10,7 @@ use App\Shirt;
 use App\Shoes;
 use App\Sweater;
 use App\Tshirt;
-
+//--------------------------------LAMAN ADMIN-------------------------------------------
 class CustomProductController extends Controller
 {
     

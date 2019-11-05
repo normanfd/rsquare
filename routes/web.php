@@ -75,6 +75,7 @@ Route::prefix('/tshirt')->group(function(){
 
 
 Route::prefix('admin')->group(function() {
+//------------------------------------------Route untuk CRUD Produk-------------------------------------------------------------
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
@@ -124,5 +125,8 @@ Route::prefix('admin')->group(function() {
     Route::get('/edittshirt/{id}', 'CustomProductController@EditCustomTshirt')->name('admin.Editcustomtshirt');
     Route::patch('/edittshirt/{id}', 'CustomProductController@PostEditCustomTshirt')->name('admin.PostEditcustomtshirt');
     Route::delete('/deletetshirt/{id}', 'CustomProductController@DeleteCustomTshirt')->name('admin.Deletecustomtshirt');
+
+    //--------------------------------------------------Order Admin-------------------------------------------------------
+    Route::get('/cardiganorder', 'AdminOrderController@CardiganOrder')->name('admin.cardiganorder');
     
   });
