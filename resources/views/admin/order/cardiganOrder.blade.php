@@ -1,5 +1,4 @@
 <!-- Mendapatkan data cardigan -->
-
 @foreach($order as $cardigan)
     <h5>Order {{$cardigan->id}}</h5>
     id : {{$cardigan->cardigan_id}}
