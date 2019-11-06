@@ -150,4 +150,6 @@ Route::prefix('admin')->group(function() {
     //Jacket
     Route::get('/tshirtorder', 'AdminOrderController@TshirtOrder')->name('admin.jacketorder');
     
+    // View Custom Product\
+    Route::get('/vwcustomproduct', 'CustomProductController@VwCustomProduct')->name('admin.vwcustomproduct');
   });

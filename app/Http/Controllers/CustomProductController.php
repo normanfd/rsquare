@@ -323,4 +323,11 @@ class CustomProductController extends Controller
         return redirect('admin/');
     }
 
+    // ====================== View Custom Product =========================
+
+    public function VwCustomProduct()
+    {
+        return view('admin.customproduct.vwcustomproduct');
+    }
+
 }
