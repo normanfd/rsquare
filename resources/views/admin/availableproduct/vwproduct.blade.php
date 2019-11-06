@@ -2,16 +2,53 @@
 @extends('layouts.admin')
 
 @section('content')
+<div class="m-content">
 
-@foreach($product as $produk)
-    <h6>produk id : {{ $produk->id }}</h6>
-    produk kategori : {{ $produk->category->category_name }}
-    nama produk : {{ $produk->product_name }}
-    harga produk : {{ $produk->product_price }}
-    <br>
-    <img src="../storage/{{ $produk->product_image }}" alt="ini gambar cardigan" width=200 height=200>
+    <!--begin:: Widgets/New Users-->
+    <div class="m-portlet m-portlet--full-height ">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <h3 class="m-portlet__head-text">
+                        View Available Product
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="m-portlet__body">
+            <div class="tab-content">
+                <div class="tab-pane active" id="m_widget4_tab1_content">
 
-    <a class="btn btn-primary" href=" {{ route('admin.EditAvailProduct', $produk->id)}}" role="button">Edit</a>
+                    <!--begin::Widget 14-->
+                    @foreach($product as $produk)
+                    <div class="m-widget4">
+                        <div class="m-widget4__item">
+                            <div class="m-widget4__img m-widget4__img--pic">
+                                <img src="../storage/{{ $produk->product_image }}" alt="" width="50" height="50">
+                            </div>
+                            <div class="m-widget4__info">
+                                <span class="m-widget4__title">
+                                    {{ $produk->category->category_name }} || {{ $produk->product_name }}
+                                </span>
+                                <br>
+                                <span class="m-widget4__sub">
+                                    harga produk : {{ $produk->product_price }}
+                                </span>
+                            </div>
+                            <div class="m-widget4__ext">
+                                <a href="{{ route('admin.EditAvailProduct', $produk->id)}}" class="m-btn m-btn--pill m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     
-@endforeach
+    
+    
+    
+
 @endsection
