@@ -1,4 +1,8 @@
 <!-- Mendapatkan data available product -->
+@extends('layouts.admin')
+
+@section('content')
+
 @foreach($product as $produk)
     <h6>produk id : {{ $produk->id }}</h6>
     produk kategori : {{ $produk->category->category_name }}
@@ -8,3 +12,4 @@
     <img src="../storage/{{ $produk->product_image }}" alt="ini gambar cardigan" width=200 height=200>
     
 @endforeach
+@endsection

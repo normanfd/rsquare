@@ -375,7 +375,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<i class="m-menu__section-icon flaticon-more-v3"></i>
 							</li>
 							<li class="m-menu__item " aria-haspopup="true" >
-								<a  href="{{ route('admin.VWAvailProduct') }}" class="m-menu__link ">
+								<a  href="{{ route('admin.listavailableproduct') }}" class="m-menu__link ">
 									<i class="m-menu__link-icon flaticon-line-graph"></i>
 									<span class="m-menu__link-title">
 										<span class="m-menu__link-wrap">
