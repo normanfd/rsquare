@@ -8,8 +8,8 @@
             <div class="col-lg-5">
                 <div class="product_slider_img">
                     <div id="vertical">
-                        <div data-thumb="../../storage/{{$cardigan->cardigan_image}}">
-                            <img src="../../storage/{{$cardigan->cardigan_image}}" alt="ini gambar cardigan" />
+                        <div data-thumb="../../../storage/{{$cardigan->cardigan_image}}">
+                            <img src="../../../storage/{{$cardigan->cardigan_image}}" alt="ini gambar cardigan" />
                         </div>
                     </div>
                 </div>
