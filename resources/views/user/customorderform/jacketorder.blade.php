@@ -9,7 +9,7 @@
         <div class="row">
           <div class="col-lg-8">
             <h4>Order Jacket Details</h4>
-            <form class="row contact_form" action="{{ route('post.user.order.jacket', $jacket->id) }}" method="post" novalidate="novalidate">
+            <form class="row contact_form" action="{{ route('post.user.order.jacket', $jacket->id) }}" method="post" novalidate="novalidate" enctype="multipart/form-data">
               {{ csrf_field() }}
               <div class="col-md-6 form-group p_star">
                 <input type="text" class="form-control" id="wa_number" name="wa_number" placeholder="Nomor Whatsapp" required/>
