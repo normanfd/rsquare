@@ -127,6 +127,9 @@ Route::prefix('admin')->group(function() {
     Route::delete('/deletetshirt/{id}', 'CustomProductController@DeleteCustomTshirt')->name('admin.Deletecustomtshirt');
 
     //--------------------------------------------------Order Admin-------------------------------------------------------
+    //cardigan
     Route::get('/cardiganorder', 'AdminOrderController@CardiganOrder')->name('admin.cardiganorder');
+    //Hoodie
+    Route::get('/hoodieorder', 'AdminOrderController@HoodieOrder')->name('admin.hoodieorder');
     
   });

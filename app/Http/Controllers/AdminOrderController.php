@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\CardiganOrder;
-use App\JacketOrder;
 use App\HoodieOrder;
+use App\JacketOrder;
 use App\ShirtOrder;
 use App\ShoesOrder;
 use App\SweaterOrder;
@@ -22,5 +22,12 @@ class AdminOrderController extends Controller
         $order = CardiganOrder::all();
         // dd($order);
         return view('admin.order.cardiganOrder', compact('order'));
+    }
+    
+    public function HoodieOrder()
+    {
+        $order = HoodieOrder::all();
+        // dd($order);
+        return view('admin.order.hoodieorder', compact('order'));
     }
 }
