@@ -87,6 +87,8 @@ Route::prefix('admin')->group(function() {
     Route::get('/listavailableproduct', 'AvailableProductController@listavailableproduct')->name('admin.listavailableproduct');
     // Edit
     Route::get('/Editavailableproduct/{id}', 'AvailableProductController@EditAvailableProduct')->name('admin.EditAvailProduct');
+    Route::patch('/Editavailableproduct/{id}', 'AvailableProductController@PostEditAvailableProduct')->name('admin.PostEditAvailableProduct');
+    
 
     // Custom Cardigan
     Route::get('/addcustomcardigan', 'CustomProductController@FormAddCustomCardigan')->name('admin.addcustomcardigan');
