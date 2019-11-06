@@ -11,20 +11,17 @@
             <h4>Order Cardigan Details</h4>
             <form class="row contact_form" action="{{ route('post.user.order.cardigan', $cardigan->id) }}" method="post" novalidate="novalidate">
               {{ csrf_field() }}
+              
               <div class="col-md-6 form-group p_star">
-                <input type="text" class="form-control" id="wa_number" name="wa_number"/>
-                <span class="placeholder" data-placeholder="Whatsapp number"></span>
+                <input type="text" class="form-control" id="wa_number" name="wa_number" placeholder="Nomor Whatsapp" required/>
               </div>
+              
               <div class="col-md-6 form-group p_star">
-                <input type="text" class="form-control" id="email" name="email" />
-                <span class="placeholder" data-placeholder="Email Address"></span>
+                <input type="text" class="form-control" id="user_id" name="user_id" value="Nama Anda = {{ Auth::getUser()->name}}" readonly/>
               </div>
+
               <div class="col-md-6 form-group p_star">
-                <input type="text" class="form-control" id="user_id" name="user_id" value="{{ Auth::getUser()->name}}" readonly/>
-              </div>
-              <div class="col-md-6 form-group p_star">
-                <input type="text" class="form-control" id="amount" name="amount" />
-                <span class="placeholder" data-placeholder="Order Amount"></span>
+                <input type="number" class="form-control" id="amount" name="amount" placeholder="Jumlah Order"/>
               </div>
 
               <h4 class="col-md-12"> Cardigan Material</h4>
@@ -214,12 +211,18 @@
                   </div>
               </div>
 
+              <div class="col-md-12 form-group">
+                <h4>Order Cardigan Note</h4>
+                <textarea class="form-control" name="note" id="message" rows="1"
+                  placeholder="Order Notes"></textarea>
+              </div>
+
 
               <!-- <div class="col-md-12 form-group">
                 <a class="btn_3 form-group" type=submit >Proceed</a>
               </div> -->
-              <button type="submit" class="btn btn-success">
-                Create
+              <button type="submit" class="col-md-3 btn_3 form-group">
+                Proceed
               </button>
               
               <input type="text" class="form-control" id="user_id" name="user_id" value="{{ Auth::getUser()->id}}" hidden/>

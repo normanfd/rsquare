@@ -1,4 +1,8 @@
 <!-- Mendapatkan data available product -->
+@extends('layouts.admin')
+
+@section('content')
+
 @foreach($product as $produk)
     <h6>produk id : {{ $produk->id }}</h6>
     produk kategori : {{ $produk->category->category_name }}
@@ -10,3 +14,4 @@
     <a class="btn btn-primary" href=" {{ route('admin.EditAvailProduct', $produk->id)}}" role="button">Edit</a>
     
 @endforeach
+@endsection

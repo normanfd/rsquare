@@ -12,19 +12,15 @@
             <form class="row contact_form" action="{{ route('post.user.order.jacket', $jacket->id) }}" method="post" novalidate="novalidate">
               {{ csrf_field() }}
               <div class="col-md-6 form-group p_star">
-                <input type="text" class="form-control" id="wa_number" name="wa_number" value=""/>
-                <span class="placeholder" data-placeholder="Whatsapp number"></span>
+                <input type="text" class="form-control" id="wa_number" name="wa_number" placeholder="Nomor Whatsapp" required/>
               </div>
+              
               <div class="col-md-6 form-group p_star">
-                <input type="text" class="form-control" id="email" name="email" />
-                <span class="placeholder" data-placeholder="Email Address"></span>
+                <input type="text" class="form-control" id="user_id" name="user_id" value="Nama Anda = {{ Auth::getUser()->name}}" readonly/>
               </div>
+
               <div class="col-md-6 form-group p_star">
-                <input type="text" class="form-control" id="user_id" name="user_id" value="{{ Auth::getUser()->name}}" readonly/>
-              </div>
-              <div class="col-md-6 form-group p_star">
-                <input type="text" class="form-control" id="amount" name="amount" />
-                <span class="placeholder" data-placeholder="Order Amount"></span>
+                <input type="number" class="form-control" id="amount" name="amount" placeholder="Jumlah Order"/>
               </div>
 
               <h4 class="col-md-12"> Jacket Material</h4>
@@ -245,6 +241,12 @@
                   <div class="form-control">
                       <input type="file" name="jacket_design">
                   </div>
+              </div>
+
+              <div class="col-md-12 form-group">
+                <h4>Order Jacket Note</h4>
+                <textarea class="form-control" name="note" id="message" rows="1"
+                  placeholder="Order Notes"></textarea>
               </div>
 
 
