@@ -131,5 +131,15 @@ Route::prefix('admin')->group(function() {
     Route::get('/cardiganorder', 'AdminOrderController@CardiganOrder')->name('admin.cardiganorder');
     //Hoodie
     Route::get('/hoodieorder', 'AdminOrderController@HoodieOrder')->name('admin.hoodieorder');
+    //Jacket
+    Route::get('/jacketorder', 'AdminOrderController@JacketOrder')->name('admin.jacketorder');
+    //Jacket
+    Route::get('/shirtorder', 'AdminOrderController@ShirtOrder')->name('admin.shirtorder');
+    //Jacket
+    Route::get('/shoesorder', 'AdminOrderController@ShoesOrder')->name('admin.shoesorder');
+    //Jacket
+    Route::get('/sweaterorder', 'AdminOrderController@SweaterOrder')->name('admin.sweaterorder');
+    //Jacket
+    Route::get('/tshirtorder', 'AdminOrderController@TshirtOrder')->name('admin.jacketorder');
     
   });

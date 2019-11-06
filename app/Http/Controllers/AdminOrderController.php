@@ -30,4 +30,39 @@ class AdminOrderController extends Controller
         // dd($order);
         return view('admin.order.hoodieorder', compact('order'));
     }
+
+    public function JacketOrder()
+    {
+        $order = JacketOrder::all();
+        // dd($order);
+        return view('admin.order.jacketorder', compact('order'));
+    }
+
+    public function ShirtOrder()
+    {
+        $order = ShirtOrder::all();
+        // dd($order);
+        return view('admin.order.shirtorder', compact('order'));
+    }
+
+    public function ShoesOrder()
+    {
+        $order = ShoesOrder::all();
+        // dd($order);
+        return view('admin.order.shoesorder', compact('order'));
+    }
+
+    public function SweaterOrder()
+    {
+        $order = SweaterOrder::all();
+        // dd($order);
+        return view('admin.order.sweaterorder', compact('order'));
+    }
+
+    public function TshirtOrder()
+    {
+        $order = TshirtOrder::all();
+        // dd($order);
+        return view('admin.order.tshirtorder', compact('order'));
+    }
 }
