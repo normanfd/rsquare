@@ -10,6 +10,8 @@
     harga produk : {{ $produk->product_price }}
     <br>
     <img src="../storage/{{ $produk->product_image }}" alt="ini gambar cardigan" width=200 height=200>
+
+    <a class="btn btn-primary" href=" {{ route('admin.EditAvailProduct', $produk->id)}}" role="button">Edit</a>
     
 @endforeach
 @endsection

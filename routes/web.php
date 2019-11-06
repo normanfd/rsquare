@@ -85,6 +85,8 @@ Route::prefix('admin')->group(function() {
     Route::post('/VWAvailableProduct', 'AvailableProductController@StoreAvailableProduct')->name('admin.StoreAvailProduct');
     // Read
     Route::get('/listavailableproduct', 'AvailableProductController@listavailableproduct')->name('admin.listavailableproduct');
+    // Edit
+    Route::get('/Editavailableproduct/{id}', 'AvailableProductController@EditAvailableProduct')->name('admin.EditAvailProduct');
 
     // Custom Cardigan
     Route::get('/addcustomcardigan', 'CustomProductController@FormAddCustomCardigan')->name('admin.addcustomcardigan');

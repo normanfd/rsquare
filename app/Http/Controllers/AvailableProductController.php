@@ -59,5 +59,11 @@ class AvailableProductController extends Controller
         $product = AvailableProduct::all();
         return view('admin.availableproduct.vwproduct', compact('product'));
     }
+
+    public function EditAvailableProduct($id)
+    {
+        $product = AvailableProduct::find($id);
+        return view('admin.availableproduct.editproduct', compact('product'));
+    }
     
 }
