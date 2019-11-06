@@ -37,6 +37,11 @@
                             </div>
                             <div class="m-widget4__ext">
                                 <a href="{{ route('admin.EditAvailProduct', $produk->id)}}" class="m-btn m-btn--pill m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
+                                <form action="{{ route('admin.DeleteAvailProduct', $produk->id) }}" method="post">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+                                    <button type="submit">Delete</button>
+                                </form>
                             </div>
                         </div>
                     </div>

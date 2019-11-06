@@ -86,4 +86,13 @@ class AvailableProductController extends Controller
         ]);
         return redirect()->route('admin.listavailableproduct', compact('product'));
     }
+
+    public function DeleteAvailableProduct($id)
+    {
+        $single_product = AvailableProduct::find($id);
+        $single_product->delete();
+        $product = AvailableProduct::all();
+        
+        return redirect()->route('admin.listavailableproduct', compact('product'));
+    }
 }
