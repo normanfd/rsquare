@@ -53,7 +53,15 @@ Harga produk : {{$product->product_price}}
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
                         <select class="form-control m-input" name="category_id" id="category_id">
-                            <!-- perulangan data category -->
+                            @foreach ($categories as $cat)
+                            <option value="{{ $cat->id }}"
+                                @if ( $cat->id === $product->category_id )
+                                    selected
+                                @endif
+                            >   
+                                {{ $cat->category_name }}
+                            </option>
+                            @endforeach
                         </select>
                         <span class="m-form__help">
                             Please select an option.
