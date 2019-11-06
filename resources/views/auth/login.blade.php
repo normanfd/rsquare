@@ -1,12 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>winter</title>
-    <link rel="icon" href="img/favicon.png">
+    <title>Rsquare</title>
+    <link rel="icon" href="{{asset('winter/img/favicon.png')}}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('winter/css/bootstrap.min.css')}}">
     <!-- animate CSS -->
@@ -17,7 +18,7 @@
     <link rel="stylesheet" href="{{asset('winter/css/all.css')}}">
     <link rel="stylesheet" href="{{asset('winter/css/nice-select.css')}}">
     <!-- flaticon CSS -->
-    <link rel="stylesheet" href="{{asset('winter/css/flaticon.css')">
+    <link rel="stylesheet" href="{{asset('winter/css/flaticon.css')}}">
     <link rel="stylesheet" href="{{asset('winter/css/themify-icons.css')}}">
     <!-- font awesome CSS -->
     <link rel="stylesheet" href="{{asset('winter/css/magnific-popup.css')}}">
@@ -28,6 +29,7 @@
     <!-- style CSS -->
     <link rel="stylesheet" href="{{asset('winter/css/style.css')}}">
 </head>
+
 <body>
     <!--================login_part Area =================-->
     <section class="login_part section_padding">
@@ -39,7 +41,7 @@
                             <h2>New to our Shop?</h2>
                             <p>There are advances being made in science and technology
                                 everyday, and a good example of this is the</p>
-                            <a href="#" class="btn_3">Create an Account</a>
+                            <a href="{{ route('register') }}" class="btn_3">Create an Account</a>
                         </div>
                     </div>
                 </div>
@@ -75,4 +77,34 @@
         </div>
     </section>
     <!--================login_part end =================-->
+
+<!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="{{asset('winter/js/jquery-1.12.1.min.js')}}"></script>
+    <!-- popper js -->
+    <script src="{{asset('winter/js/popper.min.js')}}"></script>
+    <!-- bootstrap js -->
+    <script src="{{asset('winter/js/bootstrap.min.js')}}"></script>
+    <!-- easing js -->
+    <script src="{{asset('winter/js/jquery.magnific-popup.js')}}"></script>
+    <!-- swiper js -->
+    <script src="{{asset('winter/js/swiper.min.js')}}"></script>
+    <!-- swiper js -->
+    
+    <!-- particles js -->
+    <script src="{{asset('winter/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('winter/js/jquery.nice-select.min.js')}}"></script>
+    <!-- slick js -->
+    <script src="{{asset('winter/js/slick.min.js')}}"></script>
+    <script src="{{asset('winter/js/jquery.counterup.min.js')}}"></script>
+    <script src="{{asset('winter/js/waypoints.min.js')}}"></script>
+    <script src="{{asset('winter/js/contact.js')}}"></script>
+    <script src="{{asset('winter/js/jquery.ajaxchimp.min.js')}}"></script>
+    <script src="{{asset('winter/js/jquery.form.js')}}"></script>
+    <script src="{{asset('winter/js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('winter/js/mail-script.js')}}"></script>
+    <script src="{{asset('winter/js/stellar.js')}}"></script>
+    <script src="{{asset('winter/js/price_rangs.js')}}"></script>
+    <!-- custom js -->
+    <script src="{{asset('winter/js/custom.js')}}"></script>
 </body>
