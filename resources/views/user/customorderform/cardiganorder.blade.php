@@ -207,6 +207,13 @@
                 </select>
               </div>
 
+              <div class="col-md-12 form-group">
+                  <h4>Desain Cardigan</h4>
+                  <div class="form-control">
+                      <input type="file" name="cardigan_design">
+                  </div>
+              </div>
+
 
               <!-- <div class="col-md-12 form-group">
                 <a class="btn_3 form-group" type=submit >Proceed</a>

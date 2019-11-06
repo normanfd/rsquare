@@ -91,12 +91,20 @@
                   <option value="44">44</option>
                 </select>
               </div>
+              
+              <div class="col-md-12 form-group">
+                  <h4>Design Image</h4>
+                  <div class="form-control">
+                      <input type="file" name="shoes_design">
+                  </div>
+              </div>
 
               <div class="col-md-12 form-group">
                 <h4>Order Shoes Note</h4>
                 <textarea class="form-control" name="note" id="message" rows="1"
                   placeholder="Order Notes"></textarea>
               </div>
+
               <div class="col-md-12 form-group">
                 <button type="submit" class="btn_3">Submit</button>
               </div>
