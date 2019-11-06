@@ -15,42 +15,54 @@ use App\User;
 //Controller untuk Admin melihat orderan yang masuk dan mengedit orderan sesuai perubahan keputusan user
 class AdminOrderController extends Controller
 {
+    public function ShowAllOrder()
+    {
+        $cardigan = CardiganOrder::all();
+        $hoodie = HoodieOrder::all();
+        $jacket = JacketOrder::all();
+        $shirt = ShirtOrder::all();
+        $shoes = ShoesOrder::all();
+        $sweater = SweaterOrder::all();
+        $tshirt = TshirtOrder::all();
+
+        return view('admin.order.vwallorder', compact('cardigan', 'hoodie', 'jacket', 'shirt', 'shoes', 'sweater', 'tshirt'));
+    }
     //-------------------------CARDIGAN-------------------------
 
-    public function CardiganOrder()
-    {
-        $order = CardiganOrder::all();
-        // dd($order);
-        return view('admin.order.cardiganOrder', compact('order'));
-    }
+    // public function CardiganOrder()
+    // {
+    //     $order = CardiganOrder::all();
+    //     // dd($order);
+    //     return view('admin.order.cardiganOrder', compact('order'));
+    // }
     
-    public function HoodieOrder()
-    {
-        $order = HoodieOrder::all();
-        // dd($order);
-        return view('admin.order.hoodieorder', compact('order'));
-    }
+    // public function HoodieOrder()
+    // {
+    //     $order = HoodieOrder::all();
+    //     // dd($order);
+    //     return view('admin.order.hoodieorder', compact('order'));
+    // }
 
-    public function JacketOrder()
-    {
-        $order = JacketOrder::all();
-        // dd($order);
-        return view('admin.order.jacketorder', compact('order'));
-    }
+    // public function JacketOrder()
+    // {
+    //     $order = JacketOrder::all();
+    //     // dd($order);
+    //     return view('admin.order.jacketorder', compact('order'));
+    // }
 
-    public function ShirtOrder()
-    {
-        $order = ShirtOrder::all();
-        // dd($order);
-        return view('admin.order.shirtorder', compact('order'));
-    }
+    // public function ShirtOrder()
+    // {
+    //     $order = ShirtOrder::all();
+    //     // dd($order);
+    //     return view('admin.order.shirtorder', compact('order'));
+    // }
 
-    public function ShoesOrder()
-    {
-        $order = ShoesOrder::all();
-        // dd($order);
-        return view('admin.order.shoesorder', compact('order'));
-    }
+    // public function ShoesOrder()
+    // {
+    //     $order = ShoesOrder::all();
+    //     // dd($order);
+    //     return view('admin.order.shoesorder', compact('order'));
+    // }
 
     public function SweaterOrder()
     {
