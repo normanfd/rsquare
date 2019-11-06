@@ -32,7 +32,7 @@ class CreateCardiganOrdersTable extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
-            $table->foreign('cardigan_id')->references('id')->on('shoes')->onDelete('CASCADE');
+            $table->foreign('cardigan_id')->references('id')->on('cardigans')->onDelete('CASCADE');
         });
     }
 

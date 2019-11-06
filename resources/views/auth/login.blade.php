@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.user')
 
 @section('content')
 
@@ -38,9 +38,8 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="login_part_text text-center">
                         <div class="login_part_text_iner">
-                            <h2>RSquare</h2>
-                            <p>Make Your Aesthetic Expression with Your Fashion
-                            </p>
+                            <h2>Rsquare</h2>
+                            <p>Make Your Aesthetic Expression With Your Fashion</p>
                             <a href="{{ route('register') }}" class="btn_3">Create an Account</a>
                         </div>
                     </div>
@@ -50,37 +49,35 @@
                         <div class="login_part_form_iner">
                             <h3>Welcome Back ! <br>
                                 Please Sign in now</h3>
-                                <form class="m-login__form m-form" method="POST" action="{{ route('login') }}">
-                                {{ csrf_field() }}
-                                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} m-form__group">
-                                        <input id="email" class="form-control m-input"   type="email" placeholder="Email" value="{{ old('email') }}" name="email">
-                                        @if ($errors->has('email'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('email') }}</strong>
-                                            </span>
-                                        @endif
+                            <form class="row contact_form" method="POST" action="{{ route('login') }}">
+                            {{ csrf_field() }}
+                                <div class="col-md-12 form-group p_star{{ $errors->has('email') ? ' has-error' : '' }}">
+                                    <input id="email" class="form-control m-input"   type="email" placeholder="Email" value="{{ old('email') }}" name="email" autocomplete="off">
+                                    @if ($errors->has('email'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-12 form-group p_star{{ $errors->has('password') ? ' has-error' : '' }}">
+                                    <input id="password" class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password">
+                                    @if ($errors->has('password'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('password') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <div class="creat_account d-flex align-items-center">
+                                        <input type="checkbox" id="f-option" name="selector">
+                                        <label for="f-option">Remember me</label>
                                     </div>
-                                    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }} m-form__group">
-                                        <input id="password" class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password">
-                                        @if ($errors->has('password'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('password') }}</strong>
-                                            </span>
-                                        @endif
-                                    </div>
-                                    <div class="col-md-12 form-group">
-                                        <div class="creat_account d-flex align-items-center">
-                                            <input type="checkbox" id="f-option" name="selector">
-                                            <label for="f-option">Remember me</label>
-                                        </div>
-                                        <button type="submit" value="submit" class="btn_3">
+                                    <button type="submit" value="submit" class="btn_3">
                                         log in
-                                        </button>
-                                        <a class="lost_pass" href="#">forget password?</a>
-                                    </div>
-                                </form>
-                            </div>
-                            
+                                    </button>
+                                    <a class="lost_pass" href="#">forget password?</a>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

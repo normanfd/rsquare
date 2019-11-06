@@ -87,13 +87,6 @@
                   <option value="44">44</option>
                 </select>
               </div>
-              
-              <div class="col-md-12 form-group">
-                  <h4>Design Image</h4>
-                  <div class="form-control">
-                      <input type="file" name="shoes_design">
-                  </div>
-              </div>
 
               <div class="col-md-12 form-group">
                 <h4>Order Shoes Note</h4>

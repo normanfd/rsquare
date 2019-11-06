@@ -9,7 +9,7 @@
         <div class="row">
           <div class="col-lg-8">
             <h4>Order Cardigan Details</h4>
-            <form class="row contact_form" action="{{ route('post.user.order.cardigan', $cardigan->id) }}" method="post" novalidate="novalidate">
+            <form class="row contact_form" action="{{ route('post.user.order.cardigan', $cardigan->id) }}" method="post" novalidate="novalidate" enctype="multipart/form-data">
               {{ csrf_field() }}
               
               <div class="col-md-6 form-group p_star">
@@ -205,7 +205,7 @@
               </div>
 
               <div class="col-md-12 form-group">
-                  <h4>Desain Cardigan</h4>
+                  <h4>Desain Cardigan (Optional)</h4>
                   <div class="form-control">
                       <input type="file" name="cardigan_design">
                   </div>
@@ -213,7 +213,7 @@
 
               <div class="col-md-12 form-group">
                 <h4>Order Cardigan Note</h4>
-                <textarea class="form-control" name="note" id="message" rows="1"
+                <textarea class="form-control" name="note" id="note" rows="1"
                   placeholder="Order Notes"></textarea>
               </div>
 

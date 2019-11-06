@@ -57,12 +57,17 @@ class UserController extends Controller
         return view('user.customorderform.cardiganorder', compact('cardigan'));
     }
 
-    public function CreateCardiganOrder($id)
+    public function CreateCardiganOrder($id, Request $request)
     {
         $wa_number = request('wa_number');
         $name = request('name');
         $note = request('note');
-
+        
+        if(request('cardigan_design')!= null){
+            $photo = $request->file('cardigan_design')->store('user_cardigan_images');
+        }else{
+            $photo = "null";
+        }
 
         CardiganOrder::create([
             'cardigan_id' => $id,
@@ -73,12 +78,12 @@ class UserController extends Controller
             'buttons' => request('selector_button'),
             'sleeve' => request('selector_arm'),
             'sleeve_model' => request('selector_armmodel'),
-            'size' => request('size'), //ubah db jadi string
+            'size' => request('size'),
             'amount' => request('amount'),
             'wa_number' => request('wa_number'),
-            'note' => "request('note')",
+            'note' => request('note'),
             'pocket' => request('selector_bag'),
-            'upload_design' => request('selector_bag')
+            'upload_design' => $photo
         ]);
 
         return view('confirmation', compact('wa_number', 'name', 'note'));
@@ -105,12 +110,17 @@ class UserController extends Controller
         return view('user.customorderform.hoodieorder', compact('hoodie'));
     }
 
-    public function CreateHoodieOrder($id)
+    public function CreateHoodieOrder($id, Request $request)
     {
         $wa_number = request('wa_number');
         $name = request('name');
         $note = request('note');
-
+        
+        if(request('hoodie_design')!= null){
+            $photo = $request->file('hoodie_design')->store('user_hoodie_images');
+        }else{
+            $photo = "null";
+        }
 
         HoodieOrder::create([
             'hoodie_id' => $id,
@@ -123,9 +133,9 @@ class UserController extends Controller
             'size' => request('size'),
             'amount' => request('amount'),
             'wa_number' => request('wa_number'),
-            'note' => "request('note')",
+            'note' => request('note'),
             'pocket' => request('selector_bag'),
-            'upload_design' => request('selector_bag')
+            'upload_design' => $photo
         ]);
 
         return view('confirmation', compact('wa_number', 'name', 'note'));
@@ -152,12 +162,17 @@ class UserController extends Controller
         return view('user.customorderform.jacketorder', compact('jacket'));
     }
 
-    public function CreateJacketOrder($id)
+    public function CreateJacketOrder($id, Request $request)
     {
         $wa_number = request('wa_number');
         $name = request('name');
         $note = request('note');
 
+        if(request('jacket_design')!= null){
+            $photo = $request->file('jacket_design')->store('user_jacket_images');
+        }else{
+            $photo = "null";
+        }
 
         JacketOrder::create([
             'jacket_id' => $id,
@@ -168,12 +183,12 @@ class UserController extends Controller
             'buttons' => request('selector_button'),
             'sleeve' => request('selector_arm'),
             'sleeve_model' => request('selector_armmodel'),
-            'size' => request('size'), //ubah db jadi string
+            'size' => request('size'),
             'amount' => request('amount'),
             'wa_number' => request('wa_number'),
-            'note' => "request('note')",
+            'note' => request('note'),
             'pocket' => request('selector_bag'),
-            'upload_design' => request('selector_bag')
+            'upload_design' => $photo
         ]);
 
         return view('confirmation', compact('wa_number', 'name', 'note'));
@@ -200,12 +215,17 @@ class UserController extends Controller
         return view('user.customorderform.shirtorder', compact('shirt'));
     }
     
-    public function CreateShirtOrder($id)
+    public function CreateShirtOrder($id, Request $request)
     {
         $wa_number = request('wa_number');
         $name = request('name');
         $note = request('note');
 
+        if(request('shirt_design')!= null){
+            $photo = $request->file('shirt_design')->store('user_shirt_images');
+        }else{
+            $photo = "null";
+        }
 
         ShirtOrder::create([
             'shirt_id' => $id,
@@ -216,12 +236,12 @@ class UserController extends Controller
             'buttons' => request('selector_button'),
             'sleeve' => request('selector_arm'),
             'sleeve_model' => request('selector_armmodel'),
-            'size' => request('size'), //ubah db jadi string
+            'size' => request('size'),
             'amount' => request('amount'),
             'wa_number' => request('wa_number'),
-            'note' => "request('note')",
+            'note' => request('note'),
             'pocket' => request('selector_bag'),
-            'upload_design' => request('selector_bag')
+            'upload_design' => $photo
         ]);
 
         return view('confirmation', compact('wa_number', 'name', 'note'));
@@ -253,7 +273,6 @@ class UserController extends Controller
         $wa_number = request('wa_number');
         $name = request('name');
         $note = request('note');
-
 
         ShoesOrder::create([
             'shoes_id' => $id,
@@ -290,12 +309,17 @@ class UserController extends Controller
         return view('user.customorderform.sweaterorder', compact('sweater'));
     }
 
-    public function CreateSweaterOrder($id)
+    public function CreateSweaterOrder($id, Request $request)
     {
         $wa_number = request('wa_number');
         $name = request('name');
         $note = request('note');
-
+        
+        if(request('sweater_design')!= null){
+            $photo = $request->file('sweater_design')->store('user_sweater_images');
+        }else{
+            $photo = "null";
+        }
 
         SweaterOrder::create([
             'sweater_id' => $id,
@@ -308,9 +332,9 @@ class UserController extends Controller
             'size' => request('size'),
             'amount' => request('amount'),
             'wa_number' => request('wa_number'),
-            'note' => "request('note')",
+            'note' => request('note'),
             'pocket' => request('selector_bag'),
-            'upload_design' => request('selector_bag')
+            'upload_design' => $photo
         ]);
 
         return view('confirmation', compact('wa_number', 'name', 'note'));
@@ -337,11 +361,17 @@ class UserController extends Controller
         return view('user.customorderform.tshirtorder', compact('tshirt'));
     }
 
-    public function CreateTshirtOrder($id)
+    public function CreateTshirtOrder($id, Request $request)
     {
         $wa_number = request('wa_number');
         $name = request('name');
         $note = request('note');
+
+        if(request('tshirt_design')!= null){
+            $photo = $request->file('tshirt_design')->store('user_tshirt_images');
+        }else{
+            $photo = "null";
+        }
 
 
         TshirtOrder::create([
@@ -353,8 +383,8 @@ class UserController extends Controller
             'size' => request('size'),
             'amount' => request('amount'),
             'wa_number' => request('wa_number'),
-            'note' => "request('note')",
-            'upload_design' => "request('selector_bag')"
+            'note' => request('note'),
+            'upload_design' => $photo
         ]);
 
         return view('confirmation', compact('wa_number', 'name', 'note'));

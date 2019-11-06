@@ -9,7 +9,7 @@
         <div class="row">
           <div class="col-lg-8">
             <h4>Order Sweater Details</h4>
-            <form class="row contact_form" action="{{ route('post.user.order.sweater', $sweater->id) }}" method="post" novalidate="novalidate">
+            <form class="row contact_form" action="{{ route('post.user.order.sweater', $sweater->id) }}" method="post" novalidate="novalidate" enctype="multipart/form-data">
               {{ csrf_field() }}
               <div class="col-md-6 form-group p_star">
                 <input type="text" class="form-control" id="wa_number" name="wa_number" placeholder="Nomor Whatsapp" required/>
@@ -184,7 +184,7 @@
               </div>
 
               <div class="col-md-12 form-group">
-                  <h4>Desain Sweater</h4>
+                  <h4>Desain Sweater (optional)</h4>
                   <div class="form-control">
                       <input type="file" name="sweater_design">
                   </div>
