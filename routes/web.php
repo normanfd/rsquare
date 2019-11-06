@@ -75,14 +75,17 @@ Route::prefix('/tshirt')->group(function(){
 
 
 Route::prefix('admin')->group(function() {
-//------------------------------------------Route untuk CRUD Produk-------------------------------------------------------------
+//------------------------------------------Route untuk Admin CRUD Produk-----------------------------------------------------------------
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
     // Produk Jadi
+    // Create
     Route::get('/VWAvailableProduct', 'AvailableProductController@VWAvailableProduct')->name('admin.VWAvailProduct');
     Route::post('/VWAvailableProduct', 'AvailableProductController@StoreAvailableProduct')->name('admin.StoreAvailProduct');
-    Route::get('/listavailableproduct', 'AvailableProductController@TableAvailableProduct')->name('admin.tableavailableproduct');
+    // Read
+    Route::get('/listavailableproduct', 'AvailableProductController@listavailableproduct')->name('admin.listavailableproduct');
+
     // Custom Cardigan
     Route::get('/addcustomcardigan', 'CustomProductController@FormAddCustomCardigan')->name('admin.addcustomcardigan');
     Route::post('/addcustomcardigan', 'CustomProductController@StoreFormAddCustomCardigan')->name('admin.Storeaddcustomcardigan');

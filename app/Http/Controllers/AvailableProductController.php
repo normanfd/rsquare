@@ -54,9 +54,10 @@ class AvailableProductController extends Controller
         return view('admin.availableproduct.index', compact('categories'));
     }
 
-    public function TableAvailableProduct()
+    public function listavailableproduct()
     {
-        return view('admin.viewavailableproduct.vwavailableproduct');
+        $product = AvailableProduct::all();
+        return view('admin.availableproduct.vwproduct', compact('product'));
     }
     
 }
