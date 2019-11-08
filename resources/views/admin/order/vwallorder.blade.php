@@ -22,26 +22,13 @@
                         <div class="m-widget4__item">
                             <div class="m-widget4__info">
                                 <span class="m-widget4__title">
-                                    {{ $cardigandata->user->name }}
+                                    {{ $cardigandata->user->name }} , {{ $cardigandata->created_at->format('l jS F Y') }}
                                 </span>
                                 <br>
                                 <span class="m-widget4__sub">
-                                id : {{$cardigandata->cardigandata_id}}<br>
-                                {{$cardigandata->cardigan->cardigan_name}}<br>
-                                user id : {{$cardigandata->user_id}}<br>
-                                {{$cardigandata->user->name}}<br>
-                                material : {{$cardigandata->material}}<br>
-                                warna : {{$cardigandata->color}}<br>
-                                kerah : {{$cardigandata->collar}}<br>
-                                kancing : {{$cardigandata->buttons}}<br>
-                                lengan : {{$cardigandata->sleeve}}<br>
-                                model lengan : {{$cardigandata->sleeve_model}}<br>
-                                kantong : {{$cardigandata->pocket}}<br>
-                                ukuran : {{$cardigandata->size}}<br>
-                                <!-- {{$cardigandata->upload_design}} --><br>
-                                jumlah : {{$cardigandata->amount}}<br>
-                                nomor wa : {{$cardigandata->wa_number}}<br>
-                                catatan : {{$cardigandata->note}}<br>
+                                    Jumlah : {{$cardigandata->amount}}<br>
+                                    Nomor WA : {{$cardigandata->wa_number}}<br>
+                                </span>
                             </div>
                             <div class="m-widget4__ext">
                                 <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
@@ -83,26 +70,12 @@
                         <div class="m-widget4__item">
                             <div class="m-widget4__info">
                                 <span class="m-widget4__title">
-                                    {{ $hoodiedata->user->name }}
+                                    {{ $hoodiedata->user->name }} , {{ $hoodiedata->created_at->format('l jS F Y') }}
                                 </span>
                                 <br>
                                 <span class="m-widget4__sub">
-                                <!-- id : {{$hoodiedata->hoodiedata_id}} <br> -->
-                                {{$hoodiedata->hoodie->hoodie_name}} <br>
-                                user id : {{$hoodiedata->user_id}} <br>
-                                {{$hoodiedata->user->name}} <br>
-                                material : {{$hoodiedata->material}} <br>
-                                warna : {{$hoodiedata->color}} <br>
-                                kerah : {{$hoodiedata->collar}} <br>
-                                kancing : {{$hoodiedata->buttons}} <br>
-                                lengan : {{$hoodiedata->sleeve}} <br>
-                                model lengan : {{$hoodiedata->sleeve_model}} <br>
-                                kantong : {{$hoodiedata->pocket}} <br>
-                                ukuran : {{$hoodiedata->size}} <br>
-                                <!-- {{$hoodiedata->upload_design}} -->
-                                jumlah : {{$hoodiedata->amount}} <br>
-                                nomor wa : {{$hoodiedata->wa_number}} <br>
-                                catatan : {{$hoodiedata->note}} <br>
+                                    Jumlah : {{$hoodiedata->amount}} <br>
+                                    Nomor WA : {{$hoodiedata->wa_number}} 
                                 </span>
                             </div>
                             <div class="m-widget4__ext">
@@ -145,26 +118,12 @@
                         <div class="m-widget4__item">
                             <div class="m-widget4__info">
                                 <span class="m-widget4__title">
-                                    {{ $jacketdata->user->name }}
+                                    {{ $jacketdata->user->name }}, {{ $jacketdata->created_at->format('l jS F Y') }}
                                 </span>
                                 <br>
                                 <span class="m-widget4__sub">
-                                    id : {{$jacketdata->jacketdata_id}}
-                                    {{$jacketdata->jacket->jacket_name}}
-                                    user id : {{$jacketdata->user_id}}
-                                    {{$jacketdata->user->name}}
-                                    material : {{$jacketdata->material}}
-                                    warna : {{$jacketdata->color}}
-                                    kerah : {{$jacketdata->collar}}
-                                    kancing : {{$jacketdata->buttons}}
-                                    lengan : {{$jacketdata->sleeve}}
-                                    model lengan : {{$jacketdata->sleeve_model}}
-                                    kantong : {{$jacketdata->pocket}}
-                                    ukuran : {{$jacketdata->size}}
-                                    <!-- {{$jacketdata->upload_design}} -->
-                                    jumlah : {{$jacketdata->amount}}
-                                    nomor wa : {{$jacketdata->wa_number}}
-                                    catatan : {{$jacketdata->note}}
+                                    Jumlah : {{$jacketdata->amount}} <br>
+                                    Nomor WA : {{$jacketdata->wa_number}}
                                 </span>
                             </div>
                             <div class="m-widget4__ext">
@@ -207,25 +166,13 @@
                         <div class="m-widget4__item">
                             <div class="m-widget4__info">
                                 <span class="m-widget4__title">
-                                    {{ $shirdata->user->name }}
+                                    {{ $shirdata->user->name }}, {{ $shirdata->created_at->format('l jS F Y') }}
                                 </span>
                                 <br>
                                 <span class="m-widget4__sub">
-                                {{$shirdata->shirt->shirt_name}} <br>
-                                user id : {{$shirdata->user_id}} <br>
-                                {{$shirdata->user->name}} <br>
-                                material : {{$shirdata->material}} <br>
-                                warna : {{$shirdata->color}} <br>
-                                kerah : {{$shirdata->collar}} <br>
-                                kancing : {{$shirdata->buttons}} <br>
-                                lengan : {{$shirdata->sleeve}} <br>
-                                model lengan : {{$shirdata->sleeve_model}} <br>
-                                kantong : {{$shirdata->pocket}} <br>
-                                ukuran : {{$shirdata->size}} <br>
-                                <!-- {{$shirdata->upload_design}} -->
-                                jumlah : {{$shirdata->amount}} <br>
-                                nomor wa : {{$shirdata->wa_number}} <br>
-                                catatan : {{$shirdata->note}} <br>
+                                    Jumlah : {{$shirdata->amount}} <br>
+                                    Nomor WA : {{$shirdata->wa_number}} <br>
+                                
                                 </span>
                             </div>
                             <div class="m-widget4__ext">
@@ -268,25 +215,12 @@
                         <div class="m-widget4__item">
                             <div class="m-widget4__info">
                                 <span class="m-widget4__title">
-                                    {{ $shoesdata->user->name }}
+                                    {{ $shoesdata->user->name }}, {{ $shoesdata->created_at->format('l jS F Y') }}
                                 </span>
                                 <br>
                                 <span class="m-widget4__sub">
-                                    {{$shoesdata->shoes->shoes_name}} <br>
-                                    user id : {{$shoesdata->user_id}} <br>
-                                    {{$shoesdata->user->name}} <br>
-                                    material : {{$shoesdata->material}} <br>
-                                    warna : {{$shoesdata->color}} <br>
-                                    kerah : {{$shoesdata->collar}} <br>
-                                    kancing : {{$shoesdata->buttons}} <br>
-                                    lengan : {{$shoesdata->sleeve}} <br>
-                                    model lengan : {{$shoesdata->sleeve_model}} <br>
-                                    kantong : {{$shoesdata->pocket}} <br>
-                                    ukuran : {{$shoesdata->size}} <br>
-                                    <!-- {{$shoesdata->upload_design}} -->
-                                    jumlah : {{$shoesdata->amount}} <br>
-                                    nomor wa : {{$shoesdata->wa_number}} <br>
-                                    catatan : {{$shoesdata->note}} <br>
+                                    Jumlah : {{$shoesdata->amount}} <br>
+                                    Nomor WA : {{$shoesdata->wa_number}} <br>
                                 </span>
                             </div>
                             <div class="m-widget4__ext">
@@ -329,25 +263,12 @@
                         <div class="m-widget4__item">
                             <div class="m-widget4__info">
                                 <span class="m-widget4__title">
-                                    {{ $sweaterdata->user->name }}
+                                    {{ $sweaterdata->user->name }}, {{ $sweaterdata->created_at->format('l jS F Y') }}
                                 </span>
                                 <br>
-                                <span class="m-widget4__sub">
-                                    {{$sweaterdata->sweater->sweater_name}}
-                                    user id : {{$sweaterdata->user_id}}
-                                    {{$sweaterdata->user->name}}
-                                    material : {{$sweaterdata->material}}
-                                    warna : {{$sweaterdata->color}}
-                                    kerah : {{$sweaterdata->collar}}
-                                    kancing : {{$sweaterdata->buttons}}
-                                    lengan : {{$sweaterdata->sleeve}}
-                                    model lengan : {{$sweaterdata->sleeve_model}}
-                                    kantong : {{$sweaterdata->pocket}}
-                                    ukuran : {{$sweaterdata->size}}
-                                    <!-- {{$sweaterdata->upload_design}} -->
-                                    jumlah : {{$sweaterdata->amount}}
-                                    nomor wa : {{$sweaterdata->wa_number}}
-                                    catatan : {{$sweaterdata->note}}
+                                <span class="m-widget4__sub">                                   
+                                    Jumlah : {{$sweaterdata->amount}} <br>
+                                    Nomor WA : {{$sweaterdata->wa_number}}
                                 </span>
                             </div>
                             <div class="m-widget4__ext">
@@ -390,25 +311,12 @@
                         <div class="m-widget4__item">
                             <div class="m-widget4__info">
                                 <span class="m-widget4__title">
-                                    {{ $tshirtdata->user->name }}
+                                    {{ $tshirtdata->user->name }}, {{ $tshirtdata->created_at->format('l jS F Y') }}
                                 </span>
                                 <br>
                                 <span class="m-widget4__sub">
-                                    {{$tshirtdata->tshirt->tshirt_name}} <br>
-                                    user id : {{$tshirtdata->user_id}} <br>
-                                    {{$tshirtdata->user->name}} <br>
-                                    material : {{$tshirtdata->material}} <br>
-                                    warna : {{$tshirtdata->color}} <br>
-                                    kerah : {{$tshirtdata->collar}} <br>
-                                    kancing : {{$tshirtdata->buttons}} <br>
-                                    lengan : {{$tshirtdata->sleeve}} <br>
-                                    model lengan : {{$tshirtdata->sleeve_model}} <br>
-                                    kantong : {{$tshirtdata->pocket}} <br>
-                                    ukuran : {{$tshirtdata->size}} <br>
-                                    <!-- {{$tshirtdata->upload_design}} -->
-                                    jumlah : {{$tshirtdata->amount}} <br>
-                                    nomor wa : {{$tshirtdata->wa_number}} <br>
-                                    catatan : {{$tshirtdata->note}} <br>
+                                    Jumlah : {{$tshirtdata->amount}} <br>
+                                    Nomor WA : {{$tshirtdata->wa_number}} <br>
                                 </span>
                             </div>
                             <div class="m-widget4__ext">
@@ -431,7 +339,7 @@
     </div>
 </div>
 
-@foreach($cardigan as $cardigandata)
+<!-- @foreach($cardigan as $cardigandata)
     <h5>cardigan {{$cardigandata->id}}</h5>
     id : {{$cardigandata->cardigandata_id}}
     {{$cardigandata->cardigan->cardigan_name}}
@@ -445,14 +353,14 @@
     model lengan : {{$cardigandata->sleeve_model}}
     kantong : {{$cardigandata->pocket}}
     ukuran : {{$cardigandata->size}}
-    <!-- {{$cardigandata->upload_design}} -->
+    {{$cardigandata->upload_design}}
     jumlah : {{$cardigandata->amount}}
     nomor wa : {{$cardigandata->wa_number}}
     catatan : {{$cardigandata->note}}
     <br>
 @endforeach
 
-<!-- Mendapatkan data hoodiedata -->
+Mendapatkan data hoodiedata
 @foreach($hoodie as $hoodiedata)
     <h5>Hoodie {{$hoodiedata->id}}</h5>
     id : {{$hoodiedata->hoodiedata_id}}
@@ -467,14 +375,14 @@
     model lengan : {{$hoodiedata->sleeve_model}}
     kantong : {{$hoodiedata->pocket}}
     ukuran : {{$hoodiedata->size}}
-    <!-- {{$hoodiedata->upload_design}} -->
+    {{$hoodiedata->upload_design}}
     jumlah : {{$hoodiedata->amount}}
     nomor wa : {{$hoodiedata->wa_number}}
     catatan : {{$hoodiedata->note}}
     <br>
 @endforeach
 
-<!-- Mendapatkan data jacketdata -->
+Mendapatkan data jacketdata
 @foreach($jacket as $jacketdata)
     <h5>Jacket {{$jacketdata->id}}</h5>
     id : {{$jacketdata->jacketdata_id}}
@@ -489,14 +397,14 @@
     model lengan : {{$jacketdata->sleeve_model}}
     kantong : {{$jacketdata->pocket}}
     ukuran : {{$jacketdata->size}}
-    <!-- {{$jacketdata->upload_design}} -->
+    {{$jacketdata->upload_design}}
     jumlah : {{$jacketdata->amount}}
     nomor wa : {{$jacketdata->wa_number}}
     catatan : {{$jacketdata->note}}
     <br>
 @endforeach
 
-<!-- Mendapatkan data shirdata -->
+Mendapatkan data shirdata
 @foreach($shirt as $shirdata)
     <h5>Shirt {{$shirdata->id}}</h5>
     id : {{$shirdata->shirdata_id}}
@@ -511,14 +419,14 @@
     model lengan : {{$shirdata->sleeve_model}}
     kantong : {{$shirdata->pocket}}
     ukuran : {{$shirdata->size}}
-    <!-- {{$shirdata->upload_design}} -->
+    {{$shirdata->upload_design}}
     jumlah : {{$shirdata->amount}}
     nomor wa : {{$shirdata->wa_number}}
     catatan : {{$shirdata->note}}
     <br>
 @endforeach
 
-<!-- Mendapatkan data shoesdata -->
+Mendapatkan data shoesdata
 @foreach($shoes as $shoesdata)
     <h5>Shoes {{$shoesdata->id}}</h5>
     id : {{$shoesdata->shoesdata_id}}
@@ -533,14 +441,14 @@
     model lengan : {{$shoesdata->sleeve_model}}
     kantong : {{$shoesdata->pocket}}
     ukuran : {{$shoesdata->size}}
-    <!-- {{$shoesdata->upload_design}} -->
+    {{$shoesdata->upload_design}}
     jumlah : {{$shoesdata->amount}}
     nomor wa : {{$shoesdata->wa_number}}
     catatan : {{$shoesdata->note}}
     <br>
 @endforeach
 
-<!-- Mendapatkan data sweaterdata -->
+Mendapatkan data sweaterdata
 @foreach($sweater as $sweaterdata)
     <h5>Sweater {{$sweaterdata->id}}</h5>
     id : {{$sweaterdata->sweaterdata_id}}
@@ -555,14 +463,14 @@
     model lengan : {{$sweaterdata->sleeve_model}}
     kantong : {{$sweaterdata->pocket}}
     ukuran : {{$sweaterdata->size}}
-    <!-- {{$sweaterdata->upload_design}} -->
+    {{$sweaterdata->upload_design}}
     jumlah : {{$sweaterdata->amount}}
     nomor wa : {{$sweaterdata->wa_number}}
     catatan : {{$sweaterdata->note}}
     <br>
 @endforeach
 
-<!-- Mendapatkan data tshirtdata -->
+Mendapatkan data tshirtdata
 @foreach($tshirt as $tshirtdata)
     <h5>Tshirt {{$tshirtdata->id}}</h5>
     id : {{$tshirtdata->tshirtdata_id}}
@@ -577,11 +485,11 @@
     model lengan : {{$tshirtdata->sleeve_model}}
     kantong : {{$tshirtdata->pocket}}
     ukuran : {{$tshirtdata->size}}
-    <!-- {{$tshirtdata->upload_design}} -->
+    {{$tshirtdata->upload_design}}
     jumlah : {{$tshirtdata->amount}}
     nomor wa : {{$tshirtdata->wa_number}}
     catatan : {{$tshirtdata->note}}
     <br>
-@endforeach
+@endforeach -->
 
 @endsection
