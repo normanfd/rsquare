@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\AvailableProduct;
 use App\ProductCategory;
+use Validator;
 
 class AvailableProductController extends Controller
 {
@@ -36,6 +37,22 @@ class AvailableProductController extends Controller
     {
         // untuk mendapatkan data dari DB kategori produk
         $categories = ProductCategory::all();
+
+        $this-> validate(request(),[
+            'product_name' => 'required',
+            'product_price' => 'required|numeric',
+            'product_stock' => 'required|numeric',
+            'product_brand' => 'required',
+            'product_desc' => 'product_desc',
+            'product_image' => 'required|mimes:jpeg,png,bmp,tiff|max:4096'
+        ]);
+        
+        if ($this->fails()) {
+            redirect()
+                ->back()
+                ->withErrors($this->errors());
+        }
+
         // cara dapetin lokasi path photo
         $photo = $request->file('product_image')->store('product_images');
         // dd($photo);
