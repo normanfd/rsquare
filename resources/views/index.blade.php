@@ -170,6 +170,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <br>
+            <div class="row align-items-center justify-content-between">
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_feature_post_text">
                         <img src="{{asset('winter/img/feature_2.png')}}" alt="#">
@@ -194,6 +197,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <br>
+            <div class="row align-items-center justify-content-between">
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_feature_post_text">
                         <img src="{{asset('winter/img/feature_2.png')}}" alt="#">

@@ -137,22 +137,20 @@ Route::prefix('admin')->group(function() {
     //--------------------------------------------------Order Admin-------------------------------------------------------
     //show all order
     Route::get('/allcustomorder', 'AdminOrderController@ShowAllOrder')->name('admin.showallorder');
-
-    // //cardigan
-    // Route::get('/cardiganorder', 'AdminOrderController@CardiganOrder')->name('admin.cardiganorder');
-    // //Hoodie
-    // Route::get('/hoodieorder', 'AdminOrderController@HoodieOrder')->name('admin.hoodieorder');
-    // //Jacket
-    // Route::get('/jacketorder', 'AdminOrderController@JacketOrder')->name('admin.jacketorder');
-    // //Jacket
-    // Route::get('/shirtorder', 'AdminOrderController@ShirtOrder')->name('admin.shirtorder');
-    // //Jacket
-    // Route::get('/shoesorder', 'AdminOrderController@ShoesOrder')->name('admin.shoesorder');
-    // //Jacket
-    // Route::get('/sweaterorder', 'AdminOrderController@SweaterOrder')->name('admin.sweaterorder');
-    // //Jacket
-    // Route::get('/tshirtorder', 'AdminOrderController@TshirtOrder')->name('admin.jacketorder');
-    
+    //cardigan
+    Route::get('/allcustomorder/cardigan/{id}', 'AdminOrderController@DetailCardigan')->name('admin.detailcardiganorder');
+    //Hoodie
+    Route::get('/allcustomorder/hoodie/{id}', 'AdminOrderController@DetailHoodie')->name('admin.detailhoodieorder');
+    //Jacket
+    Route::get('/allcustomorder/jacket/{id}', 'AdminOrderController@DetailJacket')->name('admin.detailjacketorder');
+    //shirt
+    Route::get('/allcustomorder/shirt/{id}', 'AdminOrderController@DetailShirt')->name('admin.detailshirtorder');
+    // shoes
+    Route::get('/allcustomorder/shoes/{id}', 'AdminOrderController@DetailShoes')->name('admin.detailshoesorder');
+    // sweater
+    Route::get('/allcustomorder/sweater/{id}', 'AdminOrderController@DetailSweater')->name('admin.detailsweaterorder');
+    // tshirt
+    Route::get('/allcustomorder/tshirt/{id}', 'AdminOrderController@DetailTshirt')->name('admin.detailtshirtorder');
     // View Custom Product\
     Route::get('/vwcustomproduct', 'CustomProductController@VwCustomProduct')->name('admin.vwcustomproduct');
   });
