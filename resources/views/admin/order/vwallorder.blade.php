@@ -34,9 +34,10 @@
                                 <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
                             </div>
                             <div class="m-widget4__ext">
-                                <form action="#" method="post">
+                                <a href="{{ route('admin.detailcardiganorder', $cardigandata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
+                                <!-- <form action="#" method="post">
                                     <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
-                                </form>
+                                </form> -->
                             </div>
                             
                         </div>
@@ -82,9 +83,10 @@
                                 <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
                             </div>
                             <div class="m-widget4__ext">
-                                <form action="#" method="post">
+                            <a href="{{ route('admin.detailhoodieorder', $hoodiedata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
+                                <!-- <form action="#" method="post">
                                     <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
-                                </form>
+                                </form> -->
                             </div>
                             
                         </div>
@@ -130,9 +132,10 @@
                                 <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
                             </div>
                             <div class="m-widget4__ext">
-                                <form action="#" method="post">
+                            <a href="{{ route('admin.detailjacketorder', $jacketdata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
+                                <!-- <form action="#" method="post">
                                     <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
-                                </form>
+                                </form> -->
                             </div>
                             
                         </div>
@@ -179,9 +182,10 @@
                                 <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
                             </div>
                             <div class="m-widget4__ext">
-                                <form action="#" method="post">
+                                <!-- <form action="#" method="post">
                                     <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
-                                </form>
+                                </form> -->
+                                <a href="{{ route('admin.detailshirtorder', $shirdata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
                             </div>
                             
                         </div>
@@ -227,9 +231,10 @@
                                 <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
                             </div>
                             <div class="m-widget4__ext">
-                                <form action="#" method="post">
+                                <!-- <form action="#" method="post">
                                     <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
-                                </form>
+                                </form> -->
+                                <a href="{{ route('admin.detailshoesorder', $shoesdata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
                             </div>
                             
                         </div>
@@ -275,9 +280,10 @@
                                 <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
                             </div>
                             <div class="m-widget4__ext">
-                                <form action="#" method="post">
+                                <!-- <form action="#" method="post">
                                     <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
-                                </form>
+                                </form> -->
+                                <a href="{{ route('admin.detailsweaterorder', $sweaterdata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
                             </div>
                             
                         </div>
@@ -323,9 +329,10 @@
                                 <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
                             </div>
                             <div class="m-widget4__ext">
-                                <form action="#" method="post">
+                                <!-- <form action="#" method="post">
                                     <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
-                                </form>
+                                </form> -->
+                                <a href="{{ route('admin.detailtshirtorder', $tshirtdata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
                             </div>
                             
                         </div>
