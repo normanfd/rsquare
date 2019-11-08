@@ -1,4 +1,437 @@
 <!-- Mendapatkan data cardigandata -->
+@extends('layouts.admin')
+
+@section('content')
+<div class="m-content">
+    <div class="m-portlet m-portlet--full-height ">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <h3 class="m-portlet__head-text">
+                        Order Cardigan
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="m-portlet__body">
+            <div class="tab-content">
+                <div class="tab-pane active" id="m_widget4_tab1_content">
+
+                @foreach($cardigan as $cardigandata)
+                    <div class="m-widget4">
+                        <div class="m-widget4__item">
+                            <div class="m-widget4__info">
+                                <span class="m-widget4__title">
+                                    {{ $cardigandata->user->name }}
+                                </span>
+                                <br>
+                                <span class="m-widget4__sub">
+                                <!-- id : {{$hoodiedata->hoodiedata_id}} <br> -->
+                                id : {{$cardigandata->cardigandata_id}}<br>
+                                {{$cardigandata->cardigan->cardigan_name}}<br>
+                                user id : {{$cardigandata->user_id}}<br>
+                                {{$cardigandata->user->name}}<br>
+                                material : {{$cardigandata->material}}<br>
+                                warna : {{$cardigandata->color}}<br>
+                                kerah : {{$cardigandata->collar}}<br>
+                                kancing : {{$cardigandata->buttons}}<br>
+                                lengan : {{$cardigandata->sleeve}}<br>
+                                model lengan : {{$cardigandata->sleeve_model}}<br>
+                                kantong : {{$cardigandata->pocket}}<br>
+                                ukuran : {{$cardigandata->size}}<br>
+                                <!-- {{$cardigandata->upload_design}} --><br>
+                                jumlah : {{$cardigandata->amount}}<br>
+                                nomor wa : {{$cardigandata->wa_number}}<br>
+                                catatan : {{$cardigandata->note}}<br>
+                            </div>
+                            <div class="m-widget4__ext">
+                                <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
+                            </div>
+                            <div class="m-widget4__ext">
+                                <form action="#" method="post">
+                                    <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <br>
+                @endforeach
+                    <!--begin::Widget 14-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="m-content">
+    <div class="m-portlet m-portlet--full-height ">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <h3 class="m-portlet__head-text">
+                        Order Hoodie
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="m-portlet__body">
+            <div class="tab-content">
+                <div class="tab-pane active" id="m_widget4_tab1_content">
+
+                @foreach($hoodie as $hoodiedata)
+                    <div class="m-widget4">
+                        <div class="m-widget4__item">
+                            <div class="m-widget4__info">
+                                <span class="m-widget4__title">
+                                    {{ $hoodiedata->user->name }}
+                                </span>
+                                <br>
+                                <span class="m-widget4__sub">
+                                <!-- id : {{$hoodiedata->hoodiedata_id}} <br> -->
+                                {{$hoodiedata->hoodie->hoodie_name}} <br>
+                                user id : {{$hoodiedata->user_id}} <br>
+                                {{$hoodiedata->user->name}} <br>
+                                material : {{$hoodiedata->material}} <br>
+                                warna : {{$hoodiedata->color}} <br>
+                                kerah : {{$hoodiedata->collar}} <br>
+                                kancing : {{$hoodiedata->buttons}} <br>
+                                lengan : {{$hoodiedata->sleeve}} <br>
+                                model lengan : {{$hoodiedata->sleeve_model}} <br>
+                                kantong : {{$hoodiedata->pocket}} <br>
+                                ukuran : {{$hoodiedata->size}} <br>
+                                <!-- {{$hoodiedata->upload_design}} -->
+                                jumlah : {{$hoodiedata->amount}} <br>
+                                nomor wa : {{$hoodiedata->wa_number}} <br>
+                                catatan : {{$hoodiedata->note}} <br>
+                                </span>
+                            </div>
+                            <div class="m-widget4__ext">
+                                <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
+                            </div>
+                            <div class="m-widget4__ext">
+                                <form action="#" method="post">
+                                    <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <br>
+                @endforeach
+                    <!--begin::Widget 14-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="m-content">
+    <div class="m-portlet m-portlet--full-height ">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <h3 class="m-portlet__head-text">
+                        Order Jacket
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="m-portlet__body">
+            <div class="tab-content">
+                <div class="tab-pane active" id="m_widget4_tab1_content">
+
+                @foreach($jacket as $jacketdata)
+                    <div class="m-widget4">
+                        <div class="m-widget4__item">
+                            <div class="m-widget4__info">
+                                <span class="m-widget4__title">
+                                    {{ $jacketdata->user->name }}
+                                </span>
+                                <br>
+                                <span class="m-widget4__sub">
+                                    id : {{$jacketdata->jacketdata_id}}
+                                    {{$jacketdata->jacket->jacket_name}}
+                                    user id : {{$jacketdata->user_id}}
+                                    {{$jacketdata->user->name}}
+                                    material : {{$jacketdata->material}}
+                                    warna : {{$jacketdata->color}}
+                                    kerah : {{$jacketdata->collar}}
+                                    kancing : {{$jacketdata->buttons}}
+                                    lengan : {{$jacketdata->sleeve}}
+                                    model lengan : {{$jacketdata->sleeve_model}}
+                                    kantong : {{$jacketdata->pocket}}
+                                    ukuran : {{$jacketdata->size}}
+                                    <!-- {{$jacketdata->upload_design}} -->
+                                    jumlah : {{$jacketdata->amount}}
+                                    nomor wa : {{$jacketdata->wa_number}}
+                                    catatan : {{$jacketdata->note}}
+                                </span>
+                            </div>
+                            <div class="m-widget4__ext">
+                                <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
+                            </div>
+                            <div class="m-widget4__ext">
+                                <form action="#" method="post">
+                                    <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <br>
+                @endforeach
+                    <!--begin::Widget 14-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="m-content">
+    <div class="m-portlet m-portlet--full-height ">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <h3 class="m-portlet__head-text">
+                        Order Shirt
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="m-portlet__body">
+            <div class="tab-content">
+                <div class="tab-pane active" id="m_widget4_tab1_content">
+
+                @foreach($shirt as $shirdata)
+                    <div class="m-widget4">
+                        <div class="m-widget4__item">
+                            <div class="m-widget4__info">
+                                <span class="m-widget4__title">
+                                    {{ $shirdata->user->name }}
+                                </span>
+                                <br>
+                                <span class="m-widget4__sub">
+                                {{$shirdata->shirt->shirt_name}} <br>
+                                user id : {{$shirdata->user_id}} <br>
+                                {{$shirdata->user->name}} <br>
+                                material : {{$shirdata->material}} <br>
+                                warna : {{$shirdata->color}} <br>
+                                kerah : {{$shirdata->collar}} <br>
+                                kancing : {{$shirdata->buttons}} <br>
+                                lengan : {{$shirdata->sleeve}} <br>
+                                model lengan : {{$shirdata->sleeve_model}} <br>
+                                kantong : {{$shirdata->pocket}} <br>
+                                ukuran : {{$shirdata->size}} <br>
+                                <!-- {{$shirdata->upload_design}} -->
+                                jumlah : {{$shirdata->amount}} <br>
+                                nomor wa : {{$shirdata->wa_number}} <br>
+                                catatan : {{$shirdata->note}} <br>
+                                </span>
+                            </div>
+                            <div class="m-widget4__ext">
+                                <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
+                            </div>
+                            <div class="m-widget4__ext">
+                                <form action="#" method="post">
+                                    <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <br>
+                @endforeach
+                    <!--begin::Widget 14-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="m-content">
+    <div class="m-portlet m-portlet--full-height ">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <h3 class="m-portlet__head-text">
+                        Order Shoes
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="m-portlet__body">
+            <div class="tab-content">
+                <div class="tab-pane active" id="m_widget4_tab1_content">
+
+                @foreach($shoes as $shoesdata)
+                    <div class="m-widget4">
+                        <div class="m-widget4__item">
+                            <div class="m-widget4__info">
+                                <span class="m-widget4__title">
+                                    {{ $shoesdata->user->name }}
+                                </span>
+                                <br>
+                                <span class="m-widget4__sub">
+                                    {{$shoesdata->shoes->shoes_name}} <br>
+                                    user id : {{$shoesdata->user_id}} <br>
+                                    {{$shoesdata->user->name}} <br>
+                                    material : {{$shoesdata->material}} <br>
+                                    warna : {{$shoesdata->color}} <br>
+                                    kerah : {{$shoesdata->collar}} <br>
+                                    kancing : {{$shoesdata->buttons}} <br>
+                                    lengan : {{$shoesdata->sleeve}} <br>
+                                    model lengan : {{$shoesdata->sleeve_model}} <br>
+                                    kantong : {{$shoesdata->pocket}} <br>
+                                    ukuran : {{$shoesdata->size}} <br>
+                                    <!-- {{$shoesdata->upload_design}} -->
+                                    jumlah : {{$shoesdata->amount}} <br>
+                                    nomor wa : {{$shoesdata->wa_number}} <br>
+                                    catatan : {{$shoesdata->note}} <br>
+                                </span>
+                            </div>
+                            <div class="m-widget4__ext">
+                                <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
+                            </div>
+                            <div class="m-widget4__ext">
+                                <form action="#" method="post">
+                                    <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <br>
+                @endforeach
+                    <!--begin::Widget 14-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="m-content">
+    <div class="m-portlet m-portlet--full-height ">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <h3 class="m-portlet__head-text">
+                        Order Sweater
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="m-portlet__body">
+            <div class="tab-content">
+                <div class="tab-pane active" id="m_widget4_tab1_content">
+
+                @foreach($sweater as $sweaterdata)
+                    <div class="m-widget4">
+                        <div class="m-widget4__item">
+                            <div class="m-widget4__info">
+                                <span class="m-widget4__title">
+                                    {{ $sweaterdata->user->name }}
+                                </span>
+                                <br>
+                                <span class="m-widget4__sub">
+                                    {{$sweaterdata->sweater->sweater_name}}
+                                    user id : {{$sweaterdata->user_id}}
+                                    {{$sweaterdata->user->name}}
+                                    material : {{$sweaterdata->material}}
+                                    warna : {{$sweaterdata->color}}
+                                    kerah : {{$sweaterdata->collar}}
+                                    kancing : {{$sweaterdata->buttons}}
+                                    lengan : {{$sweaterdata->sleeve}}
+                                    model lengan : {{$sweaterdata->sleeve_model}}
+                                    kantong : {{$sweaterdata->pocket}}
+                                    ukuran : {{$sweaterdata->size}}
+                                    <!-- {{$sweaterdata->upload_design}} -->
+                                    jumlah : {{$sweaterdata->amount}}
+                                    nomor wa : {{$sweaterdata->wa_number}}
+                                    catatan : {{$sweaterdata->note}}
+                                </span>
+                            </div>
+                            <div class="m-widget4__ext">
+                                <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
+                            </div>
+                            <div class="m-widget4__ext">
+                                <form action="#" method="post">
+                                    <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <br>
+                @endforeach
+                    <!--begin::Widget 14-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="m-content">
+    <div class="m-portlet m-portlet--full-height ">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <h3 class="m-portlet__head-text">
+                        Order T-Shirt
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="m-portlet__body">
+            <div class="tab-content">
+                <div class="tab-pane active" id="m_widget4_tab1_content">
+
+                @foreach($tshirt as $tshirtdata)
+                    <div class="m-widget4">
+                        <div class="m-widget4__item">
+                            <div class="m-widget4__info">
+                                <span class="m-widget4__title">
+                                    {{ $tshirtdata->user->name }}
+                                </span>
+                                <br>
+                                <span class="m-widget4__sub">
+                                    {{$tshirtdata->tshirt->tshirt_name}} <br>
+                                    user id : {{$tshirtdata->user_id}} <br>
+                                    {{$tshirtdata->user->name}} <br>
+                                    material : {{$tshirtdata->material}} <br>
+                                    warna : {{$tshirtdata->color}} <br>
+                                    kerah : {{$tshirtdata->collar}} <br>
+                                    kancing : {{$tshirtdata->buttons}} <br>
+                                    lengan : {{$tshirtdata->sleeve}} <br>
+                                    model lengan : {{$tshirtdata->sleeve_model}} <br>
+                                    kantong : {{$tshirtdata->pocket}} <br>
+                                    ukuran : {{$tshirtdata->size}} <br>
+                                    <!-- {{$tshirtdata->upload_design}} -->
+                                    jumlah : {{$tshirtdata->amount}} <br>
+                                    nomor wa : {{$tshirtdata->wa_number}} <br>
+                                    catatan : {{$tshirtdata->note}} <br>
+                                </span>
+                            </div>
+                            <div class="m-widget4__ext">
+                                <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
+                            </div>
+                            <div class="m-widget4__ext">
+                                <form action="#" method="post">
+                                    <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <br>
+                @endforeach
+                    <!--begin::Widget 14-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 @foreach($cardigan as $cardigandata)
     <h5>cardigan {{$cardigandata->id}}</h5>
     id : {{$cardigandata->cardigandata_id}}
@@ -151,3 +584,5 @@
     catatan : {{$tshirtdata->note}}
     <br>
 @endforeach
+
+@endsection
