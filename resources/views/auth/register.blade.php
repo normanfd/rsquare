@@ -52,7 +52,7 @@
                                 <form class="m-login__form m-form" method="POST" action="{{ route('login') }}">
                                 {{ csrf_field() }}
                                     <div class="col-md-12 form-group p_star{{ $errors->has('name') ? ' has-error' : '' }} m-form__group">
-                                        <input id="email" class="form-control m-input"   type="name" placeholder="Name" value="{{ old('name') }}" name="name" required>
+                                        <input id="name" class="form-control m-input"   type="name" placeholder="Name" value="{{ old('name') }}" name="name" required>
                                         @if ($errors->has('name'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('name') }}</strong>
@@ -60,12 +60,13 @@
                                         @endif
                                     </div>
                                     <div class="col-md-12 form-group p_star{{ $errors->has('email') ? ' has-error' : '' }} m-form__group">
-                                        <input id="email" class="form-control m-input"   type="email" placeholder="Email" value="{{ old('email') }}" name="email" required>
-                                        @if ($errors->has('email'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('email') }}</strong>
-                                            </span>
-                                        @endif
+                                            <input id="email" type="email" class="form-control m-input" name="email" value="{{ old('email') }}" placeholder="Email" required>
+
+                                            @if ($errors->has('email'))
+                                                <span class="help-block">
+                                                    <strong>{{ $errors->first('email') }}</strong>
+                                                </span>
+                                            @endif
                                     </div>
                                     <div class="col-md-12 form-group p_star{{ $errors->has('password') ? ' has-error' : '' }} m-form__group">
                                         <input id="password" class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password" required>

@@ -9,6 +9,15 @@
         <div class="row">
           <div class="col-lg-8">
             <h4>Order Cardigan Details</h4>
+            @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
             <form class="row contact_form" action="{{ route('post.user.order.cardigan', $cardigan->id) }}" method="post" novalidate="novalidate" enctype="multipart/form-data">
               {{ csrf_field() }}
               

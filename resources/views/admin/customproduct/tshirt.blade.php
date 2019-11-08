@@ -13,6 +13,15 @@
                 </div>
             </div>
             </div>
+             @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
         <!--begin::Form-->
         <form class="m-form m-form--fit m-form--label-align-right" id="m_form_1" method="POST" action="{{ route('admin.Storeaddcustomtshirt') }}" enctype="multipart/form-data">
         {{ csrf_field() }}
@@ -35,7 +44,7 @@
                         T-Shirt ID *
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
-                        <input type="text" class="form-control m-input" name="tshirt_id" placeholder="Enter your produk ID" data-toggle="m-tooltip" title="Input Produk ID">
+                        <input type="text" class="form-control m-input" name="tshirt_id" placeholder="Enter your produk ID" data-toggle="m-tooltip" title="Input Produk ID" value="{{old('tshirt_id')}}>
                     </div>
                 </div>
                 <div class="form-group m-form__group row">
@@ -44,7 +53,7 @@
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
                         <div class="input-group">
-                            <input type="text" class="form-control m-input" name="tshirt_name" placeholder="Enter your product name">
+                            <input type="text" class="form-control m-input" name="tshirt_name" placeholder="Enter your product name" value="{{old('tshirt_name')}}>
                         </div>
                     </div>
                 </div>
@@ -54,7 +63,7 @@
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
                         <div class="m-input-icon m-input-icon--left">
-                            <input type="text" class="form-control m-input" name="tshirt_price" placeholder="Enter digits">
+                            <input type="text" class="form-control m-input" name="tshirt_price" placeholder="Enter digits" value="{{old('tshirt_price')}}>
                             <span class="m-input-icon__icon m-input-icon__icon--left">
                                 <span>
                                     <i class="la la-calculator"></i>

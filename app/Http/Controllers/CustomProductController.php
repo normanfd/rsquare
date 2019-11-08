@@ -27,6 +27,15 @@ class CustomProductController extends Controller
     // Fungsi untuk menyimpan data kedalam database available product
     public function StoreFormAddCustomCardigan(Request $request)
     {
+        $this-> validate(request(),[
+
+            'cardigan_id' => 'required',
+            'cardigan_name' => 'required',
+            'cardigan_price' => 'required|numeric',
+            'cardigan_desc' => 'required',
+            'cardigan_image' => 'required|mimes:jpeg,png,bmp,tiff|max:4096'
+        ]);
+
         // cara dapetin lokasi path photo
         $photo = $request->file('cardigan_image')->store('cardigan_images');
         // dd($photo);
@@ -70,6 +79,15 @@ class CustomProductController extends Controller
     
     public function StoreFormAddCustomHoodie(Request $request)
     {
+        $this-> validate(request(),[
+            'hoodie_id' => 'required',
+            'hoodie_name' => 'required',
+            'hoodie_price' => 'required|numeric',
+            'hoodie_desc' => 'required',
+            'hoodie_image' => 'required|mimes:jpeg,png,bmp,tiff|max:4096'
+        ]);
+        
+
         // cara dapetin lokasi path photo
         $photo = $request->file('hoodie_image')->store('hoodie_images');
         // dd($photo);
@@ -113,7 +131,16 @@ class CustomProductController extends Controller
     
     // Fungsi untuk menyimpan data kedalam database available product
     public function StoreFormAddCustomJacket(Request $request)
-    {
+    {   
+        $this-> validate(request(),[
+            'jacket_id' => 'required',
+            'jacket_name' => 'required',
+            'jacket_price' => 'required|numeric',
+            'jacket_desc' => 'required',
+            'jacket_image' => 'required|mimes:jpeg,png,bmp,tiff|max:4096'
+        ]);
+        
+
         // cara dapetin lokasi path photo
         $photo = $request->file('jacket_image')->store('jacket_images');
         // dd($photo);
@@ -157,6 +184,14 @@ class CustomProductController extends Controller
     // Fungsi untuk menyimpan data kedalam database available product
     public function StoreFormAddCustomShirt(Request $request)
     {
+        $this-> validate(request(),[
+            'shirt_id' => 'required',
+            'shirt_name' => 'required',
+            'shirt_price' => 'required|numeric',
+            'shirt_desc' => 'required',
+            'shirt_image' => 'required|mimes:jpeg,png,bmp,tiff|max:4096'
+        ]);
+        
         // cara dapetin lokasi path photo
         $photo = $request->file('shirt_image')->store('shirt_images');
         // dd($photo);
@@ -202,6 +237,14 @@ class CustomProductController extends Controller
     
     public function StoreFormAddCustomShoes(Request $request)
     {
+        $this-> validate(request(),[
+            'shoes_id' => 'required',
+            'shoes_name' => 'required',
+            'shoes_price' => 'required|numeric',
+            'shoes_desc' => 'required',
+            'shoes_image' => 'required|mimes:jpeg,png,bmp,tiff|max:4096'
+        ]);
+        
         // cara dapetin lokasi path photo
         $photo = $request->file('shoes_image')->store('shoes_images');
         // dd($photo);
@@ -244,6 +287,14 @@ class CustomProductController extends Controller
 
     public function StoreFormAddCustomSweater(Request $request)
     {
+        $this-> validate(request(),[
+            'sweater_id' => 'required',
+            'sweater_name' => 'required',
+            'sweater_price' => 'required|numeric',
+            'sweater_desc' => 'required',
+            'sweater_image' => 'required|mimes:jpeg,png,bmp,tiff|max:4096'
+        ]);
+        
         // cara dapetin lokasi path photo
         $photo = $request->file('sweater_image')->store('sweater_images');
         // dd($photo);
@@ -289,6 +340,14 @@ class CustomProductController extends Controller
     // Fungsi untuk menyimpan data kedalam database available product
     public function StoreFormAddCustomTshirt(Request $request)
     {
+        $this-> validate(request(),[
+            'tshirt_id' => 'required',
+            'tshirt_name' => 'required',
+            'tshirt_price' => 'required|numeric',
+            'tshirt_desc' => 'required',
+            'tshirt_image' => 'required|mimes:jpeg,png,bmp,tiff|max:4096'
+        ]);
+        
         // cara dapetin lokasi path photo
         $photo = $request->file('tshirt_image')->store('tshirt_images');
         // dd($photo);
