@@ -29,6 +29,43 @@ class AdminOrderController extends Controller
     }
     //-------------------------CARDIGAN-------------------------
 
+    public function DetailCardigan($id)
+    {
+        $single_cardigan = CardiganOrder::find($id);
+        return view('admin.order.detailorder.CardiganOrderDetail', compact('single_cardigan'));
+    }
+    
+    public function DetailHoodie($id)
+    {
+        $single_hoodie = HoodieOrder::find($id);
+        return view('admin.order.detailorder.HoodieOrderDetail', compact('single_hoodie'));
+    }
+    public function DetailJacket($id)
+    {
+        $single_jacket = JacketOrder::find($id);
+        return view('admin.order.detailorder.JacketOrderDetail', compact('single_jacket'));
+    }
+    public function DetailShirt($id)
+    {
+        $single_shirt = ShirtOrder::find($id);
+        return view('admin.order.detailorder.ShirtOrderDetail', compact('single_shirt'));
+    }
+    public function DetailShoes($id)
+    {
+        $single_shoes = ShoesOrder::find($id);
+        return view('admin.order.detailorder.ShoesOrderDetail', compact('single_shoes'));
+    }
+    public function DetailSweater($id)
+    {
+        $single_sweater = SweaterOrder::find($id);
+        return view('admin.order.detailorder.SweaterOrderDetail', compact('single_sweater'));
+    }
+    public function DetailTshirt($id)
+    {
+        $single_tshirt = TshirtOrder::find($id);
+        return view('admin.order.detailorder.TshirtOrderDetail', compact('single_tshirt'));
+    }
+
     // public function CardiganOrder()
     // {
     //     $order = CardiganOrder::all();

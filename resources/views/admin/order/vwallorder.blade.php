@@ -26,7 +26,6 @@
                                 </span>
                                 <br>
                                 <span class="m-widget4__sub">
-                                <!-- id : {{$hoodiedata->hoodiedata_id}} <br> -->
                                 id : {{$cardigandata->cardigandata_id}}<br>
                                 {{$cardigandata->cardigan->cardigan_name}}<br>
                                 user id : {{$cardigandata->user_id}}<br>
