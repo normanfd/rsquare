@@ -130,10 +130,10 @@ class UserController extends Controller
     public function CreateHoodieOrder($id, Request $request)
     {
         $this-> validate(request(),[
-            'user_id' => 'required',
-            'color' => 'required',
-            'collar' => 'required',
-            'material' => 'required',
+            'selector_material' => 'required',
+            'selector_color' => 'required',
+            'selector_collar' => 'required',
+            
             'sleeve' => 'required',
             'sleeve_model' => 'required',
             'size' => 'required',

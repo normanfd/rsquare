@@ -33,7 +33,7 @@
                 <input type="number" class="form-control" id="amount" name="amount" placeholder="Jumlah Order"/>
               </div>
 
-              <h4 class="col-md-12"> Cardigan Material</h4>
+              <h4 class="col-md-12"> Pilih bahan</h4>
               <div class="col-md-3 form-group cardigan_material">
                 <div class="radion_btn">
                   <input type="radio" id="f-option-material-1" name="selector_material" value="kain"/>
@@ -51,7 +51,7 @@
                 <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
               </div>
 
-              <h4 class="col-md-12"> Cardigan Color</h4>
+              <h4 class="col-md-12"> Pilih warna</h4>
               <div class="col-md-3 form-group cardigan_color">
                 <div class="radion_btn">
                   <input type="radio" id="f-option1" name="selector_color" value="red"/>
@@ -77,7 +77,7 @@
                 <img src="{{asset('winter/img/instagram/inst_3.png')}}" alt="" style="width:200px;height:200px;">
               </div>
 
-              <h4 class="col-md-12"> Cardigan Collar</h4>
+              <h4 class="col-md-12"> Pilih model kerah</h4>
               <div class="col-md-3 form-group cardigan_collar">
                 <div class="radion_btn">
                   <input type="radio" id="f-option-collar-1" name="selector_collar" value="vmodel"/>
@@ -139,14 +139,13 @@
                 <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
               </div>
 
-              <h4 class="col-md-12"> Cardigan Arm</h4>
+              <h4 class="col-md-12"> Lengan Cardigan</h4>
               <div class="col-md-3 form-group cardigan_arm">
                 <div class="radion_btn">
                   <input type="radio" id="f-option-arm-1" name="selector_arm" value="short"/>
                   <label for="f-option-arm-1">Short</label>
                   <div class="check"></div>
                 </div>
-                <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
               </div>
               <div class="col-md-3 form-group cardigan_arm">
                 <div class="radion_btn">
@@ -154,10 +153,9 @@
                   <label for="f-option-arm-2">Long</label>
                   <div class="check"></div>
                 </div>
-                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
               </div>
 
-              <h4 class="col-md-12"> Cardigan Arm Model</h4>
+              <h4 class="col-md-12"> Model lengan</h4>
               <div class="col-md-3 form-group cardigan_armmodel">
                 <div class="radion_btn">
                   <input type="radio" id="f-option-armmodel-1" name="selector_armmodel" value="karet"/>
@@ -175,7 +173,7 @@
                 <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
               </div>
 
-              <h4 class="col-md-12"> Cardigan Bag</h4>
+              <h4 class="col-md-12"> Model kantong</h4>
               <div class="col-md-3 form-group cardigan_bag">
                 <div class="radion_btn">
                   <input type="radio" id="f-option-bag-1" name="selector_bag" value="kanva1"/>
@@ -203,7 +201,7 @@
 
 
               <div class="col-md-12 form-group p_star">
-                <h4>Cardigan Size</h4>
+                <h4>Ukuran</h4>
                 <select class="form-check" id="size" name="size">
                   <option value="S">S</option>
                   <option value="M">M</option>
@@ -221,7 +219,7 @@
               </div>
 
               <div class="col-md-12 form-group">
-                <h4>Order Cardigan Note</h4>
+                <h4>Catatan tambahan  </h4>
                 <textarea class="form-control" name="note" id="note" rows="1"
                   placeholder="Order Notes"></textarea>
               </div>
@@ -231,7 +229,7 @@
                 <a class="btn_3 form-group" type=submit >Proceed</a>
               </div> -->
               <button type="submit" class="col-md-3 btn_3 form-group">
-                Proceed
+                Order
               </button>
               
               <input type="text" class="form-control" id="user_id" name="user_id" value="{{ Auth::getUser()->id}}" hidden/>

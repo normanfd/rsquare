@@ -59,7 +59,8 @@ class AvailableProductController extends Controller
             'product_brand'=> request('product_brand'),
             'product_desc' => request('product_description')
         ]);
-        return view('admin.availableproduct.addAvailableProduct', compact('categories'));
+        // return view('admin.availableproduct.addAvailableProduct', compact('categories'))->with('success', 'produk berhasil ditambahkan');
+        return redirect()->route('admin.VWAvailProduct',compact('categories'))->with('success', 'produk berhasil ditambahkan');
     }
 
     public function ViewAvailableProduct()

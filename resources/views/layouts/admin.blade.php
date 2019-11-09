@@ -536,6 +536,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!-- END: Left Aside -->
 				<div class="m-grid__item m-grid__item--fluid m-wrapper">
 
+		  			@include('layouts.partials.alert')
                     @yield('content')
 
 					
