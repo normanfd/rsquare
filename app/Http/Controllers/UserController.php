@@ -60,19 +60,18 @@ class UserController extends Controller
     public function CreateCardiganOrder($id, Request $request)
     {
         $this-> validate(request(),[
-            'user_id' => 'required',
-            'color' => 'required',
-            'collar' => 'required',
-            'material' => 'required',
-            'buttons' => 'required',
-            'sleeve' => 'required',
-            'sleeve_model' => 'required',
+            'selector_color' => 'required',
+            'selector_collar' => 'required',
+            'selector_material' => 'required',
+            'selector_button' => 'required',
+            'selector_arm' => 'required',
+            'selector_armmodel' => 'required',
             'size' => 'required',
             'amount' => 'required|numeric',
             'wa_number' => 'required|numeric',
             'note' => 'required',
-            'pocket' => 'required',
-            'upload_design' => 'required|mimes:jpeg,png,bmp,tiff|max:4096'
+            'pocket' => 'selector_bag',
+            'upload_design' => 'nullable|mimes:jpeg,png,bmp,tiff|max:4096'
         ]);
         
 
@@ -202,26 +201,20 @@ class UserController extends Controller
     public function CreateJacketOrder($id, Request $request)
     {
         $this-> validate(request(),[
-            'user_id' => 'required',
-            'color' => 'required',
-            'collar' => 'required',
-            'material' => 'required',
-            'buttons' => 'required',
-            'sleeve' => 'required',
-            'sleeve_model' => 'required',
+            'selector_color' => 'required',
+            'selector_collar' => 'required',
+            'selector_material' => 'required',
+            'selector_button' => 'required',
+            'selector_arm' => 'required',
+            'selector_armmodel' => 'required',
             'size' => 'required',
             'amount' => 'required|numeric',
             'wa_number' => 'required|numeric',
             'note' => 'required',
-            'pocket' => 'required',
-            'upload_design' => 'required|mimes:jpeg,png,bmp,tiff|max:4096'
+            'selector_bag' => 'required',
+            'upload_design' => 'nullable|mimes:jpeg,png,bmp,tiff|max:4096'
         ]);
         
-        if ($this->fails()) {
-            redirect()
-                ->back()
-                ->withErrors($this->errors());
-        }
         $wa_number = request('wa_number');
         $name = request('name');
         $note = request('note');
@@ -276,19 +269,18 @@ class UserController extends Controller
     public function CreateShirtOrder($id, Request $request)
     {
         $this-> validate(request(),[
-            'user_id' => 'required',
-            'color' => 'required',
-            'collar' => 'required',
-            'material' => 'required',
-            'buttons' => 'required',
-            'sleeve' => 'required',
-            'sleeve_model' => 'required',
+            'selector_color' => 'required',
+            'selector_collar' => 'required',
+            'selector_material' => 'required',
+            'selector_button' => 'required',
+            'selector_arm' => 'required',
+            'selector_armmodel' => 'required',
             'size' => 'required',
             'amount' => 'required|numeric',
             'wa_number' => 'required|numeric',
             'note' => 'required',
-            'pocket' => 'required',
-            'upload_design' => 'required|mimes:jpeg,png,bmp,tiff|max:4096'
+            'selector_bag' => 'required',
+            'upload_design' => 'nullable|mimes:jpeg,png,bmp,tiff|max:4096'
         ]);
         
         if ($this->fails()) {
