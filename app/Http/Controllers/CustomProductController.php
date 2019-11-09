@@ -133,19 +133,23 @@ class CustomProductController extends Controller
 
     public function EditCustomHoodie($id){
         $hoodie = Hoodie::find($id);
-        return view('admin.editproduct.edithoodie', compact('hoodie'));
+        return view('admin.customproduct.hoodieedit', compact('hoodie'));
     }
 
     public function PostEditCustomHoodie($id, Request $request){
         $hoodie = Hoodie::find($id);
-        $photo = $request->file('hoodie_image')->store('hoodie_images');
+        $photo = $request->file('hoodie_image');
+
+        if($photo){
+            $photo->store('hoodie_images');
+            $hoodie->update(['hoodie_image' => $photo]);
+        }
         $hoodie->update([
             'category_id' => 2,
             'hoodie_id' => request('hoodie_id'),
             'hoodie_name' => request('hoodie_name'),
             'hoodie_price' => request('hoodie_price'),
-            'hoodie_desc' => request('hoodie_desc'),
-            'hoodie_image' => $photo
+            'hoodie_desc' => request('hoodie_desc')
         ]);
         redirect('admin/');
     }
@@ -202,19 +206,22 @@ class CustomProductController extends Controller
 
     public function EditCustomJacket($id){
         $jacket = Jacket::find($id);
-        return view('admin.editproduct.editjacket', compact('jacket'));
+        return view('admin.customproduct.jacketedit', compact('jacket'));
     }
 
     public function PostEditCustomJacket($id, Request $request){
         $jacket = Jacket::find($id);
-        $photo = $request->file('jacket_image')->store('jacket_images');
+        $photo = $request->file('jacket_image');
+        if($photo){
+            $photo->store('jacket_images');
+            $jacket->update(['jacket_image' => $photo]);
+        }
         $jacket->update([
             'category_id' => 2,
             'jacket_id' => request('jacket_id'),
             'jacket_name' => request('jacket_name'),
             'jacket_price' => request('jacket_price'),
             'jacket_desc' => request('jacket_desc'),
-            'jacket_image' => $photo
         ]);
         return redirect('admin/');
     }
@@ -269,19 +276,22 @@ class CustomProductController extends Controller
 
     public function EditCustomShirt($id){
         $shirt = Shirt::find($id);
-        return view('admin.editproduct.editshirt', compact('shirt'));
+        return view('admin.customproduct.shirtedit', compact('shirt'));
     }
 
     public function PostEditCustomShirt($id, Request $request){
         $shirt = Shirt::find($id);
-        $photo = $request->file('shirt_image')->store('shirt_images');
+        $photo = $request->file('shirt_image');
+        if($photo){
+            $photo->store('shirt_images');
+            $shirt->update(['shirt_image' => $photo]);
+        }
         $shirt->update([
             'category_id' => 2,
             'shirt_id' => request('shirt_id'),
             'shirt_name' => request('shirt_name'),
             'shirt_price' => request('shirt_price'),
             'shirt_desc' => request('shirt_desc'),
-            'shirt_image' => $photo
         ]);
         return redirect('admin/');
     }
@@ -338,19 +348,23 @@ class CustomProductController extends Controller
 
     public function EditCustomShoes($id){
         $shoes = Shoes::find($id);
-        return view('admin.editproduct.editshoes', compact('shoes'));
+        return view('admin.customproduct.shoesedit', compact('shoes'));
     }
 
     public function PostEditCustomShoes($id, Request $request){
         $shoes = Shoes::find($id);
-        $photo = $request->file('shoes_image')->store('shoes_images');
+        $photo = $request->file('shoes_image');
+
+        if($photo){
+            $photo->store('shoes_images');
+            $shoes->update(['shoes_image' => $photo]);
+        }
         $shoes->update([
             'category_id' => 2,
             'shoes_id' => request('shoes_id'),
             'shoes_name' => request('shoes_name'),
             'shoes_price' => request('shoes_price'),
             'shoes_desc' => request('shoes_desc'),
-            'shoes_image' => $photo
         ]);
         return redirect('admin/');
     }
@@ -406,19 +420,22 @@ class CustomProductController extends Controller
 
     public function EditCustomSweater($id){
         $sweater = Sweater::find($id);
-        return view('admin.editproduct.editsweater', compact('sweater'));
+        return view('admin.customproduct.sweateredit', compact('sweater'));
     }
 
     public function PostEditCustomSweater($id, Request $request){
         $sweater = Sweater::find($id);
-        $photo = $request->file('sweater_image')->store('sweater_images');
+        $photo = $request->file('sweater_image');
+        if($photo){
+            $photo->store('sweater_images');
+            $sweater->update(['sweater_image' => $photo]);
+        }
         $sweater->update([
             'category_id' => 2,
             'sweater_id' => request('sweater_id'),
             'sweater_name' => request('sweater_name'),
             'sweater_price' => request('sweater_price'),
             'sweater_desc' => request('sweater_desc'),
-            'sweater_image' => $photo
         ]);
         return redirect('admin/');
     }
@@ -473,19 +490,23 @@ class CustomProductController extends Controller
 
     public function EditCustomTshirt($id){
         $tshirt = Tshirt::find($id);
-        return view('admin.editproduct.edittshirt', compact('tshirt'));
+        return view('admin.customproduct.tshirtedit', compact('tshirt'));
     }
 
     public function PostEditCustomTshirt($id, Request $request){
         $tshirt = Tshirt::find($id);
-        $photo = $request->file('tshirt_image')->store('tshirt_images');
+        $photo = $request->file('tshirt_image');
+        if($photo){
+            $photo->store('tshirt_images');
+            $sweater->update(['tshirt_image' => $photo]);
+        }
+        
         $tshirt->update([
             'category_id' => 2,
             'tshirt_id' => request('tshirt_id'),
             'tshirt_name' => request('tshirt_name'),
             'tshirt_price' => request('tshirt_price'),
             'tshirt_desc' => request('tshirt_desc'),
-            'tshirt_image' => $photo
         ]);
         return redirect('admin/');
     }
