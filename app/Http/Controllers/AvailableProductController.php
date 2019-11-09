@@ -24,16 +24,13 @@ class AvailableProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function VWAvailableProduct()
+    public function FormAvailableProduct()
     {
-        // untuk mendapatkan data dari DB kategori produk
         $categories = ProductCategory::all();
-
-        // dd($categories); ini buat check ada ga sih data category nya
-        return view('admin.availableproduct.index', compact('categories'));
+        return view('admin.availableproduct.addAvailableProduct', compact('categories'));
     }
-    // Fungsi untuk menyimpan data kedalam database available product
-    public function StoreAvailableProduct(Request $request)
+
+    public function SaveFormAvailableProduct(Request $request)
     {
         // untuk mendapatkan data dari DB kategori produk
         $categories = ProductCategory::all();
@@ -46,12 +43,6 @@ class AvailableProductController extends Controller
             'product_desc' => 'product_desc',
             'product_image' => 'required|mimes:jpeg,png,bmp,tiff|max:4096'
         ]);
-        
-        if ($this->fails()) {
-            redirect()
-                ->back()
-                ->withErrors($this->errors());
-        }
 
         // cara dapetin lokasi path photo
         $photo = $request->file('product_image')->store('product_images');
@@ -68,35 +59,41 @@ class AvailableProductController extends Controller
             'product_brand'=> request('product_brand'),
             'product_desc' => request('product_description')
         ]);
-        return view('admin.availableproduct.index', compact('categories'));
+        return view('admin.availableproduct.addAvailableProduct', compact('categories'));
     }
 
-    public function listavailableproduct()
+    public function ViewAvailableProduct()
     {
         $product = AvailableProduct::all();
         return view('admin.availableproduct.vwproduct', compact('product'));
     }
 
-    public function EditAvailableProduct($id)
+    public function EditFormAvailableProduct($id)
     {
         $product = AvailableProduct::find($id);
         $categories = ProductCategory::all();
         return view('admin.availableproduct.editproduct', compact('product', 'categories'));
     }
 
-    public function PostEditAvailableProduct($id, Request $request)
+    public function SaveEditFormAvailableProduct($id, Request $request)
     {
         $single_product = AvailableProduct::find($id);
         $product = AvailableProduct::all();
 
-        $photo = $request->file('product_image')->store('product_images');
+        $photo = $request->file('product_image');
+        if($photo){
+            $photo->store('product_images');
+            $single_product->update([
+                'product_image' => $photo
+            ]);
+        }
+
         $single_product->update([
             'category_id' => request('category_id'),
             'product_id' => 1,
             'product_name' => request('product_name'),
             'product_price' => request('product_price'),
             'product_rating' => "sssss",
-            'product_image' => $photo,
             'product_stock'=> request('product_stock'),
             'product_brand'=> request('product_brand'),
             'product_desc' => request('product_description')

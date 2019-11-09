@@ -243,18 +243,18 @@ License: You must have a valid license purchased only from themeforest(the above
 				<button class="m-aside-left-close  m-aside-left-close--skin-dark " id="m_aside_left_close_btn">
 					<i class="la la-close"></i>
 				</button>
-				<div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark ">
-					<!-- BEGIN: Aside Menu -->
-	<div 
-		id="m_ver_menu" 
-		class="m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark " 
-		m-menu-vertical="1"
-		 m-menu-scrollable="0" m-menu-dropdown-timeout="500"  
-		>
+					<div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark ">
+						<!-- BEGIN: Aside Menu -->
+						<div 
+							id="m_ver_menu" 
+							class="m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark " 
+							m-menu-vertical="1"
+							m-menu-scrollable="0" m-menu-dropdown-timeout="500"  
+						>
 						<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
 							<li class="m-menu__section">
 								<h4 class="m-menu__section-text">
-									Add Product
+									Produk Baru
 								</h4>
 								<i class="m-menu__section-icon flaticon-more-v3"></i>
 							</li>
@@ -264,7 +264,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<span class="m-menu__link-title">
 										<span class="m-menu__link-wrap">
 											<span class="m-menu__link-text">
-												Available Product
+												Tambahkan Produk Jadi
 											</span>
 										</span>
 									</span>
@@ -274,7 +274,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<a  href="javascript:;" class="m-menu__link m-menu__toggle">
 									<i class="m-menu__link-icon flaticon-signs-2"></i>
 									<span class="m-menu__link-text">
-										Custom Product
+										Tambahkan Produk Custom
 									</span>
 									<i class="m-menu__ver-arrow la la-angle-right"></i>
 								</a>
@@ -370,7 +370,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							
 							<li class="m-menu__section">
 								<h4 class="m-menu__section-text">
-									View Product
+									Manajemen Produk
 								</h4>
 								<i class="m-menu__section-icon flaticon-more-v3"></i>
 							</li>
@@ -380,28 +380,126 @@ License: You must have a valid license purchased only from themeforest(the above
 									<span class="m-menu__link-title">
 										<span class="m-menu__link-wrap">
 											<span class="m-menu__link-text">
-												Available Product
+												Prdouk Jadi
 											</span>
 										</span>
 									</span>
 								</a>
 							</li>
-							<li class="m-menu__item " aria-haspopup="true" >
+							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  m-menu-submenu-toggle="hover">
+								<a  href="javascript:;" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon flaticon-signs-2"></i>
+									<span class="m-menu__link-text">
+										Produk Custom
+									</span>
+									<i class="m-menu__ver-arrow la la-angle-right"></i>
+								</a>
+								<div class="m-menu__submenu ">
+									<span class="m-menu__arrow"></span>
+									<ul class="m-menu__subnav">
+										<li class="m-menu__item  m-menu__item--parent" aria-haspopup="true" >
+											<span class="m-menu__link">
+												<span class="m-menu__link-text">
+													Custom Product
+												</span>
+											</span>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="{{ route('admin.viewcustomcardigan') }}" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Cardigan
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="{{ route('admin.addcustomhoodie') }}" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Hoodie
+												</span>
+											</a>
+										</li>
+
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="{{ route('admin.addcustomjacket') }}" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Jacket
+												</span>
+											</a>
+										</li>
+
+										
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="{{ route('admin.addcustomshirt') }}" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Shirt
+												</span>
+											</a>
+										</li>
+										
+										
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="{{ route('admin.addcustomshoes') }}" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Shoes
+												</span>
+											</a>
+										</li>
+										
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="{{ route('admin.addcustomsweater') }}" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Sweater
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="{{ route('admin.addcustomtshirt') }}" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													T-Shirt
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							
+							<!-- <li class="m-menu__item " aria-haspopup="true" >
 								<a  href="{{ route('admin.vwcustomproduct') }}" class="m-menu__link ">
 									<i class="m-menu__link-icon flaticon-line-graph"></i>
 									<span class="m-menu__link-title">
 										<span class="m-menu__link-wrap">
 											<span class="m-menu__link-text">
-												Custom Product
+												Produk Custom
 											</span>
 										</span>
 									</span>
 								</a>
-							</li>
+							</li> -->
 
 							<li class="m-menu__section">
 								<h4 class="m-menu__section-text">
-									View Order
+									Manajemen Pesanan
 								</h4>
 								<i class="m-menu__section-icon flaticon-more-v3"></i>
 							</li>
@@ -411,7 +509,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<span class="m-menu__link-title">
 										<span class="m-menu__link-wrap">
 											<span class="m-menu__link-text">
-												Available Product
+												Pesanan Produk Jadi
 											</span>
 										</span>
 									</span>
@@ -423,7 +521,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<span class="m-menu__link-title">
 										<span class="m-menu__link-wrap">
 											<span class="m-menu__link-text">
-												Custom Product
+												Pesanan Produk Custom
 											</span>
 										</span>
 									</span>
@@ -437,16 +535,6 @@ License: You must have a valid license purchased only from themeforest(the above
 				</div>
 				<!-- END: Left Aside -->
 				<div class="m-grid__item m-grid__item--fluid m-wrapper">
-					<!-- BEGIN: Subheader -->
-					<!-- <div class="m-subheader ">
-						<div class="d-flex align-items-center">
-							<div class="mr-auto">
-								<h3 class="m-subheader__title ">
-									Dashboard
-								</h3>
-							</div>
-						</div>
-					</div> -->
 
                     @yield('content')
 

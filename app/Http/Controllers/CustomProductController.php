@@ -51,6 +51,12 @@ class CustomProductController extends Controller
         return view('admin.customproduct.cardigan');
     }
     
+    public function ViewCustomCardigan()
+    {
+        $cardigan = cardigan::all();
+        // dd($cardigan);
+        return view('admin.customproduct.cardiganview', compact('cardigan'));
+    }
     //fungsi buat get data cardigan
     public function EditCustomCardigan($id){
         $cardigan = cardigan::find($id);
@@ -69,6 +75,15 @@ class CustomProductController extends Controller
             'cardigan_image' => $photo
         ]);
         return redirect('admin/');
+    }
+
+    public function DeleteCustomCardigan($id)
+    {
+        $single_product = cardigan::find($id);
+        $single_product->delete();
+        $product = cardigan::all();
+        
+        return redirect()->route('admin.viewcustomcardigan', compact('product'));
     }
 
     //================HOODIE=================================================================================

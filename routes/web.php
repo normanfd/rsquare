@@ -80,23 +80,28 @@ Route::prefix('admin')->group(function() {
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
     // Produk Jadi
-    // Create
-    Route::get('/VWAvailableProduct', 'AvailableProductController@VWAvailableProduct')->name('admin.VWAvailProduct');
-    Route::post('/VWAvailableProduct', 'AvailableProductController@StoreAvailableProduct')->name('admin.StoreAvailProduct');
-    // Read
-    Route::get('/listavailableproduct', 'AvailableProductController@listavailableproduct')->name('admin.listavailableproduct');
-    // Edit
-    Route::get('/Editavailableproduct/{id}', 'AvailableProductController@EditAvailableProduct')->name('admin.EditAvailProduct');
-    Route::patch('/Editavailableproduct/{id}', 'AvailableProductController@PostEditAvailableProduct')->name('admin.PostEditAvailableProduct');
-    // Delete
-    Route::delete('/deleteavailableproduct/{id}', 'AvailableProductController@DeleteAvailableProduct')->name('admin.DeleteAvailProduct');
+        // Create
+        Route::get('/addavailableproduct', 'AvailableProductController@FormAvailableProduct')->name('admin.VWAvailProduct');
+        Route::post('/addAvailableproduct', 'AvailableProductController@SaveFormAvailableProduct')->name('admin.StoreAvailProduct');
+        // Read
+        Route::get('/viewavailableproduct', 'AvailableProductController@ViewAvailableProduct')->name('admin.listavailableproduct');
+        // Update
+        Route::get('/editavailableproduct/{id}', 'AvailableProductController@EditFormAvailableProduct')->name('admin.EditAvailProduct');
+        Route::patch('/editavailableproduct/{id}', 'AvailableProductController@SaveEditFormAvailableProduct')->name('admin.PostEditAvailableProduct');
+        // Delete
+        Route::delete('/deleteavailableproduct/{id}', 'AvailableProductController@DeleteAvailableProduct')->name('admin.DeleteAvailProduct');
 
     // Custom Cardigan
-    Route::get('/addcustomcardigan', 'CustomProductController@FormAddCustomCardigan')->name('admin.addcustomcardigan');
-    Route::post('/addcustomcardigan', 'CustomProductController@StoreFormAddCustomCardigan')->name('admin.Storeaddcustomcardigan');
-    Route::get('/editcardigan/{id}', 'CustomProductController@EditCustomCardigan')->name('admin.Editcustomcardigan');
-    Route::patch('/editcardigan/{id}', 'CustomProductController@PostEditCustomCardigan')->name('admin.PostEditcustomcardigan');
-    Route::delete('/deletecardigan/{id}', 'CustomProductController@DeleteCustomCardigan')->name('admin.Deletecustomcardigan');
+        // create
+        Route::get('/addcustomcardigan', 'CustomProductController@FormAddCustomCardigan')->name('admin.addcustomcardigan');
+        Route::post('/addcustomcardigan', 'CustomProductController@StoreFormAddCustomCardigan')->name('admin.Storeaddcustomcardigan');
+        // read
+        Route::get('/viewcustomcardigan', 'CustomProductController@ViewCustomCardigan')->name('admin.viewcustomcardigan');
+        // update
+        Route::get('/editcardigan/{id}', 'CustomProductController@EditCustomCardigan')->name('admin.Editcustomcardigan');
+        Route::patch('/editcardigan/{id}', 'CustomProductController@PostEditCustomCardigan')->name('admin.PostEditcustomcardigan');
+        //delete
+        Route::delete('/deletecardigan/{id}', 'CustomProductController@DeleteCustomCardigan')->name('admin.Deletecustomcardigan');
     // Custom Hoodie
     Route::get('/addcustomhoodie', 'CustomProductController@FormAddCustomHoodie')->name('admin.addcustomhoodie');
     Route::post('/addcustomhoodie', 'CustomProductController@StoreFormAddCustomHoodie')->name('admin.Storeaddcustomhoodie');

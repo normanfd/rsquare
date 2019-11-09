@@ -140,7 +140,7 @@ Harga produk : {{$product->product_price}}
                         Product Photo
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
-                        <input type="file" name="product_image">
+                        <input type="file" name="product_image" value="{{$product->product_image}}>
                     </div>
                 </div>
             </div>
