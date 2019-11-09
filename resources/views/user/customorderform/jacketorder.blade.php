@@ -32,64 +32,96 @@
                 <input type="number" class="form-control" id="amount" name="amount" placeholder="Jumlah Order"/>
               </div>
 
-              <h4 class="col-md-12"> Jacket Material</h4>
+              <h4 class="col-md-12"> Pilih bahan</h4>
               <div class="col-md-3 form-group jacket_material">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option-material-1" name="selector_material" value="kanva1"/>
+                  <input type="radio" id="f-option-material-1" name="selector_material" value="kain"/>
                   <label for="f-option-material-1">Kain</label>
                   <div class="check"></div>
                 </div>
-                <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
+                <!-- <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;"> -->
               </div>
               <div class="col-md-3 form-group jacket_material">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option-material-2" name="selector_material" value="kanva2"/>
+                  <input type="radio" id="f-option-material-2" name="selector_material" value="kulit"/>
                   <label for="f-option-material-2">Kulit</label>
                   <div class="check"></div>
                 </div>
-                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+                <!-- <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;"> -->
               </div>
               <div class="col-md-3 form-group jacket_material">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option-material-3" name="selector_material" value="kanva2"/>
+                  <input type="radio" id="f-option-material-3" name="selector_material" value="katun"/>
                   <label for="f-option-material-3">Katun</label>
                   <div class="check"></div>
                 </div>
-                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+                <!-- <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;"> -->
               </div>
 
-              <h4 class="col-md-12"> Jacket Color</h4>
+              <h4 class="col-md-12"> Pilih warna</h4>
               <div class="col-md-3 form-group jacket_color">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option1" name="selector_color" />
-                  <label for="f-option1">Red</label>
+                  <input type="radio" id="f-option1" name="selector_color" value="black"/>
+                  <label for="f-option1">Black</label>
                   <div class="check"></div>
                 </div>
-                <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
+                <!-- <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;"> -->
               </div>
               <div class="col-md-3 form-group jacket_color">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option2" name="selector_color" />
-                  <label for="f-option2">Blue</label>
+                  <input type="radio" id="f-option2" name="selector_color" value="grey"/>
+                  <label for="f-option2">Grey</label>
                   <div class="check"></div>
                 </div>
-                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+                <!-- <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;"> -->
               </div>
               <div class="col-md-3 form-group jacket_color">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option3" name="selector_color" />
-                  <label for="f-option3">Green</label>
+                  <input type="radio" id="f-option3" name="selector_color" value="green army"/>
+                  <label for="f-option3">Green Army</label>
                   <div class="check"></div>
                 </div>
-                <img src="{{asset('winter/img/instagram/inst_3.png')}}" alt="" style="width:200px;height:200px;">
+                <!-- <img src="{{asset('winter/img/instagram/inst_3.png')}}" alt="" style="width:200px;height:200px;"> -->
               </div>
               <div class="col-md-3 form-group jacket_color">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option4" name="selector_color" />
+                  <input type="radio" id="f-option4" name="selector_color" value="cyan"/>
                   <label for="f-option4">Cyan</label>
                   <div class="check"></div>
                 </div>
-                <img src="{{asset('winter/img/instagram/inst_3.png')}}" alt="" style="width:200px;height:200px;">
+                <!-- <img src="{{asset('winter/img/instagram/inst_3.png')}}" alt="" style="width:200px;height:200px;"> -->
+              </div>
+              <div class="col-md-3 form-group jacket_color">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option5" name="selector_color" value="donker"/>
+                  <label for="f-option5">Donker</label>
+                  <div class="check"></div>
+                </div>
+                <!-- <img src="{{asset('winter/img/instagram/inst_3.png')}}" alt="" style="width:200px;height:200px;"> -->
+              </div>
+              <div class="col-md-3 form-group jacket_color">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option6" name="selector_color" value="cream"/>
+                  <label for="f-option6">Cream</label>
+                  <div class="check"></div>
+                </div>
+                <!-- <img src="{{asset('winter/img/instagram/inst_3.png')}}" alt="" style="width:200px;height:200px;"> -->
+              </div>
+              <div class="col-md-3 form-group jacket_color">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option7" name="selector_color" value="dark red"/>
+                  <label for="f-option7">Dark red</label>
+                  <div class="check"></div>
+                </div>
+                <!-- <img src="{{asset('winter/img/instagram/inst_3.png')}}" alt="" style="width:200px;height:200px;"> -->
+              </div>
+              <div class="col-md-3 form-group jacket_color">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option8" name="selector_color" value="white"/>
+                  <label for="f-option8">white</label>
+                  <div class="check"></div>
+                </div>
+                <!-- <img src="{{asset('winter/img/instagram/inst_3.png')}}" alt="" style="width:200px;height:200px;"> -->
               </div>
 
               <h4 class="col-md-12"> Jacket Collar</h4>
@@ -177,33 +209,49 @@
                   <label for="f-option-bag-3">kirikanan</label>
                   <div class="check"></div>
                 </div>
-                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+                <img src="{{asset('winter/img/formjaket/button/jenis1.png')}}" alt="" style="width:200px;height:200px;">
               </div>
 
-              <h4 class="col-md-12"> Jacket Zipper</h4>
+              <h4 class="col-md-12"> Pilih sleting/ kancing depan</h4>
               <div class="col-md-3 form-group jacket_zipper">
                 <div class="radion_btn">
                   <input type="radio" id="f-option-zipper-1" name="selector_zipper" value="kanva1"/>
-                  <label for="f-option-zipper-1">V model</label>
+                  <label for="f-option-zipper-1">jenis1</label>
                   <div class="check"></div>
                 </div>
-                <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
+                <img src="{{asset('winter/img/formjaket/button/jenis1.png')}}" alt="" style="width:200px;height:200px;">
               </div>
               <div class="col-md-3 form-group jacket_zipper">
                 <div class="radion_btn">
                   <input type="radio" id="f-option-zipper-2" name="selector_zipper" value="kanva2"/>
-                  <label for="f-option-zipper-2">O model</label>
+                  <label for="f-option-zipper-2">jenis2</label>
                   <div class="check"></div>
                 </div>
-                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+                <img src="{{asset('winter/img/formjaket/button/jenis2.png')}}" alt="" style="width:200px;height:200px;">
               </div>
               <div class="col-md-3 form-group jacket_zipper">
                 <div class="radion_btn">
                   <input type="radio" id="f-option-zipper-3" name="selector_zipper" value="kanva2"/>
-                  <label for="f-option-zipper-3">Z model</label>
+                  <label for="f-option-zipper-3">jenis3</label>
                   <div class="check"></div>
                 </div>
-                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+                <img src="{{asset('winter/img/formjaket/button/jenis3.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
+              <div class="col-md-3 form-group jacket_zipper">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-zipper-4" name="selector_zipper" value="kanva2"/>
+                  <label for="f-option-zipper-4">jenis4</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/formjaket/button/jenis4.png')}}" alt="" style="width:200px;height:200px;">
+              </div>
+              <div class="col-md-3 form-group jacket_zipper">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-zipper-5" name="selector_zipper" value="kanva2"/>
+                  <label for="f-option-zipper-5">jenis5</label>
+                  <div class="check"></div>
+                </div>
+                <img src="{{asset('winter/img/formjaket/button/jenis5.png')}}" alt="" style="width:200px;height:200px;">
               </div>
 
               <h4 class="col-md-12"> Jacket Button</h4>
