@@ -9,7 +9,7 @@
             <div class="m-portlet__head-caption">
                 <div class="m-portlet__head-title">
                     <h3 class="m-portlet__head-text">
-                        Add New Product
+                        Tambahkan Produk Jadi
                     </h3>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                         Kode Produk *
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
-                        <input type="text" class="form-control m-input" name="product_id" placeholder="Enter your produk ID" data-toggle="m-tooltip" title="masukan kode produk" value="{{ old('product_id') }}">
+                        <input type="text" class="form-control m-input" name="product_id" placeholder="masukan kode produk" data-toggle="m-tooltip" title="masukan kode produk" value="{{ old('product_id') }}">
                     </div>
                 </div>
                 <div class="form-group m-form__group row">
@@ -128,7 +128,7 @@
                         Deskripsi Produk *
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
-                        <textarea class="form-control m-input" name="product_description" placeholder="masukan deskripsi produk"> {{ old('category_id') }} </textarea>
+                        <textarea class="form-control m-input" name="product_description" placeholder="masukan deskripsi produk">{{old('product_description')}}</textarea>
                         <span class="m-form__help">
                             Please enter a Description of Product
                         </span>

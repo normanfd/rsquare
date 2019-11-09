@@ -8,7 +8,7 @@
             <div class="m-portlet__head-caption">
                 <div class="m-portlet__head-title">
                     <h3 class="m-portlet__head-text">
-                        Add New Custom Cardigan
+                        Tambahkan Produk Cardigan (Custom)
                     </h3>
                 </div>
             </div>
@@ -41,25 +41,25 @@
                 </div>
                 <div class="form-group m-form__group row">
                     <label class="col-form-label col-lg-3 col-sm-12">
-                        Cardigan ID *
+                        Kode produk *
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
-                        <input type="text" class="form-control m-input" name="cardigan_id" placeholder="Enter your produk ID" data-toggle="m-tooltip" title="Input Produk ID" value="{{old('cardigan_id')}}">
+                        <input type="text" class="form-control m-input" name="cardigan_id" placeholder="masukan kode produk" data-toggle="m-tooltip" title="Input Produk Code" value="{{old('cardigan_id')}}">
                     </div>
                 </div>
                 <div class="form-group m-form__group row">
                     <label class="col-form-label col-lg-3 col-sm-12">
-                        Cardigan Name*
+                        Nama Cardigan*
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
                         <div class="input-group">
-                            <input type="text" class="form-control m-input" name="cardigan_name" placeholder="Enter your product name" value="{{old('cardigan_name')}}">
+                            <input type="text" class="form-control m-input" name="cardigan_name" placeholder="masukan nama cardigan" value="{{old('cardigan_name')}}">
                         </div>
                     </div>
                 </div>
                 <div class="form-group m-form__group row">
                     <label class="col-form-label col-lg-3 col-sm-12">
-                        Cardigan Price
+                        Harga Cardigan
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
                         <div class="m-input-icon m-input-icon--left">
@@ -77,10 +77,10 @@
                 </div>
                 <div class="form-group m-form__group row">
                     <label class="col-form-label col-lg-3 col-sm-12">
-                        Cardigan Description *
+                        Deskripsi *
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
-                        <textarea class="form-control m-input" name="cardigan_desc" placeholder="Enter a description"> </textarea>
+                        <textarea class="form-control m-input" name="cardigan_desc" placeholder="masukan deskripsi cardigan"> </textarea>
                         <span class="m-form__help">
                             Please enter a Description of Cardigan
                         </span>
@@ -88,7 +88,7 @@
                 </div>
                 <div class="form-group m-form__group row">
                     <label class="col-form-label col-lg-3 col-sm-12">
-                        Product Cardigan Image
+                        Gambar
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
                         <input type="file" name="cardigan_image">
