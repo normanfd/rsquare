@@ -415,7 +415,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="{{ route('admin.addcustomhoodie') }}" class="m-menu__link ">
+											<a  href="{{ route('admin.viewcustomhoodie') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
@@ -426,7 +426,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										</li>
 
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="{{ route('admin.addcustomjacket') }}" class="m-menu__link ">
+											<a  href="{{ route('admin.viewcustomjacket') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
@@ -438,7 +438,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 										
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="{{ route('admin.addcustomshirt') }}" class="m-menu__link ">
+											<a  href="{{ route('admin.viewcustomshirt') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
@@ -450,7 +450,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										
 										
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="{{ route('admin.addcustomshoes') }}" class="m-menu__link ">
+											<a  href="{{ route('admin.viewcustomshoes') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
@@ -461,7 +461,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										</li>
 										
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="{{ route('admin.addcustomsweater') }}" class="m-menu__link ">
+											<a  href="{{ route('admin.viewcustomsweater') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
@@ -471,7 +471,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="{{ route('admin.addcustomtshirt') }}" class="m-menu__link ">
+											<a  href="{{ route('admin.viewcustomtshirt') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>

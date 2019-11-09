@@ -58,21 +58,27 @@ class CustomProductController extends Controller
         return view('admin.customproduct.cardiganview', compact('cardigan'));
     }
     //fungsi buat get data cardigan
-    public function EditCustomCardigan($id){
+    public function EditFormCustomCardigan($id){
         $cardigan = cardigan::find($id);
-        return view('admin.editproduct.editcardigan', compact('cardigan'));
+        return view('admin.customproduct.cardiganedit', compact('cardigan'));
     }
 
-    public function PostEditCustomCardigan($id, Request $request){
+    public function SaveEditFormCustomCardigan($id, Request $request){
         $cardigan = cardigan::find($id);
-        $photo = $request->file('cardigan_image')->store('cardigan_images');
+        $photo = $request->file('cardigan_image');
+        if($photo){
+            $photo->store('cardigan_images');
+            $cardigan->update([
+                'cardigan_image' => $photo
+            ]);
+        }
+        
         $cardigan->update([
             'category_id' => 2,
             'cardigan_id' => request('cardigan_id'),
             'cardigan_name' => request('cardigan_name'),
             'cardigan_price' => request('cardigan_price'),
             'cardigan_desc' => request('cardigan_desc'),
-            'cardigan_image' => $photo
         ]);
         return redirect('admin/');
     }
@@ -118,6 +124,13 @@ class CustomProductController extends Controller
         return view('admin.customproduct.hoodie');
     }
 
+    public function ViewCustomHoodie()
+    {
+        $hoodie = Hoodie::all();
+        // dd($cardigan);
+        return view('admin.customproduct.hoodieview', compact('hoodie'));
+    }
+
     public function EditCustomHoodie($id){
         $hoodie = Hoodie::find($id);
         return view('admin.editproduct.edithoodie', compact('hoodie'));
@@ -135,6 +148,15 @@ class CustomProductController extends Controller
             'hoodie_image' => $photo
         ]);
         redirect('admin/');
+    }
+
+    public function DeleteCustomHoodie($id)
+    {
+        $single_product = Hoodie::find($id);
+        $single_product->delete();
+        $product = Hoodie::all();
+        
+        return redirect()->route('admin.viewcustomhoodie', compact('product'));
     }
     
 
@@ -171,6 +193,13 @@ class CustomProductController extends Controller
         return view('admin.customproduct.jacket');
     }
 
+    public function ViewCustomJacket()
+    {
+        $jacket = Jacket::all();
+        // dd($cardigan);
+        return view('admin.customproduct.jacketview', compact('jacket'));
+    }
+
     public function EditCustomJacket($id){
         $jacket = Jacket::find($id);
         return view('admin.editproduct.editjacket', compact('jacket'));
@@ -188,6 +217,15 @@ class CustomProductController extends Controller
             'jacket_image' => $photo
         ]);
         return redirect('admin/');
+    }
+
+    public function DeleteCustomJacket($id)
+    {
+        $single_product = Jacket::find($id);
+        $single_product->delete();
+        $product = Jacket::all();
+        
+        return redirect()->route('admin.viewcustomjacket', compact('product'));
     }
 
     //============================shirt=================================================================
@@ -222,6 +260,13 @@ class CustomProductController extends Controller
         return view('admin.customproduct.shirt');
     }
 
+    public function ViewCustomShirt()
+    {
+        $shirt = Shirt::all();
+        // dd($cardigan);
+        return view('admin.customproduct.shirtview', compact('shirt'));
+    }
+
     public function EditCustomShirt($id){
         $shirt = Shirt::find($id);
         return view('admin.editproduct.editshirt', compact('shirt'));
@@ -239,6 +284,15 @@ class CustomProductController extends Controller
             'shirt_image' => $photo
         ]);
         return redirect('admin/');
+    }
+
+    public function DeleteCustomShirt($id)
+    {
+        $single_product = Shirt::find($id);
+        $single_product->delete();
+        $product = Shirt::all();
+        
+        return redirect()->route('admin.viewcustomshirt', compact('product'));
     }
 
     //========================================shoes=======================================================
@@ -275,6 +329,13 @@ class CustomProductController extends Controller
         return view('admin.customproduct.shoes');
     }
 
+    public function ViewCustomShoes()
+    {
+        $shoes = Shoes::all();
+        // dd($cardigan);
+        return view('admin.customproduct.shoesview', compact('shoes'));
+    }
+
     public function EditCustomShoes($id){
         $shoes = Shoes::find($id);
         return view('admin.editproduct.editshoes', compact('shoes'));
@@ -292,6 +353,15 @@ class CustomProductController extends Controller
             'shoes_image' => $photo
         ]);
         return redirect('admin/');
+    }
+
+    public function DeleteCustomShoes($id)
+    {
+        $single_product = Shoes::find($id);
+        $single_product->delete();
+        $product = Shoes::all();
+        
+        return redirect()->route('admin.viewcustomshoes', compact('product'));
     }
 
     //===============================================Sweater==================================================
@@ -327,6 +397,13 @@ class CustomProductController extends Controller
         
     }
 
+    public function ViewCustomSweater()
+    {
+        $sweater = Sweater::all();
+        // dd($cardigan);
+        return view('admin.customproduct.sweaterview', compact('sweater'));
+    }
+
     public function EditCustomSweater($id){
         $sweater = Sweater::find($id);
         return view('admin.editproduct.editsweater', compact('sweater'));
@@ -344,6 +421,15 @@ class CustomProductController extends Controller
             'sweater_image' => $photo
         ]);
         return redirect('admin/');
+    }
+
+    public function DeleteCustomSweater($id)
+    {
+        $single_product = Sweater::find($id);
+        $single_product->delete();
+        $product = Sweater::all();
+        
+        return redirect()->route('admin.viewcustomsweater', compact('product'));
     }
     
     //============================tshirt=================================================================
@@ -378,6 +464,13 @@ class CustomProductController extends Controller
         return view('admin.customproduct.tshirt');
     }
 
+    public function ViewCustomTshirt()
+    {
+        $tshirt = Tshirt::all();
+        // dd($cardigan);
+        return view('admin.customproduct.tshirtview', compact('tshirt'));
+    }
+
     public function EditCustomTshirt($id){
         $tshirt = Tshirt::find($id);
         return view('admin.editproduct.edittshirt', compact('tshirt'));
@@ -397,11 +490,12 @@ class CustomProductController extends Controller
         return redirect('admin/');
     }
 
-    // ====================== View Custom Product =========================
-
-    public function VwCustomProduct()
+    public function DeleteCustomTshirt($id)
     {
-        return view('admin.customproduct.vwcustomproduct');
+        $single_product = Tshirt::find($id);
+        $single_product->delete();
+        $product = Tshirt::all();
+        
+        return redirect()->route('admin.viewcustomtshirt', compact('product'));
     }
-
 }
