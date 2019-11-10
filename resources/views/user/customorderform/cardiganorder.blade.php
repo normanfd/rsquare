@@ -22,7 +22,7 @@
               {{ csrf_field() }}
               
               <div class="col-md-6 form-group p_star">
-                <input type="text" class="form-control" id="wa_number" name="wa_number" placeholder="Nomor Whatsapp" required/>
+                <input type="text" class="form-control" id="wa_number" name="wa_number" placeholder="Nomor Whatsapp" value="{{old('wa_number')}}" required/>
               </div>
               
               <div class="col-md-6 form-group p_star">

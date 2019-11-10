@@ -46,38 +46,32 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
-                    <div class="login_part_form">
-                        <div class="login_part_form_iner">
+                    <div class="register_part_form">
+                        <div class="register_part_form_iner">
                             <h3>Welcome to Rsquare! </h3>
-                                <form class="m-login__form m-form" method="POST" action="{{ route('login') }}">
+                                    @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
+                                <form class="m-register__form m-form" method="POST" action="{{ route('register') }}">
+
                                 {{ csrf_field() }}
                                     <div class="col-md-12 form-group p_star{{ $errors->has('name') ? ' has-error' : '' }} m-form__group">
-                                        <input id="name" class="form-control m-input"   type="name" placeholder="Name" value="{{ old('name') }}" name="name" required>
-                                        @if ($errors->has('name'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('name') }}</strong>
-                                            </span>
-                                        @endif
+                                        <input id="name" class="form-control m-input"   type="name" placeholder="Name" value="{{ old('name') }}" name="name" >
                                     </div>
                                     <div class="col-md-12 form-group p_star{{ $errors->has('email') ? ' has-error' : '' }} m-form__group">
-                                            <input id="email" type="email" class="form-control m-input" name="email" value="{{ old('email') }}" placeholder="Email" required>
-
-                                            @if ($errors->has('email'))
-                                                <span class="help-block">
-                                                    <strong>{{ $errors->first('email') }}</strong>
-                                                </span>
-                                            @endif
+                                            <input id="email" type="email" class="form-control m-input" name="email" value="{{ old('email') }}" placeholder="Email">
                                     </div>
                                     <div class="col-md-12 form-group p_star{{ $errors->has('password') ? ' has-error' : '' }} m-form__group">
-                                        <input id="password" class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password" required>
-                                        @if ($errors->has('password'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('password') }}</strong>
-                                            </span>
-                                        @endif
+                                        <input id="password" class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password" >
                                     </div>
                                     <div class="col-md-12 form-group p_star m-form__group">
-                                        <input id="confirmpassword" class="form-control m-input m-login__form-input--last" type="password" placeholder="Confirm Password" name="confirmpassword" required>
+                                        <input id="confirmpassword" class="form-control m-input m-login__form-input--last" type="password" placeholder="Confirm Password" name="confirmpassword" required="password">
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-6 col-md-offset-4">
@@ -95,7 +89,7 @@
             </div>
         </div>
     </section>
-    <!--================login_part end =================-->
+    <!--================regis_part end =================-->
 
 <!-- jquery plugins here-->
     <!-- jquery -->
