@@ -142,11 +142,7 @@ class UserController extends Controller
             'upload_design' => 'nullable|mimes:jpeg,png,bmp,tiff|max:4096'
         ]);
         
-        if ($this->fails()) {
-            redirect()
-                ->back()
-                ->withErrors($this->errors());
-        }
+        
         $wa_number = request('wa_number');
         $name = request('name');
         $note = request('note');
@@ -282,11 +278,6 @@ class UserController extends Controller
             'upload_design' => 'nullable|mimes:jpeg,png,bmp,tiff|max:4096'
         ]);
         
-        if ($this->fails()) {
-            redirect()
-                ->back()
-                ->withErrors($this->errors());
-        }
         $wa_number = request('wa_number');
         $name = request('name');
         $note = request('note');
@@ -468,11 +459,6 @@ class UserController extends Controller
             'upload_design' => 'nullable|mimes:jpeg,png,bmp,tiff|max:4096'
         ]);
         
-        if ($this->fails()) {
-            redirect()
-                ->back()
-                ->withErrors($this->errors());
-        }
         $wa_number = request('wa_number');
         $name = request('name');
         $note = request('note');
