@@ -16,7 +16,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<head>
 		<meta charset="utf-8" />
 		<title>
-        {{ config('app.name', 'Laravel') }}
+        {{ config('app.name', 'Rsquare') }}
 		</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,7 +56,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="m-stack__item m-brand  m-brand--skin-dark ">
 							<div class="m-stack m-stack--ver m-stack--general">
 								<div class="m-stack__item m-stack__item--middle m-brand__logo">
-									<a href="index.html" class="m-brand__logo-wrapper">
+									<a href="{{ route('admin') }}" class="m-brand__logo-wrapper">
 										<img alt="" src="{{ asset('assets/demo/default/media/img/logo/logo_default_dark.png') }}"/>
 									</a>
 								</div>
