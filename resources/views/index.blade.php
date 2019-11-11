@@ -163,6 +163,15 @@
     <section class="feature_part pt-4">
         <div class="container-fluid p-lg-0 overflow-hidden">
             <div class="row align-items-center justify-content-between">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="arrival_tittle">
+                                <h2>Custom Product</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_feature_post_text">
                         <img src="{{asset('winter/img/feature_3.png')}}" alt="#">
@@ -240,17 +249,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-8">
                     <div class="arrival_tittle">
-                        <h2>new arrival</h2>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="arrival_filter_item filters">
-                        <ul>
-                            <li class="active controls" data-filter="*">all</li>
-                            <li class="controls" data-toggle=".men">men</li>
-                            <li class="controls" data-toggle=".women">women</li>
-                            <li class="controls" data-toggle=".shoes">shoes</li>
-                        </ul>
+                        <h2>Pesan Produk Jadi</h2>
                     </div>
                 </div>
             </div>

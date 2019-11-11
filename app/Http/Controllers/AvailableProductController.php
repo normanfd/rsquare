@@ -27,7 +27,7 @@ class AvailableProductController extends Controller
     public function FormAvailableProduct()
     {
         $categories = ProductCategory::all();
-        return view('admin.availableproduct.addAvailableProduct', compact('categories'));
+        return view('admin.availableproduct.addavailableproduct', compact('categories'));
     }
 
     public function SaveFormAvailableProduct(Request $request)
