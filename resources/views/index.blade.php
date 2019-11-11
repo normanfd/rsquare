@@ -4,6 +4,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Rsquare</title>
     <link rel="icon" href="{{asset('winter/img/favicon.png')}}">
@@ -24,6 +25,8 @@
     <link rel="stylesheet" href="{{asset('winter/css/slick.css')}}">
     <!-- style CSS -->
     <link rel="stylesheet" href="{{asset('winter/css/style.css')}}">
+    <!-- chat css -->
+    <link rel="stylesheet" href="{{asset('winter/css/chat.css')}}">
 </head>
 
 <body>
@@ -99,7 +102,7 @@
                                     </li>
                                 @endif
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
+                                    <a class="nav-link" href="https://wa.me/6285888019534?text=">Contact</a>
                                 </li>
                             </ul>
                         </div>
@@ -130,6 +133,7 @@
                 </form>
             </div>
         </div>
+        
     </header>
     <!-- Header part end-->
 
@@ -161,31 +165,12 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_feature_post_text">
-                        <img src="{{asset('winter/img/feature_1.png')}}" alt="#">
-                        <div class="hover_text">
-                            <a href="{{ route('user.cardigan') }}" class="btn_2">Custom Cardigan</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_feature_post_text">
-                        <img src="{{asset('winter/img/feature_2.png')}}" alt="#">
-                        <div class="hover_text">
-                            <a href="{{ route('user.hoodie') }}" class="btn_2">Costum Hoddie</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_feature_post_text">
                         <img src="{{asset('winter/img/feature_3.png')}}" alt="#">
                         <div class="hover_text">
                             <a href="{{ route('user.jacket') }}" class="btn_2">Costum Jacket</a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <br>
-            <div class="row align-items-center justify-content-between">
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_feature_post_text">
                         <img src="{{asset('winter/img/feature_2.png')}}" alt="#">
@@ -202,14 +187,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_feature_post_text">
-                        <img src="{{asset('winter/img/feature_2.png')}}" alt="#">
-                        <div class="hover_text">
-                            <a href="{{ route('user.sweater') }}" class="btn_2">Costum Sweater</a>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
             <br>
             <div class="row align-items-center justify-content-between">
@@ -222,6 +200,36 @@
                     </div>
                 </div>
             </div>
+            <!-- <br>
+            
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <img src="{{asset('winter/img/feature_1.png')}}" alt="#">
+                        <div class="hover_text">
+                            <a href="{{ route('user.cardigan') }}" class="btn_2">Custom Cardigan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <img src="{{asset('winter/img/feature_2.png')}}" alt="#">
+                        <div class="hover_text">
+                            <a href="{{ route('user.hoodie') }}" class="btn_2">Costum Hoddie</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <img src="{{asset('winter/img/feature_2.png')}}" alt="#">
+                        <div class="hover_text">
+                            <a href="{{ route('user.sweater') }}" class="btn_2">Costum Sweater</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            
         </div>
     </section>
     <!-- upcoming_event part start-->
@@ -540,6 +548,29 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="{{asset('winter/js/mail-script.js')}}"></script>
     <!-- custom js -->
     <script src="{{asset('winter/js/custom.js')}}"></script>
+
+<section>
+        <button class="open-button" onclick="openForm()"> <a href="https://wa.me/628978042276?text=" type="submit" class="btn" >Chat</button>
+
+        <!-- <div class="chat-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Chat</h1>
+                    <label for="msg"><b>Message</b></label>
+                    <textarea placeholder="Type message.." name="msg" required></textarea>
+                    <a href="https://wa.me/6285888019534?text=" type="submit" class="btn" >Send</a>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+        </div> -->
+        <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+        </script>
+</section>
 </body>
 
 </html>

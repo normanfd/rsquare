@@ -2,7 +2,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>RSQuare</title>
+    <title>RSquare</title>
     <link rel="icon" href="{{asset('winter/img/favicon.png')}}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('winter/css/bootstrap.min.css')}}">
@@ -86,7 +86,7 @@
                                 </li>
                                 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
+                                    <a class="nav-link" href="#">Contact</a>
                                 </li>
                             </ul>
                         </div>
