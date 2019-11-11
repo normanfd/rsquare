@@ -97,7 +97,7 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="single_category_product">
                             <div class="single_category_img">
-                                <img src="../storage/{{$tshirts->tshirt_image}}" alt="ini gambar tshirt">
+                                <img src="../storage/{{$tshirts->tshirt_image}}" width="200" height="200" alt="ini gambar tshirt">
                                 <div class="category_product_text">
                                     <a href="{{ route('user.detail.tshirt', $tshirts->id) }}"><h5>{{$tshirts->tshirt_name}}</h5></a>
                                     <p>{{$tshirts->tshirt_price}}</p>

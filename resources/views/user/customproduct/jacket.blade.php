@@ -97,7 +97,7 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="single_category_product">
                             <div class="single_category_img">
-                                <img src="../storage/{{$jackets->jacket_image}}" alt="ini gambar jacket">
+                                <img src="../storage/{{$jackets->jacket_image}}" width="200" height="200" alt="ini gambar jacket">
                                 <div class="category_product_text">
                                     <a href="{{ route('user.detail.jacket', $jackets->id) }}"><h5>{{$jackets->jacket_name}}</h5></a>
                                     <p>{{$jackets->jacket_price}}</p>

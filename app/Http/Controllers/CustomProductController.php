@@ -10,6 +10,7 @@ use App\Shirt;
 use App\Shoes;
 use App\Sweater;
 use App\Tshirt;
+use Intervention\Image\ImageManagerStatic as Image;
 //--------------------------------LAMAN ADMIN-------------------------------------------
 class CustomProductController extends Controller
 {
@@ -37,7 +38,9 @@ class CustomProductController extends Controller
         ]);
 
         // cara dapetin lokasi path photo
-        $photo = $request->file('cardigan_image')->store('cardigan_images');
+        $photo = $request->file('cardigan_image');
+        $image_resize = Image::make($photo->getRealPath())->resize(300,300);
+        $image_resize->store('cardigan_images');
         // dd($photo);
         // membuat row baru pada db
         cardigan::create([

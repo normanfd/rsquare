@@ -97,7 +97,7 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="single_category_product">
                             <div class="single_category_img">
-                                <img src="../storage/{{$hoodies->hoodie_image}}" alt="ini gambar hoodie">
+                                <img src="../storage/{{$hoodies->hoodie_image}}" width="200" height="200" alt="ini gambar hoodie">
                                 <div class="category_product_text">
                                     <a href="{{ route('user.detail.hoodie', $hoodies->id) }}"><h5>{{$hoodies->hoodie_name}}</h5></a>
                                     <p>{{$hoodies->hoodie_price}}</p>
