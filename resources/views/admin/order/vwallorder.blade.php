@@ -2,7 +2,7 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="m-content">
+<!-- <div class="m-content">
     <div class="m-portlet m-portlet--full-height ">
         <div class="m-portlet__head">
             <div class="m-portlet__head-caption">
@@ -35,23 +35,23 @@
                             </div>
                             <div class="m-widget4__ext">
                                 <a href="{{ route('admin.detailcardiganorder', $cardigandata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
-                                <!-- <form action="#" method="post">
+                                 <form action="#" method="post">
                                     <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
                                 </form> -->
-                            </div>
+                            <!-- </div>
                             
                         </div>
                     </div>
                     <br>
                 @endforeach
-                    <!--begin::Widget 14-->
+                    begin::Widget 14
                 </div>
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
-<div class="m-content">
+<!-- <div class="m-content">
     <div class="m-portlet m-portlet--full-height ">
         <div class="m-portlet__head">
             <div class="m-portlet__head-caption">
@@ -84,21 +84,21 @@
                             </div>
                             <div class="m-widget4__ext">
                             <a href="{{ route('admin.detailhoodieorder', $hoodiedata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
-                                <!-- <form action="#" method="post">
+                                <form action="#" method="post">
                                     <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
                                 </form> -->
-                            </div>
+                            <!-- </div>
                             
                         </div>
                     </div>
                     <br>
-                @endforeach
+                @endforeach -->
                     <!--begin::Widget 14-->
-                </div>
+                <!-- </div>
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="m-content">
     <div class="m-portlet m-portlet--full-height ">
@@ -147,9 +147,9 @@
             </div>
         </div>
     </div>
-</div>
+<!-- </div>
 
-<div class="m-content">
+<div class="m-content"> -->
     <div class="m-portlet m-portlet--full-height ">
         <div class="m-portlet__head">
             <div class="m-portlet__head-caption">
@@ -197,9 +197,9 @@
             </div>
         </div>
     </div>
-</div>
+<!-- </div>
 
-<div class="m-content">
+<div class="m-content"> -->
     <div class="m-portlet m-portlet--full-height ">
         <div class="m-portlet__head">
             <div class="m-portlet__head-caption">
@@ -246,9 +246,9 @@
             </div>
         </div>
     </div>
-</div>
+<!-- </div> -->
 
-<div class="m-content">
+<!-- <div class="m-content">
     <div class="m-portlet m-portlet--full-height ">
         <div class="m-portlet__head">
             <div class="m-portlet__head-caption">
@@ -280,9 +280,9 @@
                                 <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
                             </div>
                             <div class="m-widget4__ext">
-                                <!-- <form action="#" method="post">
+                                <form action="#" method="post">
                                     <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
-                                </form> -->
+                                </form>
                                 <a href="{{ route('admin.detailsweaterorder', $sweaterdata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
                             </div>
                             
@@ -290,14 +290,14 @@
                     </div>
                     <br>
                 @endforeach
-                    <!--begin::Widget 14-->
+                    begin::Widget 14
                 </div>
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
-<div class="m-content">
+<!-- <div class="m-content"> -->
     <div class="m-portlet m-portlet--full-height ">
         <div class="m-portlet__head">
             <div class="m-portlet__head-caption">
@@ -329,9 +329,9 @@
                                 <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
                             </div>
                             <div class="m-widget4__ext">
-                                <!-- <form action="#" method="post">
+                                <form action="#" method="post">
                                     <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
-                                </form> -->
+                                </form>
                                 <a href="{{ route('admin.detailtshirtorder', $tshirtdata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
                             </div>
                             
@@ -345,4 +345,5 @@
         </div>
     </div>
 </div>
+
 @endsection

@@ -204,7 +204,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												</span>
 											</span>
 										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
+										<!-- <li class="m-menu__item " aria-haspopup="true" >
 											<a  href="{{ route('admin.addcustomcardigan') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
@@ -213,8 +213,8 @@ License: You must have a valid license purchased only from themeforest(the above
 													Cardigan
 												</span>
 											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
+										</li> -->
+										<!-- <li class="m-menu__item " aria-haspopup="true" >
 											<a  href="{{ route('admin.addcustomhoodie') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
@@ -223,7 +223,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													Hoodie
 												</span>
 											</a>
-										</li>
+										</li> -->
 
 										<li class="m-menu__item " aria-haspopup="true" >
 											<a  href="{{ route('admin.addcustomjacket') }}" class="m-menu__link ">
@@ -261,22 +261,23 @@ License: You must have a valid license purchased only from themeforest(the above
 										</li>
 										
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="{{ route('admin.addcustomsweater') }}" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Sweater
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
 											<a  href="{{ route('admin.addcustomtshirt') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
 												<span class="m-menu__link-text">
 													T-Shirt
+												</span>
+											</a>
+										</li>
+
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="{{ route('admin.addcustomsweater') }}" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Jersey
 												</span>
 											</a>
 										</li>
@@ -320,7 +321,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												</span>
 											</span>
 										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
+										<!-- <li class="m-menu__item " aria-haspopup="true" >
 											<a  href="{{ route('admin.viewcustomcardigan') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
@@ -329,8 +330,8 @@ License: You must have a valid license purchased only from themeforest(the above
 													Cardigan
 												</span>
 											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
+										</li> -->
+										<!-- <li class="m-menu__item " aria-haspopup="true" >
 											<a  href="{{ route('admin.viewcustomhoodie') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
@@ -338,8 +339,8 @@ License: You must have a valid license purchased only from themeforest(the above
 												<span class="m-menu__link-text">
 													Hoodie
 												</span>
-											</a>
-										</li>
+											</a> -->
+										<!-- </li> -->
 
 										<li class="m-menu__item " aria-haspopup="true" >
 											<a  href="{{ route('admin.viewcustomjacket') }}" class="m-menu__link ">
@@ -377,22 +378,23 @@ License: You must have a valid license purchased only from themeforest(the above
 										</li>
 										
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="{{ route('admin.viewcustomsweater') }}" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Sweater
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
 											<a  href="{{ route('admin.viewcustomtshirt') }}" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
 												<span class="m-menu__link-text">
 													T-Shirt
+												</span>
+											</a>
+										</li>
+
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="{{ route('admin.viewcustomsweater') }}" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Jersey
 												</span>
 											</a>
 										</li>
