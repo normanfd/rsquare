@@ -493,4 +493,10 @@ class UserController extends Controller
         $product = AvailableProduct::all();
         return view('user.availableproduct.availableproduct', compact('product'));
     }
+
+    public function DetailAvailable($id)
+    {
+        $product = AvailableProduct::find($id);
+        return view('user.availableproduct.availableproductdetail', compact('product'));
+    }
 }

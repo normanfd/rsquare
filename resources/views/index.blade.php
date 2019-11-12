@@ -258,30 +258,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <!-- <div class="col-lg-4 col-sm-6">
                     <div class="single_feature_post_text">
                         <img src="{{asset('winter/img/home_jacket.png')}}" alt="#">
                         <div class="hover_text">
-                            <a href="{{ route('user.jacket') }}" class="btn_2">Costum Jacket</a>
+                            <a href="{{ route('user.detail.available',1) }}" class="btn_2">Jaket1</a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_feature_post_text">
-                        <img src="{{asset('winter/img/home_shirt.png')}}" alt="#">
-                        <div class="hover_text">
-                            <a href="{{ route('user.shirt') }}" class="btn_2">Costum Shirt</a>
+                </div> -->
+                $count = 0;
+                @foreach($product as $prod)
+                    @if($count < 4)
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single_feature_post_text">
+                                <img src="{{asset('winter/img/home_shirt.png')}}" alt="#">
+                                <div class="hover_text">
+                                    <a href="{{ route('user.shirt') }}" class="btn_2">Costum Shirt</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
+                    @endif
+                    $count++;
+                @endforeach
+                <!-- <div class="col-lg-4 col-sm-6">
                     <div class="single_feature_post_text">
                         <img src="{{asset('winter/img/home_shoes.png')}}" alt="#">
                         <div class="hover_text">
                             <a href="{{ route('user.shoes') }}" class="btn_2">Costum Shoes</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <br>
                 <br>
                 <div class="col-lg-12 text-center">

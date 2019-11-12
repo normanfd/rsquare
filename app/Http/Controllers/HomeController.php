@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\AvailableProduct;
 
 class HomeController extends Controller
 {
@@ -29,5 +30,11 @@ class HomeController extends Controller
     public function confirmation()
     {
         return view('confirmation');
+    }
+
+    public function idx()
+    {
+        $product = AvailableProduct::all();
+        return view('index',compact('product'));
     }
 }

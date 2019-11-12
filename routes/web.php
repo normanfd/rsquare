@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+// Route::get('/', function () {
+//     return view('index');
+// })->name('index');
+
+Route::get('/', 'HomeController@idx')->name('index');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
@@ -75,6 +77,7 @@ Route::prefix('/tshirt')->group(function(){
 
 ##Available Product
 Route::get('/availableproduct', 'UserController@VWAvailableProduct')-> name('user.availableproduct');
+Route::get('/availableproduct/detail/{id}', 'UserController@DetailAvailable')->name('user.detail.available');
 
 
 Route::prefix('admin')->group(function() {
