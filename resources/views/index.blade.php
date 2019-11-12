@@ -101,9 +101,9 @@
                                         </div>
                                     </li>
                                 @endif
-                                <li class="nav-item">
-                                    <a class="nav-link" href="https://wa.me/6285888019534?text=">Contact</a>
-                                </li>
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li> -->
                             </ul>
                         </div>
                         <div class="hearer_icon d-flex">
@@ -146,9 +146,9 @@
                         <div class="single_banner_slider">
                             <div class="banner_text">
                                 <div class="banner_text_iner">
-                                    <h5>Winter Fasion</h5>
+                                    <h5>Rsquare Fashion</h5>
                                     <h1>Fashion Collection 2019</h1>
-                                    <a href="#" class="btn_1">shop now</a>
+                                    <a href="" class="btn_1">Belanja Sekarang</a>
                                 </div>
                             </div>
                         </div>
