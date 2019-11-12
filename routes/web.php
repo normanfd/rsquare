@@ -73,6 +73,9 @@ Route::prefix('/tshirt')->group(function(){
     Route::post('/detail/order/{id}', 'UserController@CreateTshirtOrder')->name('post.user.order.tshirt');
 });
 
+##Available Product
+Route::get('/availableproduct', 'UserController@VWAvailableProduct')-> name('user.availableproduct');
+
 
 Route::prefix('admin')->group(function() {
 //------------------------------------------Route untuk Admin CRUD Produk-----------------------------------------------------------------

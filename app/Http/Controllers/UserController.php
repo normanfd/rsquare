@@ -17,6 +17,7 @@ use App\HoodieOrder;
 use App\ShirtOrder;
 use App\SweaterOrder;
 use App\TshirtOrder;
+use App\AvailableProduct;
 
 class UserController extends Controller
 {
@@ -484,5 +485,12 @@ class UserController extends Controller
         ]);
 
         return view('confirmation', compact('wa_number', 'name', 'note'));
+    }
+
+// ------------------------------------ProdukJadi--------------------------------------------
+    public function VWAvailableProduct()
+    {
+        $product = AvailableProduct::all();
+        return view('user.availableproduct.availableproduct', compact('product'));
     }
 }
