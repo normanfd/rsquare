@@ -12,7 +12,7 @@
                     </h3>
                 </div>
             </div>
-            </div>
+        </div>
              @if (count($errors) > 0)
             <div class="alert alert-danger">
                 <ul>
@@ -44,7 +44,7 @@
                         Shirt ID *
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
-                        <input type="text" class="form-control m-input" name="shirt_id" placeholder="Enter your produk ID" data-toggle="m-tooltip" title="Input Produk ID" value="{{old('shirt_id')}}>
+                        <input type="text" class="form-control m-input" name="shirt_id" placeholder="Enter your produk ID" data-toggle="m-tooltip" title="Input Produk ID" value="{{old('shirt_id')}}">
                     </div>
                 </div>
                 <div class="form-group m-form__group row">
@@ -53,7 +53,7 @@
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
                         <div class="input-group">
-                            <input type="text" class="form-control m-input" name="shirt_name" placeholder="Enter your product name" value="{{old('shirt_name')}}>
+                            <input type="text" class="form-control m-input" name="shirt_name" placeholder="Enter your product name" value="{{old('shirt_name')}}">
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
                         <div class="m-input-icon m-input-icon--left">
-                            <input type="text" class="form-control m-input" name="shirt_price" placeholder="Enter digits" value="{{old('shirt_price')}}>
+                            <input type="text" class="form-control m-input" name="shirt_price" placeholder="Enter digits" value="{{old('shirt_price')}}">
                             <span class="m-input-icon__icon m-input-icon__icon--left">
                                 <span>
                                     <i class="la la-calculator"></i>

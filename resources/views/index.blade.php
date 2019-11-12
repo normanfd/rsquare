@@ -102,9 +102,9 @@
                                     </div>
                                 </li>
                                 @endif
-                                <li class="nav-item">
-                                    <a class="nav-link" href="https://wa.me/6285888019534?text=">Contact</a>
-                                </li>
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li> -->
                             </ul>
                         </div>
                         <!-- <div class="hearer_icon d-flex">
@@ -150,9 +150,15 @@
                         <div class="single_banner_slider">
                             <div class="banner_text">
                                 <div class="banner_text_iner">
+<<<<<<< HEAD
                                     <h5>Hello, we are</h5>
                                     <h1>RSquare Confection</h1>
                                     <!-- <a href="#" class="btn_1">shop now</a> -->
+=======
+                                    <h5>Rsquare Fashion</h5>
+                                    <h1>Fashion Collection 2019</h1>
+                                    <a href="" class="btn_1">Belanja Sekarang</a>
+>>>>>>> 70387cab9a61da71160ab361a09f43354cfd3ea2
                                 </div>
                             </div>
                         </div>
