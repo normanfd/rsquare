@@ -21,32 +21,32 @@ Route::get('/confirmation', 'HomeController@confirmation')->name('confirmation')
 
 ##cardigan
 Route::prefix('/cardigan')->group(function(){
-    Route::get('/cardigan', 'UserController@VWCardigan')->name('user.cardigan');
-    Route::get('/cardigan/detail/{id}', 'UserController@DetailCardigan')->name('user.detail.cardigan');
-    Route::get('/cardigan/detail/order/{id}', 'UserController@FormOrderCardigan')->name('user.order.cardigan');
+    Route::get('/', 'UserController@VWCardigan')->name('user.cardigan');
+    Route::get('/detail/{id}', 'UserController@DetailCardigan')->name('user.detail.cardigan');
+    Route::get('/detail/order/{id}', 'UserController@FormOrderCardigan')->name('user.order.cardigan');
     Route::post('/detail/order/{id}', 'UserController@CreateCardiganOrder')->name('post.user.order.cardigan');
 });
 
 ##Hoddie
 Route::prefix('/hoodie')->group(function(){
-    Route::get('/hoodie', 'UserController@VWHoodie')->name('user.hoodie');
-    Route::get('/hoodie/detail/{id}', 'UserController@DetailHoodie')->name('user.detail.hoodie');
-    Route::get('/hoodie/detail/order/{id}', 'UserController@FormOrderHoodie')->name('user.order.hoodie');
+    Route::get('/', 'UserController@VWHoodie')->name('user.hoodie');
+    Route::get('/detail/{id}', 'UserController@DetailHoodie')->name('user.detail.hoodie');
+    Route::get('/detail/order/{id}', 'UserController@FormOrderHoodie')->name('user.order.hoodie');
     Route::post('/detail/order/{id}', 'UserController@CreateHoodieOrder')->name('post.user.order.hoodie');
 });
 ##Jacket
 Route::prefix('/jacket')->group(function(){
-    Route::get('/jacket', 'UserController@VWJacket')->name('user.jacket');
-    Route::get('/jacket/detail/{id}', 'UserController@DetailJacket')->name('user.detail.jacket');
-    Route::get('/jacket/detail/order/{id}', 'UserController@FormOrderJacket')->name('user.order.jacket');
+    Route::get('/', 'UserController@VWJacket')->name('user.jacket');
+    Route::get('/detail/{id}', 'UserController@DetailJacket')->name('user.detail.jacket');
+    Route::get('/detail/order/{id}', 'UserController@FormOrderJacket')->name('user.order.jacket');
     Route::post('/detail/order/{id}', 'UserController@CreateJacketOrder')->name('post.user.order.jacket');
 });
 
 ##Shirt
 Route::prefix('/shirt')->group(function(){
-    Route::get('/shirt', 'UserController@VWShirt')->name('user.shirt');
-    Route::get('/shirt/detail/{id}', 'UserController@DetailShirt')->name('user.detail.shirt');
-    Route::get('/shirt/detail/order/{id}', 'UserController@FormOrderShirt')->name('user.order.shirt');
+    Route::get('/', 'UserController@VWShirt')->name('user.shirt');
+    Route::get('/detail/{id}', 'UserController@DetailShirt')->name('user.detail.shirt');
+    Route::get('/detail/order/{id}', 'UserController@FormOrderShirt')->name('user.order.shirt');
     Route::post('/detail/order/{id}', 'UserController@CreateShirtOrder')->name('post.user.order.shirt');
 });
 
@@ -59,17 +59,17 @@ Route::prefix('/shoes')->group(function(){
 });
 ##Sweater
 Route::prefix('/sweater')->group(function(){
-    Route::get('/sweater', 'UserController@VWSweater')->name('user.sweater');
-    Route::get('/sweater/detail/{id}', 'UserController@DetailSweater')->name('user.detail.sweater');
-    Route::get('/sweater/detail/order/{id}', 'UserController@FormOrderSweater')->name('user.order.sweater');
+    Route::get('/', 'UserController@VWSweater')->name('user.sweater');
+    Route::get('/detail/{id}', 'UserController@DetailSweater')->name('user.detail.sweater');
+    Route::get('/detail/order/{id}', 'UserController@FormOrderSweater')->name('user.order.sweater');
     Route::post('/detail/order/{id}', 'UserController@CreateSweaterOrder')->name('post.user.order.sweater');
 });
 
 ##Tshirt
 Route::prefix('/tshirt')->group(function(){
-    Route::get('/tshirt', 'UserController@VWTshirt')->name('user.tshirt');
-    Route::get('/tshirt/detail/{id}', 'UserController@DetailTshirt')->name('user.detail.tshirt');
-    Route::get('/tshirt/detail/order/{id}', 'UserController@FormOrderTshirt')->name('user.order.tshirt');
+    Route::get('/', 'UserController@VWTshirt')->name('user.tshirt');
+    Route::get('/detail/{id}', 'UserController@DetailTshirt')->name('user.detail.tshirt');
+    Route::get('/detail/order/{id}', 'UserController@FormOrderTshirt')->name('user.order.tshirt');
     Route::post('/detail/order/{id}', 'UserController@CreateTshirtOrder')->name('post.user.order.tshirt');
 });
 
