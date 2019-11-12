@@ -44,9 +44,9 @@ Route::prefix('/jacket')->group(function(){
 
 ##Shirt
 Route::prefix('/shirt')->group(function(){
-    Route::get('/shirt', 'UserController@VWShirt')->name('user.shirt');
-    Route::get('/shirt/detail/{id}', 'UserController@DetailShirt')->name('user.detail.shirt');
-    Route::get('/shirt/detail/order/{id}', 'UserController@FormOrderShirt')->name('user.order.shirt');
+    Route::get('/', 'UserController@VWShirt')->name('user.shirt');
+    Route::get('/detail/{id}', 'UserController@DetailShirt')->name('user.detail.shirt');
+    Route::get('/detail/order/{id}', 'UserController@FormOrderShirt')->name('user.order.shirt');
     Route::post('/detail/order/{id}', 'UserController@CreateShirtOrder')->name('post.user.order.shirt');
 });
 
