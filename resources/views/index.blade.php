@@ -48,7 +48,8 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="/">Home</a>
                                 </li>
-                                <li class="nav-item dropdown">
+
+                                <!-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Shop
@@ -58,8 +59,8 @@
                                         <a class="dropdown-item" href="single-product.html">product details</a>
                                         
                                     </div>
-                                </li>
-                                <li class="nav-item dropdown">
+                                </li> -->
+                                <!-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_3"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         pages
@@ -75,56 +76,59 @@
                                         <a class="dropdown-item" href="confirmation.html">confirmation</a>
                                         <a class="dropdown-item" href="elements.html">elements</a>
                                     </div>
-                                </li>
+                                </li> -->
                                 
                                 
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_2"
-                                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Akun
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_2"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Akun
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+                                    @if (Auth::guest())
+                                        <a class="dropdown-item" href="{{ route('login') }}"> Login</a>
+                                        <a class="dropdown-item" href="{{ route('register') }}">Registrasi</a>
+                                    @else
+                                        <a class="dropdown-item" href="single-blog.html">Hello  {{ Auth::user()->name }}</a>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();" class="dropdown-item">
+                                            Logout
                                         </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        @if (Auth::guest())
-                                            <a class="dropdown-item" href="{{ route('login') }}"> Login</a>
-                                            <a class="dropdown-item" href="{{ route('register') }}">Registrasi</a>
-                                        @else
-                                            <a class="dropdown-item" href="single-blog.html">Hello  {{ Auth::user()->name }}</a>
-                                            <a href="{{ route('logout') }}"
-                                                onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();" class="dropdown-item">
-                                                Logout
-                                            </a>
 
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                {{ csrf_field() }}
-                                            </form>
-                                        </div>
-                                    </li>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </div>
+                                </li>
                                 @endif
                                 <li class="nav-item">
                                     <a class="nav-link" href="https://wa.me/6285888019534?text=">Contact</a>
                                 </li>
                             </ul>
                         </div>
-                        <div class="hearer_icon d-flex">
+                        <!-- <div class="hearer_icon d-flex">
+                            <div class="nav-item">
+                                <a class="nav-link" href="/">Home</a>
+                            </div>
                             <div class="dropdown cart">
                                 <a class="dropdown-toggle" href="#" id="navbarDropdown3" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="ti-bag"></i>
                                 </a>
-                                <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <div class="single_product">
     
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
                             <a id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
-                        </div>
+                        </div> -->
                     </nav>
                 </div>
             </div>
         </div>
-        <div class="search_input" id="search_input_box">
+        <!-- <div class="search_input" id="search_input_box">
             <div class="container ">
                 <form class="d-flex justify-content-between search-inner">
                     <input type="text" class="form-control" id="search_input" placeholder="Search Here">
@@ -132,7 +136,7 @@
                     <span class="ti-close" id="close_search" title="Close Search"></span>
                 </form>
             </div>
-        </div>
+        </div> -->
         
     </header>
     <!-- Header part end-->
@@ -146,9 +150,9 @@
                         <div class="single_banner_slider">
                             <div class="banner_text">
                                 <div class="banner_text_iner">
-                                    <h5>Winter Fasion</h5>
-                                    <h1>Fashion Collection 2019</h1>
-                                    <a href="#" class="btn_1">shop now</a>
+                                    <h5>Hello, we are</h5>
+                                    <h1>RSquare Confection</h1>
+                                    <!-- <a href="#" class="btn_1">shop now</a> -->
                                 </div>
                             </div>
                         </div>
@@ -174,7 +178,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_feature_post_text">
-                        <img src="{{asset('winter/img/feature_3.png')}}" alt="#">
+                        <img src="{{asset('winter/img/home_jacket.png')}}" alt="#">
                         <div class="hover_text">
                             <a href="{{ route('user.jacket') }}" class="btn_2">Costum Jacket</a>
                         </div>
@@ -182,7 +186,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_feature_post_text">
-                        <img src="{{asset('winter/img/feature_2.png')}}" alt="#">
+                        <img src="{{asset('winter/img/home_shirt.png')}}" alt="#">
                         <div class="hover_text">
                             <a href="{{ route('user.shirt') }}" class="btn_2">Costum Shirt</a>
                         </div>
@@ -190,7 +194,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_feature_post_text">
-                        <img src="{{asset('winter/img/feature_2.png')}}" alt="#">
+                        <img src="{{asset('winter/img/home_shoes.png')}}" alt="#">
                         <div class="hover_text">
                             <a href="{{ route('user.shoes') }}" class="btn_2">Costum Shoes</a>
                         </div>
@@ -202,7 +206,7 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_feature_post_text">
-                        <img src="{{asset('winter/img/feature_2.png')}}" alt="#">
+                        <img src="{{asset('winter/img/home_tshirt.png')}}" alt="#">
                         <div class="hover_text">
                             <a href="{{ route('user.tshirt') }}" class="btn_2">Costum Tshirt</a>
                         </div>
@@ -241,10 +245,51 @@
             
         </div>
     </section>
+
+    <section class="feature_part pt-4">
+        <div class="container-fluid p-lg-0 overflow-hidden">
+            <div class="row align-items-center justify-content-between">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="arrival_tittle">
+                                <h2>Available Product</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <img src="{{asset('winter/img/home_jacket.png')}}" alt="#">
+                        <div class="hover_text">
+                            <a href="{{ route('user.jacket') }}" class="btn_2">Costum Jacket</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <img src="{{asset('winter/img/home_shirt.png')}}" alt="#">
+                        <div class="hover_text">
+                            <a href="{{ route('user.shirt') }}" class="btn_2">Costum Shirt</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <img src="{{asset('winter/img/home_shoes.png')}}" alt="#">
+                        <div class="hover_text">
+                            <a href="{{ route('user.shoes') }}" class="btn_2">Costum Shoes</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
     <!-- upcoming_event part start-->
 
     <!-- new arrival part here -->
-    <section class="new_arrival section_padding">
+    <!-- <section class="new_arrival section_padding">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8">
@@ -376,7 +421,7 @@
                 </div> 
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- new arrival part end -->
 
     <!-- free shipping here -->
@@ -479,9 +524,9 @@
                     <div class="single_footer_part">
                         <h4>Address</h4>
                         <ul class="list-unstyled">
-                            <li><a href="#">200, Green block, NewYork</a></li>
-                            <li><a href="#">+10 456 267 1678</a></li>
-                            <li><span>contact89@winter.com</span></li>
+                            <li><a href="#">Bogor, West Java</a></li>
+                            <li><a href="#">+62 897-8042-276</a></li>
+                            <li><span>contact@rsquare.id</span></li>
                         </ul>
                     </div>
                 </div>
@@ -549,8 +594,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="{{asset('winter/js/custom.js')}}"></script>
 
 <section>
-        <button class="open-button" onclick="openForm()"> <a href="https://wa.me/628978042276?text=" type="submit" class="btn" >Chat</button>
-
+        <!-- <button class="open-button" onclick="openForm()"> <a href="https://wa.me/628978042276?text=" type="submit" class="btn" >Chat</button> -->
+    <a href="https://wa.me/628978042276?text=" class="float">
+        <i class="fa fa-envelope my-float"></i>
+    </a>
         <!-- <div class="chat-popup" id="myForm">
             <form action="/action_page.php" class="form-container">
                 <h1>Chat</h1>
@@ -560,15 +607,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
                 </form>
         </div> -->
-        <script>
-        function openForm() {
-          document.getElementById("myForm").style.display = "block";
-        }
+        <!-- <script>
+        // function openForm() {
+        //   document.getElementById("myForm").style.display = "block";
+        // }
 
-        function closeForm() {
-          document.getElementById("myForm").style.display = "none";
-        }
-        </script>
+        // function closeForm() {
+        //   document.getElementById("myForm").style.display = "none";
+        // }
+        </script> -->
 </section>
 </body>
 
