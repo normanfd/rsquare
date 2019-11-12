@@ -12,7 +12,7 @@
                     </h3>
                 </div>
             </div>
-            </div>
+        </div>
              @if (count($errors) > 0)
             <div class="alert alert-danger">
                 <ul>
@@ -63,7 +63,7 @@
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
                         <div class="m-input-icon m-input-icon--left">
-                            <input type="text" class="form-control m-input" name="jacket_price" placeholder="Enter digits" value="{{old('jacket_price')}}>
+                            <input type="text" class="form-control m-input" name="jacket_price" placeholder="Enter digits" value="{{old('jacket_price')}}">
                             <span class="m-input-icon__icon m-input-icon__icon--left">
                                 <span>
                                     <i class="la la-calculator"></i>

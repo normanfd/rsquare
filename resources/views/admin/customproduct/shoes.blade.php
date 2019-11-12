@@ -44,7 +44,7 @@
                         Shoes ID *
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
-                        <input type="text" class="form-control m-input" name="shoes_id" placeholder="Enter your produk ID" data-toggle="m-tooltip" title="Input Produk ID" value="{{old('shoes_id')}}>
+                        <input type="text" class="form-control m-input" name="shoes_id" placeholder="Enter your produk ID" data-toggle="m-tooltip" title="Input Produk ID" value="{{old('shoes_id')}}">
                     </div>
                 </div>
                 <div class="form-group m-form__group row">
@@ -53,7 +53,7 @@
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
                         <div class="input-group">
-                            <input type="text" class="form-control m-input" name="shoes_name" placeholder="Enter your product name" value="{{old('shoes_name')}}>
+                            <input type="text" class="form-control m-input" name="shoes_name" placeholder="Enter your product name" value="{{old('shoes_name')}}">
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                     </label>
                     <div class="col-lg-4 col-md-9 col-sm-12">
                         <div class="m-input-icon m-input-icon--left">
-                            <input type="text" class="form-control m-input" name="shoes_price" placeholder="Enter digits" value="{{old('shoes_price')}}>
+                            <input type="text" class="form-control m-input" name="shoes_price" placeholder="Enter digits" value="{{old('shoes_price')}}">
                             <span class="m-input-icon__icon m-input-icon__icon--left">
                                 <span>
                                     <i class="la la-calculator"></i>
