@@ -282,6 +282,11 @@
                         </div>
                     </div>
                 </div>
+                <br>
+                <br>
+                <div class="col-lg-12 text-center">
+                    <a href="{{ route('user.availableproduct') }}" class="btn_2">More Items</a>
+                </div>
                 
             </div>
         </div>
