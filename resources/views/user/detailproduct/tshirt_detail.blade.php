@@ -17,12 +17,12 @@
             <div class="col-lg-5 offset-lg-1">
                 <div class="s_product_text">
                     <h3>{{$tshirt->tshirt_name }}</h3>
-                    <h2>{{$tshirt->tshirt_price }}</h2>
+                    <h2>Rp.{{$tshirt->tshirt_price }}</h2>
                     <ul class="list">
-                        <li>
+                        <!-- <li>
                             <a class="active" href="#">
                             <span>Category</span> : cek kategori</a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="#"> <span>Availibility</span> : In Stock</a>
                         </li>
@@ -32,7 +32,7 @@
                     </p>
                     <div class="card_area">
                         <div class="add_to_cart">
-                            <a href="{{route('user.order.tshirt', $tshirt->id)}}" class="btn_3">Order This Product</a>
+                            <a href="{{route('user.order.tshirt', $tshirt->id)}}" class="btn_3">Pesan Sekarang</a>
                         </div>
                         <!-- <div class="social_icon">
                             <a href="#" class="fb"><i class="ti-facebook"></i></a>

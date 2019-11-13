@@ -100,7 +100,7 @@
                                 <img src="../storage/{{$shirts->shirt_image}}" style="width:300px;height:300px;" alt="ini gambar shirt">
                                 <div class="category_product_text">
                                     <a href="{{ route('user.detail.shirt', $shirts->id) }}"><h5>{{$shirts->shirt_name}}</h5></a>
-                                    <p>{{$shirts->shirt_price}}</p>
+                                    <p>Rp.{{$shirts->shirt_price}}</p>
                                 </div>
                             </div>
                         </div>

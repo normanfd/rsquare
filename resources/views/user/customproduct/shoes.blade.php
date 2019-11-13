@@ -100,7 +100,7 @@
                                 <img src="../storage/{{$shoes->shoes_image}}" style="width:300px;height:300px;" alt="ini gambar shoes">
                                 <div class="category_product_text">
                                     <a href="{{ route('user.detail.shoes', $shoes->id) }}"><h5>{{$shoes->shoes_name}}</h5></a>
-                                    <p>{{$shoes->shoes_price}}</p>
+                                    <p>Rp.{{$shoes->shoes_price}}</p>
                                 </div>
                             </div>
                         </div>

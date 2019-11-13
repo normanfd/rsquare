@@ -69,7 +69,7 @@
             <div class="col-lg-9">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="product_top_bar d-flex justify-content-between align-items-center">
+                        <!-- <div class="product_top_bar d-flex justify-content-between align-items-center"> -->
                             <div class="single_product_menu product_bar_item">
                                 <h2>Custom Kaos</h2>
                             </div>
@@ -90,7 +90,7 @@
                                     </select>
                                 </div>
                             </div> -->
-                        </div>
+                        <!-- </div> -->
                     </div>
                     <!-- Recycler View Product -->
                     @foreach($tshirt as $tshirts)
@@ -100,7 +100,7 @@
                                 <img src="../storage/{{$tshirts->tshirt_image}}" style="width:300px;height:300px;" alt="ini gambar tshirt">
                                 <div class="category_product_text">
                                     <a href="{{ route('user.detail.tshirt', $tshirts->id) }}"><h5>{{$tshirts->tshirt_name}}</h5></a>
-                                    <p>{{$tshirts->tshirt_price}}</p>
+                                    <p>Rp.{{$tshirts->tshirt_price}}</p>
                                 </div>
                             </div>
                         </div>
