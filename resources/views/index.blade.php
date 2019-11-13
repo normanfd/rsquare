@@ -266,20 +266,7 @@
                         </div>
                     </div>
                 </div> -->
-                $count = 0;
-                @foreach($product as $prod)
-                    @if($count < 4)
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_feature_post_text">
-                                <img src="{{asset('winter/img/home_shirt.png')}}" alt="#">
-                                <div class="hover_text">
-                                    <a href="{{ route('user.shirt') }}" class="btn_2">Costum Shirt</a>
-                                </div>
-                            </div>
-                        </div>
-                    @endif
-                    $count++;
-                @endforeach
+                
                 <!-- <div class="col-lg-4 col-sm-6">
                     <div class="single_feature_post_text">
                         <img src="{{asset('winter/img/home_shoes.png')}}" alt="#">
