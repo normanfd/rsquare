@@ -8,30 +8,30 @@
                 <div class="left_sidebar_area">
                     <aside class="left_widgets p_filter_widgets sidebar_box_shadow">
                         <div class="l_w_title">
-                            <h3>Browse Categories</h3>
+                            <h3>Categories</h3>
                         </div>
                         <div class="widgets_inner">
                             <ul class="list">
-                                <li>
+                                <!-- <li>
                                     <a href="{{ route('user.cardigan') }}">Cardigan</a>
-                                </li>
-                                <li>
+                                </li> -->
+                                <!-- <li>
                                     <a href="{{ route('user.hoodie') }}">Hoodie</a>
+                                </li> -->
+                                <li>
+                                    <a href="{{ route('user.jacket') }}">Custom Jaket</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('user.jacket') }}">Jacket</a>
+                                    <a href="{{ route('user.shirt') }}">Custom Kemeja</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('user.shirt') }}">Shirt</a>
+                                    <a href="{{ route('user.shoes') }}">Custom Sepatu</a>
                                 </li>
-                                <li>
-                                    <a href="{{ route('user.shoes') }}">Shoes</a>
-                                </li>
-                                <li>
+                                <!-- <li>
                                     <a href="{{ route('user.sweater') }}">Sweater</a>
-                                </li>
+                                </li> -->
                                 <li>
-                                    <a href="{{ route('user.tshirt') }}">T-Shirt</a>
+                                    <a href="{{ route('user.tshirt') }}">Custom Kaos</a>
                                 </li>
 
                                 <!-- <li class="sub-menu">
@@ -71,7 +71,7 @@
                     <div class="col-lg-12">
                         <div class="product_top_bar d-flex justify-content-between align-items-center">
                             <div class="single_product_menu product_bar_item">
-                                <h2>T-Shirt</h2>
+                                <h2>Custom Kaos</h2>
                             </div>
                             <!-- <div class="product_top_bar_iner product_bar_item d-flex">
                                 <div class="product_bar_single">
@@ -97,7 +97,7 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="single_category_product">
                             <div class="single_category_img">
-                                <img src="../storage/{{$tshirts->tshirt_image}}" style="width:300px;padding:50px 50px;height:300px;" alt="ini gambar tshirt">
+                                <img src="../storage/{{$tshirts->tshirt_image}}" style="width:300px;height:300px;" alt="ini gambar tshirt">
                                 <div class="category_product_text">
                                     <a href="{{ route('user.detail.tshirt', $tshirts->id) }}"><h5>{{$tshirts->tshirt_name}}</h5></a>
                                     <p>{{$tshirts->tshirt_price}}</p>
@@ -107,9 +107,9 @@
                     </div>
                     @endforeach
                     
-                    <div class="col-lg-12 text-center">
+                    <!-- <div class="col-lg-12 text-center">
                         <a href="#" class="btn_2">More Items</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
