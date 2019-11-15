@@ -18,6 +18,7 @@ use App\ShirtOrder;
 use App\SweaterOrder;
 use App\TshirtOrder;
 use App\AvailableProduct;
+use App\AvailableProductOrder;
 
 class UserController extends Controller
 {
@@ -504,5 +505,26 @@ class UserController extends Controller
     {
         $product = AvailableProduct::find($id);
         return view('user.availableproduct.availableproductform', compact('product'));
+    }
+
+    public function AddFormAvailable($id)
+    {
+        $this-> validate(request(),[
+            'size' => 'required',
+            'amount' => 'required|numeric',
+            'wa_number' => 'required|numeric',
+            'note' => 'nullable|required',
+        ]);
+        
+        AvailableProductOrder::create([
+            'availableproduct_id' => $id,
+            'user_id' => request('user_id'),
+            'size' => request('size'),
+            'amount' => request('amount'),
+            'wa_number' => request('wa_number'),
+            'note' => request('note'),
+        ]);
+
+        return redirect()->route('confirmation');
     }
 }

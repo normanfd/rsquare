@@ -78,7 +78,8 @@ Route::prefix('/tshirt')->group(function(){
 ##Available Product
 Route::get('/availableproduct', 'UserController@VWAvailableProduct')-> name('user.availableproduct');
 Route::get('/availableproduct/detail/{id}', 'UserController@DetailAvailable')->name('user.detail.available');
-route::get('/availbalrproduct/detail/order/{id}', 'UserController@FormAvailable')->name('user.detail.form.available');
+Route::get('/availableproduct/detail/order/{id}', 'UserController@FormAvailable')->name('user.detail.form.available');
+Route::post('availableproduct/detali/order/{id}', 'UserController@AddFormAvailable')->name('post.user.order.availableproduct');
 
 
 Route::prefix('admin')->group(function() {
@@ -179,4 +180,6 @@ Route::prefix('admin')->group(function() {
     Route::get('/allcustomorder/tshirt/{id}', 'AdminOrderController@DetailTshirt')->name('admin.detailtshirtorder');
     // View Custom Product\
     Route::get('/vwcustomproduct', 'CustomProductController@VwCustomProduct')->name('admin.vwcustomproduct');
+    // Order Available product
+    
   });

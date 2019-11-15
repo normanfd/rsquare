@@ -22,7 +22,6 @@ class CreateAvailableProductOrdersTable extends Migration
             $table->string('wa_number');
             $table->string('note');
             $table->timestamps();
-
             $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
             $table->foreign('availableproduct_id')->references('id')->on('available_products')->onDelete('CASCADE');     
         });

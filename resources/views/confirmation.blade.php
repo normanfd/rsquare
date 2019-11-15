@@ -15,7 +15,7 @@
                     <h4>order info</h4>
                     <ul>
                         <li>
-                            <p>Name</p><span>: {{$name}}</span>
+                            
                         </li>
                         <li>
                             <p>data</p><span>: Oct 03, 2017</span>
