@@ -90,7 +90,7 @@ class CustomProductController extends Controller
         $single_product->delete();
         $product = cardigan::all();
         
-        return redirect()->route('admin.viewcustomcardigan', compact('product'));
+        return redirect()->route('admin.viewcustomcardigan', compact('product'))->with('success', 'produk berhasil ditambahkan');
     }
 
     //================HOODIE=================================================================================
@@ -161,7 +161,7 @@ class CustomProductController extends Controller
         $single_product->delete();
         $product = Hoodie::all();
         
-        return redirect()->route('admin.viewcustomhoodie', compact('product'));
+        return redirect()->route('admin.viewcustomhoodie', compact('product'))->with('success', 'produk berhasil ditambahkan');
     }
     
 
@@ -233,7 +233,7 @@ class CustomProductController extends Controller
         $single_product->delete();
         $product = Jacket::all();
         
-        return redirect()->route('admin.viewcustomjacket', compact('product'));
+        return redirect()->route('admin.viewcustomjacket', compact('product'))->with('success', 'produk berhasil ditambahkan');
     }
 
     //============================shirt=================================================================
@@ -303,7 +303,7 @@ class CustomProductController extends Controller
         $single_product->delete();
         $product = Shirt::all();
         
-        return redirect()->route('admin.viewcustomshirt', compact('product'));
+        return redirect()->route('admin.viewcustomshirt', compact('product'))->with('success', 'produk berhasil ditambahkan');
     }
 
     //========================================shoes=======================================================
@@ -376,7 +376,7 @@ class CustomProductController extends Controller
         $single_product->delete();
         $product = Shoes::all();
         
-        return redirect()->route('admin.viewcustomshoes', compact('product'));
+        return redirect()->route('admin.viewcustomshoes', compact('product'))->with('success', 'produk berhasil ditambahkan');
     }
 
     //===============================================Sweater==================================================
@@ -447,7 +447,7 @@ class CustomProductController extends Controller
         $single_product->delete();
         $product = Sweater::all();
         
-        return redirect()->route('admin.viewcustomsweater', compact('product'));
+        return redirect()->route('admin.viewcustomsweater', compact('product'))->with('success', 'produk berhasil ditambahkan');
     }
     
     //============================tshirt=================================================================
@@ -518,6 +518,6 @@ class CustomProductController extends Controller
         $single_product->delete();
         $product = Tshirt::all();
         
-        return redirect()->route('admin.viewcustomtshirt', compact('product'));
+        return redirect()->route('admin.viewcustomtshirt', compact('product'))->with('success', 'produk berhasil ditambahkan');
     }
 }

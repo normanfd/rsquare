@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Rsquare</title>
-    <link rel="icon" href="{{asset('winter/img/favicon.png')}}">
+    <link rel="icon" href="{{asset('winter/img/rsquare.png')}}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('winter/css/bootstrap.min.css')}}">
     <!-- animate CSS -->
@@ -36,7 +36,7 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-11">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="index.html"> <img src="{{asset('winter/img/logo.png')}}" alt="logo"> </a>
+                        <a class="navbar-brand" href="index.html"> <img src="{{asset('winter/img/logorsquare.png')}}" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
