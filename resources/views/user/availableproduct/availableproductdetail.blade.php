@@ -32,7 +32,7 @@
                     </p>
                     <div class="card_area">
                         <div class="add_to_cart">
-                            <a href="{{route('user.order.product', $product->id)}}" class="btn_3">Order This Product</a>
+                            <a href="{{route('user.detail.form.available', $product->id)}}" class="btn_3">Order This Product</a>
                         </div>
                         <!-- <div class="social_icon">
                             <a href="#" class="fb"><i class="ti-facebook"></i></a>
