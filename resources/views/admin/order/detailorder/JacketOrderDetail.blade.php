@@ -82,7 +82,7 @@ id jaket :{{ $single_jacket->id}} -->
                                             <h1>{{ $single_jacket->user->name }}, {{ $single_jacket->wa_number }}</h1>
                                         </a>
                                         <a href="../../../storage/{{ $single_jacket->upload_design }}">
-                                            <img src="../../../storage/{{ $single_jacket->upload_design }}" width=200px>
+                                            <img src="../../../storage/{{ $single_jacket->upload_design }}" alt="User Tidak Mengirim desainnya" width=200px>
                                         </a>
                                     </div>
                                     <span class="m-invoice__desc">

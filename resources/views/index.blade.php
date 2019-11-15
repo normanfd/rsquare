@@ -49,17 +49,23 @@
                                     <a class="nav-link" href="/">Home</a>
                                 </li>
 
-                                <!-- <li class="nav-item dropdown">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('user.availableproduct')}}">Available Product</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Shop
+                                        Custom Product
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                        <a class="dropdown-item" href="category.html"> shop category</a>
-                                        <a class="dropdown-item" href="single-product.html">product details</a>
+                                        <a class="dropdown-item" href="{{ route('user.jacket') }}"> Jaket </a>
+                                        <a class="dropdown-item" href="{{ route('user.shirt') }}">Kemeja</a>
+                                        <a class="dropdown-item" href="{{ route('user.shoes') }}">Sepatu</a>
+                                        <a class="dropdown-item" href="{{ route('user.tshirt') }}">Kaos</a>
                                         
                                     </div>
-                                </li> -->
+                                </li>
                                 <!-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_3"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
