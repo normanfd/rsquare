@@ -167,6 +167,8 @@ Route::prefix('admin')->group(function() {
     Route::get('/availableproductorder', 'AdminOrderController@ShowAvailableOrder')->name('admin.showavailableorder');
     // detail Available product order
     Route::get('/availableproductorder/{id}', 'AdminOrderController@DetailAvailableProduct')->name('admin.detail.availableproduct');
+    // delete Available product order
+    Route::delete('/availableproductorder/{id}', 'AdminOrderController@DeleteAvailableOrder')->name('admin.delete.available.order');
     //show all custom order
     Route::get('/allcustomorder', 'AdminOrderController@ShowAllOrder')->name('admin.showallorder');
     //detail cardigan order

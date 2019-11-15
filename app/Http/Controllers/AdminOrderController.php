@@ -16,6 +16,15 @@ use App\AvailableProductOrder;
 //Controller untuk Admin melihat orderan yang masuk dan mengedit orderan sesuai perubahan keputusan user
 class AdminOrderController extends Controller
 {
+    public function DeleteAvailableOrder($id)
+    {
+        $single_product = AvailableProductOrder::find($id);
+        $single_product->delete();
+        
+        $order = AvailableProductOrder::all();
+        return redirect()->route('admin.showavailableorder', compact('order'))->with('danger', 'pesanan berhasil dihapus');
+    }
+
     public function ShowAvailableOrder()
     {
         $order = AvailableProductOrder::all();

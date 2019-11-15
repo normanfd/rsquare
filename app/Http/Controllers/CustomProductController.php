@@ -212,20 +212,21 @@ class CustomProductController extends Controller
     }
 
     public function PostEditCustomJacket($id, Request $request){
-        $jacket = Jacket::find($id);
+        $jacket = Jacket::all();
+        $single_jacket = Jacket::find($id);
         $photo = $request->file('jacket_image');
         if($photo){
             $photo->store('jacket_images');
-            $jacket->update(['jacket_image' => $photo]);
+            $single_jacket->update(['jacket_image' => $photo]);
         }
-        $jacket->update([
+        $single_jacket->update([
             'category_id' => 2,
             'jacket_id' => request('jacket_id'),
             'jacket_name' => request('jacket_name'),
             'jacket_price' => request('jacket_price'),
             'jacket_desc' => request('jacket_desc'),
         ]);
-        return redirect('admin/')->with('success', 'produk berhasil diupdate');
+        return redirect()->route('admin.viewcustomjacket',compact('jacket'))->with('info', 'produk berhasil diupdate');
     }
 
     public function DeleteCustomJacket($id)
@@ -234,7 +235,7 @@ class CustomProductController extends Controller
         $single_product->delete();
         $product = Jacket::all();
         
-        return redirect()->route('admin.viewcustomjacket', compact('product'))->with('success', 'produk berhasil ditambahkan');
+        return redirect()->route('admin.viewcustomjacket', compact('product'))->with('danger', 'produk berhasil dihapus');
     }
 
     //============================shirt=================================================================
@@ -283,29 +284,32 @@ class CustomProductController extends Controller
     }
 
     public function PostEditCustomShirt($id, Request $request){
-        $shirt = Shirt::find($id);
+        $shirt = Shirt::all();
+        $single_shirt = Shirt::find($id);
         $photo = $request->file('shirt_image');
         if($photo){
             $photo->store('shirt_images');
-            $shirt->update(['shirt_image' => $photo]);
+            $single_shirt->update(['shirt_image' => $photo]);
         }
-        $shirt->update([
+        $single_shirt->update([
             'category_id' => 2,
             'shirt_id' => request('shirt_id'),
             'shirt_name' => request('shirt_name'),
             'shirt_price' => request('shirt_price'),
             'shirt_desc' => request('shirt_desc'),
         ]);
-        return redirect('admin/');
+        // return redirect('admin/');
+        return redirect()->route('admin.viewcustomshirt',compact('shirt'))->with('info', 'produk berhasil diupdate');
     }
 
     public function DeleteCustomShirt($id)
     {
+        $shirt = Shirt::all();
         $single_product = Shirt::find($id);
         $single_product->delete();
         $product = Shirt::all();
         
-        return redirect()->route('admin.viewcustomshirt');
+        return redirect()->route('admin.viewcustomshirt',compact('shirt'))->with('danger', 'produk berhasil dihapus');
     }
 
     //========================================shoes=======================================================
@@ -356,21 +360,22 @@ class CustomProductController extends Controller
     }
 
     public function PostEditCustomShoes($id, Request $request){
-        $shoes = Shoes::find($id);
+        $shoes = Shoes::all();
+        $single_shoes = Shoes::find($id);
         $photo = $request->file('shoes_image');
 
         if($photo){
             $photo->store('shoes_images');
-            $shoes->update(['shoes_image' => $photo]);
+            $single_shoes->update(['shoes_image' => $photo]);
         }
-        $shoes->update([
+        $single_shoes->update([
             'category_id' => 2,
             'shoes_id' => request('shoes_id'),
             'shoes_name' => request('shoes_name'),
             'shoes_price' => request('shoes_price'),
             'shoes_desc' => request('shoes_desc'),
         ]);
-        return redirect('admin/');
+        return redirect()->route('admin.viewcustomshoes',compact('shoes'))->with('info', 'produk berhasil diupdate');
     }
 
     public function DeleteCustomShoes($id)
@@ -379,7 +384,7 @@ class CustomProductController extends Controller
         $single_product->delete();
         $product = Shoes::all();
         
-        return redirect()->route('admin.viewcustomshoes', compact('product'))->with('success', 'produk berhasil ditambahkan');
+        return redirect()->route('admin.viewcustomshoes', compact('product'))->with('danger', 'produk berhasil dihapus');
     }
 
     //===============================================Sweater==================================================
@@ -450,7 +455,7 @@ class CustomProductController extends Controller
         $single_product->delete();
         $product = Sweater::all();
         
-        return redirect()->route('admin.viewcustomsweater', compact('product'))->with('success', 'produk berhasil ditambahkan');
+        return redirect()->route('admin.viewcustomsweater', compact('product'))->with('success', 'produk berhasil dihapus');
     }
     
     //============================tshirt=================================================================
@@ -458,7 +463,6 @@ class CustomProductController extends Controller
     {
         return view('admin.customproduct.tshirt');
     }
-    // Fungsi untuk menyimpan data kedalam database available product
     // Fungsi untuk menyimpan data kedalam database available product
     public function StoreFormAddCustomTshirt(Request $request)
     {
@@ -499,21 +503,23 @@ class CustomProductController extends Controller
     }
 
     public function PostEditCustomTshirt($id, Request $request){
-        $tshirt = Tshirt::find($id);
+        $single_tshirt = Tshirt::find($id);
         $photo = $request->file('tshirt_image');
         if($photo){
             $photo->store('tshirt_images');
-            $sweater->update(['tshirt_image' => $photo]);
+            $single_tshirt->update(['tshirt_image' => $photo]);
         }
         
-        $tshirt->update([
+        $single_tshirt->update([
             'category_id' => 2,
             'tshirt_id' => request('tshirt_id'),
             'tshirt_name' => request('tshirt_name'),
             'tshirt_price' => request('tshirt_price'),
             'tshirt_desc' => request('tshirt_desc'),
         ]);
-        return redirect('admin/');
+        // return redirect('admin/');
+        return redirect()->route('admin.viewcustomtshirt',compact('tshirt'))->with('info', 'produk berhasil diupdate');
+        
     }
 
     public function DeleteCustomTshirt($id)
@@ -522,6 +528,6 @@ class CustomProductController extends Controller
         $single_product->delete();
         $product = Tshirt::all();
         
-        return redirect()->route('admin.viewcustomtshirt', compact('product'))->with('success', 'produk berhasil ditambahkan');
+        return redirect()->route('admin.viewcustomtshirt', compact('product'))->with('danger', 'produk berhasil dihapus');
     }
 }

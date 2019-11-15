@@ -99,7 +99,7 @@ class AvailableProductController extends Controller
             'product_brand'=> request('product_brand'),
             'product_desc' => request('product_description')
         ]);
-        return redirect()->route('admin.listavailableproduct', compact('product'));
+        return redirect()->route('admin.listavailableproduct', compact('product'))->with('info', 'produk berhasil diupdate');
     }
 
     public function DeleteAvailableProduct($id)
@@ -108,6 +108,6 @@ class AvailableProductController extends Controller
         $single_product->delete();
         $product = AvailableProduct::all();
         
-        return redirect()->route('admin.listavailableproduct', compact('product'));
+        return redirect()->route('admin.listavailableproduct', compact('product'))->with('danger', 'produk berhasil dihapus');
     }
 }
