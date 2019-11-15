@@ -19,10 +19,10 @@
                     <h3>{{$product->product_name }}</h3>
                     <h2>{{$product->product_price }}</h2>
                     <ul class="list">
-                        <li>
+                        <!-- <li>
                             <a class="active" href="#">
                             <span>Category</span> : cek kategori</a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="#"> <span>Availibility</span> : In Stock</a>
                         </li>

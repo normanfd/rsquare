@@ -195,7 +195,8 @@ class CustomProductController extends Controller
             'jacket_desc' => request('jacket_desc'),
             'jacket_image' => $photo
         ]);
-        return view('admin.customproduct.jacket');
+        // return view('admin.customproduct.jacket');
+        return redirect()->route('admin.addcustomjacket')->with('success', 'produk berhasil ditambahkan');
     }
 
     public function ViewCustomJacket()
@@ -224,7 +225,7 @@ class CustomProductController extends Controller
             'jacket_price' => request('jacket_price'),
             'jacket_desc' => request('jacket_desc'),
         ]);
-        return redirect('admin/');
+        return redirect('admin/')->with('success', 'produk berhasil diupdate');
     }
 
     public function DeleteCustomJacket($id)
@@ -265,7 +266,8 @@ class CustomProductController extends Controller
             'shirt_desc' => request('shirt_desc'),
             'shirt_image' => $photo
         ]);
-        return view('admin.customproduct.shirt');
+        // return view('admin.customproduct.shirt');
+        return redirect()->route('admin.addcustomshirt')->with('success', 'Kemeja berhasil ditambahkan');
     }
 
     public function ViewCustomShirt()
@@ -303,7 +305,7 @@ class CustomProductController extends Controller
         $single_product->delete();
         $product = Shirt::all();
         
-        return redirect()->route('admin.viewcustomshirt', compact('product'))->with('success', 'produk berhasil ditambahkan');
+        return redirect()->route('admin.viewcustomshirt');
     }
 
     //========================================shoes=======================================================
@@ -337,7 +339,8 @@ class CustomProductController extends Controller
             'shoes_desc' => request('shoes_desc'),
             'shoes_image' => $photo
         ]);
-        return view('admin.customproduct.shoes');
+        // return view('admin.customproduct.shoes');
+        return redirect()->route('admin.addcustomshoes')->with('success', 'Sepatu berhasil ditambahkan');
     }
 
     public function ViewCustomShoes()
@@ -479,7 +482,8 @@ class CustomProductController extends Controller
             'tshirt_desc' => request('tshirt_desc'),
             'tshirt_image' => $photo
         ]);
-        return view('admin.customproduct.tshirt');
+        // return view('admin.customproduct.tshirt');
+        return redirect()->route('admin.addcustomtshirt')->with('success', 'T-shirt berhasil ditambahkan');
     }
 
     public function ViewCustomTshirt()

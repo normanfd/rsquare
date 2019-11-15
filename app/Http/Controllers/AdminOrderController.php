@@ -11,13 +11,21 @@ use App\ShoesOrder;
 use App\SweaterOrder;
 use App\TshirtOrder;
 use App\User;
+use App\AvailableProductOrder;
 
 //Controller untuk Admin melihat orderan yang masuk dan mengedit orderan sesuai perubahan keputusan user
 class AdminOrderController extends Controller
 {
     public function ShowAvailableOrder()
     {
-        # code...
+        $order = AvailableProductOrder::all();
+        return view('admin.availableproduct.OrderAvailableProduct', compact('order'));
+    }
+
+    public function DetailAvailableProduct($id)
+    {
+        $single_product = AvailableProductOrder::find($id);
+        return view('admin.availableproduct.DetailOrderAvailableProduct', compact('single_product'));
     }
     public function ShowAllOrder()
     {

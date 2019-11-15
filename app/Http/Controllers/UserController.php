@@ -514,17 +514,21 @@ class UserController extends Controller
         $this-> validate(request(),[
             'size' => 'required',
             'amount' => 'required|numeric',
-            'wa_number' => 'required|numeric',
-            'note' => 'nullable|required',
+            'wa_number' => 'required|numeric'
         ]);
         
+        $note = request('note');
+        if(!$note){
+            $note = "tidak ada catatan tambahan";
+        }
+
         AvailableProductOrder::create([
             'availableproduct_id' => $id,
             'user_id' => request('user_id'),
             'size' => request('size'),
             'amount' => request('amount'),
             'wa_number' => request('wa_number'),
-            'note' => request('note'),
+            'note' => $note
         ]);
 
         return redirect()->route('confirmation');
