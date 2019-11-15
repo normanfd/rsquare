@@ -1,9 +1,6 @@
 @extends('layouts.admin')
 @section('content')
 
-<!-- jaket Order detail
-id jaket :{{ $single_shirt->id}} -->
-
 <div class="m-grid__item m-grid__item--fluid m-wrapper">
 
 <!-- BEGIN: Subheader -->
@@ -81,7 +78,7 @@ id jaket :{{ $single_shirt->id}} -->
                                             <h1>{{ $single_shirt->user->name }}, {{ $single_shirt->wa_number }}</h1>
                                         </a>
                                         <a href="../../../storage/{{ $single_shirt->upload_design }}">
-                                            <img src="../../../storage/{{ $single_shirt->upload_design }}" width=200px>
+                                            <img src="../../../storage/{{ $single_shirt->upload_design }}" alt="User Tidak Mengirim desainnya" width=200px>
                                         </a>
                                     </div>
                                     <span class="m-invoice__desc">
