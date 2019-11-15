@@ -200,21 +200,22 @@ class UserController extends Controller
         $this-> validate(request(),[
             'selector_color' => 'required',
             'selector_collar' => 'required',
-            'selector_material' => 'required',
+            // 'selector_material' => 'required',
             // 'selector_button' => 'required',
             'selector_arm' => 'required',
             'selector_armmodel' => 'required',
             'size' => 'required',
             'amount' => 'required|numeric',
             'wa_number' => 'required|numeric',
-            'note' => 'required',
+            // 'note' => 'required',
             'selector_bag' => 'required',
             'upload_design' => 'nullable|mimes:jpeg,png,bmp,tiff|max:4096'
         ]);
         
-        $wa_number = request('wa_number');
-        $name = request('name');
         $note = request('note');
+        if(!$note){
+            $note = "tidak ada catatan tambahan";
+        }
 
         if(request('jacket_design')!= null){
             $photo = $request->file('jacket_design')->store('user_jacket_images');
@@ -234,7 +235,7 @@ class UserController extends Controller
             'size' => request('size'),
             'amount' => request('amount'),
             'wa_number' => request('wa_number'),
-            'note' => request('note'),
+            'note' => $note,
             'pocket' => request('selector_bag'),
             'upload_design' => $photo
         ]);
@@ -268,21 +269,22 @@ class UserController extends Controller
         $this-> validate(request(),[
             'selector_color' => 'required',
             'selector_collar' => 'required',
-            'selector_material' => 'required',
+            // 'selector_material' => 'required',
             'selector_button' => 'required',
             'selector_arm' => 'required',
             'selector_armmodel' => 'required',
             'size' => 'required',
             'amount' => 'required|numeric',
             'wa_number' => 'required|numeric',
-            'note' => 'required',
+            // 'note' => 'required',
             'selector_bag' => 'required',
             'upload_design' => 'nullable|mimes:jpeg,png,bmp,tiff|max:4096'
         ]);
         
-        $wa_number = request('wa_number');
-        $name = request('name');
         $note = request('note');
+        if(!$note){
+            $note = "tidak ada catatan tambahan";
+        }
 
         if(request('shirt_design')!= null){
             $photo = $request->file('shirt_design')->store('user_shirt_images');
@@ -302,7 +304,7 @@ class UserController extends Controller
             'size' => request('size'),
             'amount' => request('amount'),
             'wa_number' => request('wa_number'),
-            'note' => request('note'),
+            'note' => $note,
             'pocket' => request('selector_bag'),
             'upload_design' => $photo
         ]);
@@ -451,18 +453,19 @@ class UserController extends Controller
     {
         $this-> validate(request(),[
             'selector_color' => 'required',
-            'selector_material' => 'required',
+            // 'selector_material' => 'required',
             'selector_arm' => 'required',
             'size' => 'required',
             'amount' => 'required|numeric',
             'wa_number' => 'required|numeric',
-            'note' => 'required',
+            // 'note' => 'required',
             'upload_design' => 'nullable|mimes:jpeg,png,bmp,tiff|max:4096'
         ]);
         
-        $wa_number = request('wa_number');
-        $name = request('name');
         $note = request('note');
+        if(!$note){
+            $note = "tidak ada catatan tambahan";
+        }
 
         if(request('tshirt_design')!= null){
             $photo = $request->file('tshirt_design')->store('user_tshirt_images');
@@ -480,7 +483,7 @@ class UserController extends Controller
             'size' => request('size'),
             'amount' => request('amount'),
             'wa_number' => request('wa_number'),
-            'note' => request('note'),
+            'note' => $note,
             'upload_design' => $photo
         ]);
 

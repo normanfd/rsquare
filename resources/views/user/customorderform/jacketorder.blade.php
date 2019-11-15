@@ -31,15 +31,15 @@
               <div class="col-md-12 form-group p_star">
                 <input type="number" class="form-control" id="amount" name="amount" placeholder="Jumlah Order"/>
               </div>
-
-              <h4 class="col-md-12"> Pilih bahan</h4>
+              <input class="input" id="selector_material" name="selector_material" value="belum tersedia" hidden>
+              <!-- <h4 class="col-md-12"> Pilih bahan</h4>
               <div class="col-md-3 form-group jacket_material">
                 <div class="radion_btn">
                   <input type="radio" id="f-option-material-1" name="selector_material" value="kain"/>
                   <label for="f-option-material-1">Kain</label>
                   <div class="check"></div>
                 </div>
-                <!-- <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;"> -->
+                <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
               </div>
               <div class="col-md-3 form-group jacket_material">
                 <div class="radion_btn">
@@ -47,7 +47,7 @@
                   <label for="f-option-material-2">Kulit</label>
                   <div class="check"></div>
                 </div>
-                <!-- <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;"> -->
+                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
               </div>
               <div class="col-md-3 form-group jacket_material">
                 <div class="radion_btn">
@@ -55,8 +55,8 @@
                   <label for="f-option-material-3">Katun</label>
                   <div class="check"></div>
                 </div>
-                <!-- <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;"> -->
-              </div>
+                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+              </div> -->
 
               <h4 class="col-md-12"> Pilih warna</h4>
               <div class="col-md-3 form-group jacket_color">
@@ -341,14 +341,14 @@
               </div>
 
               <div class="col-md-12 form-group">
-                  <h4>Desain Jacket</h4>
+                  <h4>Desain Jacket (Optional)</h4>
                   <div class="form-control">
                       <input type="file" name="jacket_design">
                   </div>
               </div>
 
               <div class="col-md-12 form-group">
-                <h4>Catatan khusus</h4>
+                <h4>Catatan khusus (Optional)</h4>
                 <textarea class="form-control" name="note" id="message" rows="1"
                   placeholder="Order Notes"></textarea>
               </div>

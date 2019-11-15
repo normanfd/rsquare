@@ -31,15 +31,15 @@
               <div class="col-md-12 form-group p_star">
                 <input type="number" class="form-control" id="amount" name="amount" placeholder="Jumlah Order"/>
               </div>
-
-              <h4 class="col-md-12">Pilih Bahan</h4>
+              <input class="input" id="selector_material" name="selector_material" value="belum tersedia" hidden>
+              <!-- <h4 class="col-md-12">Pilih Bahan</h4>
               <div class="col-md-2 form-group shirt_material">
                 <div class="radion_btn">
                   <input type="radio" id="f-option-material-1" name="selector_material" value="kain"/>
                   <label for="f-option-material-1">Kain</label>
                   <div class="check"></div>
                 </div>
-                <!-- <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;"> -->
+                <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
               </div>
               <div class="col-md-2 form-group shirt_material">
                 <div class="radion_btn">
@@ -47,7 +47,7 @@
                   <label for="f-option-material-2">Kulit</label>
                   <div class="check"></div>
                 </div>
-                <!-- <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;"> -->
+                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
               </div>
               <div class="col-md-2 form-group shirt_material">
                 <div class="radion_btn">
@@ -55,8 +55,8 @@
                   <label for="f-option-material-3">Katun</label>
                   <div class="check"></div>
                 </div>
-                <!-- <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;"> -->
-              </div>
+                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+              </div> -->
 
               <h4 class="col-md-12">Pilih Warna</h4>
               <div class="col-md-3 form-group shirt_color">
@@ -198,27 +198,43 @@
                 <img src="{{asset('winter/img/shirt/kerah/model9.png')}}">
               </div>
 
+              <h4 class="col-md-12">Lengan panjang / pendek</h4>
+              <div class="col-md-2 form-group shirt_arm">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-arm-1" name="selector_arm" value="panjang"/>
+                  <label for="f-option-arm-1">panjang</label>
+                  <div class="check"></div>
+                </div>
+              </div>
+              <div class="col-md-2 form-group shirt_arm">
+                <div class="radion_btn">
+                  <input type="radio" id="f-option-arm-2" name="selector_arm" value="pendek"/>
+                  <label for="f-option-arm-2">pendek</label>
+                  <div class="check"></div>
+                </div>
+              </div> 
+
               <h4 class="col-md-12">Model Lengan</h4>
               <div class="col-md-2 form-group shirt_arm">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option-arm-1" name="selector_arm" value="model1"/>
-                  <label for="f-option-arm-1">model1</label>
+                  <input type="radio" id="f-option-armmodel1-1" name="selector_armmodel" value="model1"/>
+                  <label for="f-option-armmodel1-1">model1</label>
                   <div class="check"></div>
                 </div>
                 <img src="{{asset('winter/img/shirt/lengan/model1.png')}}">
               </div>
               <div class="col-md-2 form-group shirt_arm">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option-arm-2" name="selector_arm" value="model2"/>
-                  <label for="f-option-arm-2">model2</label>
+                  <input type="radio" id="f-option-armmodel2-2" name="selector_armmodel" value="model2"/>
+                  <label for="f-option-armmodel2-2">model2</label>
                   <div class="check"></div>
                 </div>
                 <img src="{{asset('winter/img/shirt/lengan/model2.png')}}">
               </div>
               <div class="col-md-2 form-group shirt_arm">
                 <div class="radion_btn">
-                  <input type="radio" id="f-option-arm-3" name="selector_arm" value="model3"/>
-                  <label for="f-option-arm-3">model3</label>
+                  <input type="radio" id="f-option-armmodel3-3" name="selector_armmodel" value="model3"/>
+                  <label for="f-option-armmodel3-3">model3</label>
                   <div class="check"></div>
                 </div>
                 <img src="{{asset('winter/img/shirt/lengan/model3.png')}}">
@@ -344,14 +360,14 @@
               </div>
 
               <div class="col-md-12 form-group">
-                  <h4>Desain Shirt</h4>
+                  <h4>Desain Shirt (Optional)</h4>
                   <div class="form-control">
                       <input type="file" name="shirt_design">
                   </div>
               </div>
 
               <div class="col-md-12 form-group">
-                <h4>Catatan Khusus</h4>
+                <h4>Catatan Khusus (Optional)</h4>
                 <textarea class="form-control" name="note" id="message" rows="1"
                   placeholder="Catatan Khusus..."></textarea>
               </div>
