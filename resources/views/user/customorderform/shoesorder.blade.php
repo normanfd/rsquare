@@ -38,7 +38,7 @@
                   <label for="f-option-material-1">Kain</label>
                   <div class="check"></div>
                 </div>
-                <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
+                <!-- <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;"> -->
               </div>
               <div class="col-md-3 form-group shoes_material">
                 <div class="radion_btn">
@@ -112,7 +112,7 @@
                   <label for="f-option-pola-1">Pola 1</label>
                   <div class="check"></div>
                 </div>
-                <!-- <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;"> -->
+                <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
               </div>
               <div class="col-md-3 form-group shoes_pola">
                 <div class="radion_btn">
