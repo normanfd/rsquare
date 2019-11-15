@@ -78,8 +78,8 @@ id jaket :{{ $single_jacket->id}} -->
                             <div class="m-invoice__head" style="background-image: url(../../assets/app/media/img//logos/bg-6.jpg);">
                                 <div class="m-invoice__container m-invoice__container--centered">
                                     <div class="m-invoice__logo">
-                                        <a href="https://wa.me/{{ $single_jacket->wa_number}}?text=">
-                                            <h1>{{ $single_jacket->user->name}}, {{ $single_jacket->wa_number}}</h1>
+                                        <a href="https://wa.me/{{ $single_jacket->wa_number }}?text=">
+                                            <h1>{{ $single_jacket->user->name }}, {{ $single_jacket->wa_number }}</h1>
                                         </a>
                                         <a href="../../../storage/{{ $single_jacket->upload_design }}">
                                             <img src="../../../storage/{{ $single_jacket->upload_design }}" width=200px>
@@ -92,11 +92,11 @@ id jaket :{{ $single_jacket->id}} -->
                                     <div class="m-invoice__items">
                                         <div class="m-invoice__item">
                                             <span class="m-invoice__subtitle">DATA</span>
-                                            <span class="m-invoice__text">{{ $single_jacket->created_at}}</span>
+                                            <span class="m-invoice__text">{{ $single_jacket->created_at }}</span>
                                         </div>
                                         <div class="m-invoice__item">
-                                            <span class="m-invoice__subtitle">INVOICE NO.</span>
-                                            <span class="m-invoice__text">{{ $single_jacket->id}}</span>
+                                            <span class="m-invoice__subtitle">TOTAL ORDER</span>
+                                            <span class="m-invoice__text">{{ $single_jacket->amount }}</span>
                                         </div>
                                         <div class="m-invoice__item">
                                             <span class="m-invoice__subtitle">NOTE.</span>
@@ -110,30 +110,54 @@ id jaket :{{ $single_jacket->id}} -->
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>DESCRIPTION</th>
-                                                <th>HOURS</th>
-                                                <th>RATE</th>
-                                                <th>AMOUNT</th>
+                                                <th>ITEM</th>
+                                                <th>DETAIL</th>
+                                                <!-- <th>RATE</th>
+                                                <th>AMOUNT</th> -->
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Creative Design</td>
-                                                <td>80</td>
-                                                <td>$40.00</td>
-                                                <td class="m--font-danger">$3200.00</td>
+                                                <td>Jacket ID</td>
+                                                <td>{{ $single_jacket->jacket_id }}</td>
+                                                <!-- <td>$40.00</td>
+                                                <td class="m--font-danger">$3200.00</td> -->
                                             </tr>
                                             <tr>
-                                                <td>Front-End Development</td>
-                                                <td>120</td>
-                                                <td>$40.00</td>
-                                                <td class="m--font-danger">$4800.00</td>
+                                                <td>Material</td>
+                                                <td>{{ $single_jacket->material }}</td>
+                                                <!-- <td>$40.00</td>
+                                                <td class="m--font-danger">$4800.00</td> -->
                                             </tr>
                                             <tr>
-                                                <td>Back-End Development</td>
-                                                <td>210</td>
-                                                <td>$60.00</td>
-                                                <td class="m--font-danger">$12600.00</td>
+                                                <td>Color</td>
+                                                <td>{{ $single_jacket->color }}</td>
+                                                <!-- <td>$60.00</td>
+                                                <td class="m--font-danger">$12600.00</td> -->
+                                            </tr>
+                                            <tr>
+                                                <td>Collar</td>
+                                                <td>{{ $single_jacket->collar }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sleeve</td>
+                                                <td>{{ $single_jacket->sleeve }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sleeve Model</td>
+                                                <td>{{ $single_jacket->sleeve_model }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Kantong</td>
+                                                <td>{{ $single_jacket->pocket }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Kancing</td>
+                                                <td>{{ $single_jacket->buttons }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ukuran</td>
+                                                <td>{{ $single_jacket->size }}</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -144,18 +168,20 @@ id jaket :{{ $single_jacket->id}} -->
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>BANK</th>
-                                                <th>ACC.NO.</th>
-                                                <th>DUE DATE</th>
+                                                <th>NAME</th>
+                                                <th>NO WA</th>
+                                                <th>DATE</th>
+                                                <th>PRICE PER ITEM</th>
                                                 <th>TOTAL AMOUNT</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>BARCLAYS UK</td>
-                                                <td>12345678909</td>
-                                                <td>Jan 07, 2018</td>
-                                                <td class="m--font-danger">20,600.00</td>
+                                                <td>{{ $single_jacket->user->name }}</td>
+                                                <td>{{ $single_jacket->wa_number }}</td>
+                                                <td>{{ $single_jacket->created_at }}</td>
+                                                <td>{{ $single_jacket->jacket->jacket_price }}</td>
+                                                <td class="m--font-danger">{{ $single_jacket->amount * $single_jacket->jacket->jacket_price }}</td>
                                             </tr>
                                         </tbody>
                                     </table>
