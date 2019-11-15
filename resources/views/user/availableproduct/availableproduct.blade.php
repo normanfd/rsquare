@@ -25,7 +25,7 @@
                             <div class="single_category_img">
                                 <img src="../storage/{{$product->product_image}}" style="width:300px;padding:50px 50px;height:300px;"  alt="ini gambar product">
                                 <div class="category_product_text">
-                                    <a href="#"><h5>{{$product->product_name}}</h5></a>
+                                    <a href="{{route('user.detail.available', $product->id)}}"><h5>{{$product->product_name}}</h5></a>
                                     <p>{{$product->product_price}}</p>
                                 </div>
                             </div>

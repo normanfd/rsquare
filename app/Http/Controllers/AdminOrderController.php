@@ -15,6 +15,10 @@ use App\User;
 //Controller untuk Admin melihat orderan yang masuk dan mengedit orderan sesuai perubahan keputusan user
 class AdminOrderController extends Controller
 {
+    public function ShowAvailableOrder()
+    {
+        # code...
+    }
     public function ShowAllOrder()
     {
         $cardigan = CardiganOrder::all();
