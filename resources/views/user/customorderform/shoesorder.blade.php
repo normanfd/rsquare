@@ -6,7 +6,7 @@
   <section class="checkout_area section_padding">
     <div class="container">
       <div class="billing_details">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
           <div class="col-lg-8">
             <h4>Detail Pesanan</h4>
             @if (count($errors) > 0)
@@ -31,14 +31,16 @@
               <div class="col-md-6 form-group p_star">
                 <input type="number" class="form-control" id="amount" name="amount" placeholder="Jumlah Order"/>
               </div>
-              <h4 class="col-md-12"> Pilih Bahan </h4>
+
+              <input class="input" id="selector_material" name="selector_material" value="belum tersedia" hidden>
+              <!-- <h4 class="col-md-12"> Pilih Bahan </h4>
               <div class="col-md-3 form-group shoes_material">
                 <div class="radion_btn">
                   <input type="radio" id="f-option-material-1" name="selector_material" value="kain"/>
                   <label for="f-option-material-1">Kain</label>
                   <div class="check"></div>
                 </div>
-                <!-- <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;"> -->
+                <img src="{{asset('winter/img/instagram/inst_1.png')}}" alt="" style="width:200px;height:200px;">
               </div>
               <div class="col-md-3 form-group shoes_material">
                 <div class="radion_btn">
@@ -46,16 +48,16 @@
                   <label for="f-option-material-2">Kulit</label>
                   <div class="check"></div>
                 </div>
-                <!-- <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;"> -->
-              </div>
-              <div class="col-md-3 form-group shoes_material">
-                <div class="radion_btn">
+                <img src="{{asset('winter/img/instagram/inst_2.png')}}" alt="" style="width:200px;height:200px;">
+               </div> -->
+              <!-- <div class="col-md-3 form-group shoes_material"> -->
+                <!-- <div class="radion_btn">
                   <input type="radio" id="f-option-material-3" name="selector_material" value="plastik"/>
                   <label for="f-option-material-3">Plastik</label>
                   <div class="check"></div>
-                </div>
+                </div> -->
                 <!-- <img src="{{asset('winter/img/instagram/inst_3.png')}}" alt="" style="width:200px;height:200px;"> -->
-              </div>            
+              <!-- </div> -->
               <h4 class="col-md-12"> Pilih Warna</h4>
               <div class="col-md-3 form-group shoes_color">
                 <div class="radion_btn">
@@ -105,7 +107,8 @@
                 </div>
                 <!-- <img src="{{asset('winter/img/instagram/inst_3.png')}}" alt="" style="width:200px;height:200px;"> -->
               </div>
-              <h4 class="col-md-12">Pilih Pola</h4>
+              <div class="input" id="pola" name="selector_pola" value="belum tersedia"></div>
+              <!-- <h4 class="col-md-12">Pilih Pola</h4>
               <div class="col-md-3 form-group shoes_pola">
                 <div class="radion_btn">
                   <input type="radio" id="f-option-pola-1" name="selector_pola" value="Pola 1"/>
@@ -129,7 +132,7 @@
                   <div class="check"></div>
                 </div>
                 <img src="{{asset('winter/img/instagram/inst_3.png')}}" alt="" style="width:200px;height:200px;">
-              </div>
+              </div> -->
 
               <div class="col-md-12 form-group p_star">
                 <h4>Ukuran</h4>

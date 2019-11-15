@@ -335,16 +335,15 @@ class UserController extends Controller
     {
         $this-> validate(request(),[
             'selector_color' => 'required',
-            'selector_material' => 'required',
             'size' => 'required',
             'amount' => 'required|numeric',
             'wa_number' => 'required|numeric',
-            'note' => 'required'
         ]);
         
-        $wa_number = request('wa_number');
-        $name = request('name');
         $note = request('note');
+        if(!$note){
+            $note = "tidak ada catatan tambahan";
+        }
 
         ShoesOrder::create([
             'shoes_id' => $id,
@@ -354,7 +353,7 @@ class UserController extends Controller
             'size' => request('size'),
             'amount' => request('amount'),
             'wa_number' => request('wa_number'),
-            'note' => request('note')
+            'note' => $note
         ]);
 
         return view('confirmation', compact('wa_number', 'name', 'note'));
