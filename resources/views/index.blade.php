@@ -181,36 +181,44 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_feature_post_text">
-                        <img src="{{asset('winter/img/home_jacket.png')}}" alt="#">
-                        <div class="hover_text">
-                            <a href="{{ route('user.jacket') }}" class="btn_2">Costum Jacket</a>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single_feature_post_text">
+                                <img src="{{asset('winter/img/home_jacket.png')}}" alt="#">
+                                <div class="hover_text">
+                                    <a href="{{ route('user.jacket') }}" class="btn_2">Costum Jacket</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single_feature_post_text">
+                                <img src="{{asset('winter/img/home_shirt.png')}}" alt="#">
+                                <div class="hover_text">
+                                    <a href="{{ route('user.shirt') }}" class="btn_2">Costum Shirt</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single_feature_post_text">
+                            <img src="{{asset('winter/img/home_tshirt.png')}}" alt="#">
+                                <div class="hover_text">
+                                    <a href="{{ route('user.shoes') }}" class="btn_2">Costum Shoes</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single_feature_post_text">
+                                <img src="{{asset('winter/img/home_shoes.png')}}" alt="#">
+                                <div class="hover_text">
+                                    <a href="{{ route('user.tshirt') }}" class="btn_2">Costum T-shirt</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_feature_post_text">
-                        <img src="{{asset('winter/img/home_shirt.png')}}" alt="#">
-                        <div class="hover_text">
-                            <a href="{{ route('user.shirt') }}" class="btn_2">Costum Shirt</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_feature_post_text">
-                        <img src="{{asset('winter/img/home_shoes.png')}}" alt="#">
-                        <div class="hover_text">
-                            <a href="{{ route('user.shoes') }}" class="btn_2">Costum Shoes</a>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
-            <br>
-            <div class="row align-items-center justify-content-between">
-                <div class="col-lg-4 col-sm-6">
+            <!-- <div class="row align-items-center justify-content-between">
+                <div class="col-lg-3 col-sm-6">
                     <div class="single_feature_post_text">
                         <img src="{{asset('winter/img/home_tshirt.png')}}" alt="#">
                         <div class="hover_text">
@@ -218,7 +226,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- <br>
             
             <div class="row align-items-center justify-content-between">
