@@ -78,6 +78,7 @@ Route::prefix('/tshirt')->group(function(){
 ##Available Product
 Route::get('/availableproduct', 'UserController@VWAvailableProduct')-> name('user.availableproduct');
 Route::get('/availableproduct/detail/{id}', 'UserController@DetailAvailable')->name('user.detail.available');
+route::get('/availbalrproduct/detail/order/{id}', 'UserController@FormAvailable')->name('user.detail.form.available');
 
 
 Route::prefix('admin')->group(function() {
