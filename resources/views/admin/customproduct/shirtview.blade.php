@@ -36,7 +36,7 @@
                                     harga produk : {{ $produk->shirt_price }}
                                 </span>
                             </div>
-                            <div class="m-widget4__ext">
+                            <div class="m-widget4__ext" style="padding-right:10px;">
                                 <a href="{{ route('admin.Editcustomshirt', $produk->id)}}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
                             </div>
                             <div class="m-widget4__ext">

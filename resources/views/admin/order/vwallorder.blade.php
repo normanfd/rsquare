@@ -128,16 +128,19 @@
                                     Nomor WA : {{$jacketdata->wa_number}}
                                 </span>
                             </div>
-                            <div class="m-widget4__ext">
-                                <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
+                            <!-- <div class="m-widget4__ext" style="padding-right:10px;">
+                                <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-info">Edit</a>
+                            </div> -->
+                            <div class="m-widget4__ext" style="padding-right:10px;">
+                                <a href="{{ route('admin.detailjacketorder', $jacketdata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
                             </div>
                             <div class="m-widget4__ext">
-                            <a href="{{ route('admin.detailjacketorder', $jacketdata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
-                                <!-- <form action="#" method="post">
-                                    <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
-                                </form> -->
+                                <form action="{{route('admin.delete.jacket.order', $jacketdata->id)}}" method="post">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+                                    <button class="m-btn  btn btn-sm btn-danger" type="submit">Delete</button>
+                                </form>
                             </div>
-                            
                         </div>
                     </div>
                     <br>
@@ -164,7 +167,7 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="m_widget4_tab1_content">
 
-                @foreach($shirt as $shirdata)
+                @foreach($shirt as $shirdata)   
                     <div class="m-widget4">
                         <div class="m-widget4__item">
                             <div class="m-widget4__info">
@@ -178,14 +181,18 @@
                                 
                                 </span>
                             </div>
-                            <div class="m-widget4__ext">
+                            <!-- <div class="m-widget4__ext" style="padding-right:10px;">
                                 <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
+                            </div> -->
+                            <div class="m-widget4__ext" style="padding-right:10px;">
+                                <a href="{{ route('admin.detailshirtorder', $shirdata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
                             </div>
                             <div class="m-widget4__ext">
-                                <!-- <form action="#" method="post">
-                                    <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
-                                </form> -->
-                                <a href="{{ route('admin.detailshirtorder', $shirdata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
+                                <form action="{{route('admin.delete.shirt.order', $shirdata->id)}}" method="post">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+                                    <button class="m-btn  btn btn-sm btn-danger" type="submit">Delete</button>
+                                </form>
                             </div>
                             
                         </div>
@@ -227,13 +234,19 @@
                                     Nomor WA : {{$shoesdata->wa_number}} <br>
                                 </span>
                             </div>
-                            <div class="m-widget4__ext">
-                                <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
-                            </div>
-                            <div class="m-widget4__ext">
+                            <!-- <div class="m-widget4__ext" style="padding-right:10px;">
+                                <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary" >Edit</a>
+                            </div> -->
+                            <div class="m-widget4__ext" style="padding-right:10px;">
                                 <a href="{{ route('admin.detailshoesorder', $shoesdata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
                             </div>
-                            
+                            <div class="m-widget4__ext">
+                                <form action="{{route('admin.delete.shoes.order', $shoesdata->id)}}" method="post">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+                                    <button class="m-btn  btn btn-sm btn-danger" type="submit">Delete</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <br>
@@ -243,58 +256,6 @@
             </div>
         </div>
     </div>
-<!-- </div> -->
-
-<!-- <div class="m-content">
-    <div class="m-portlet m-portlet--full-height ">
-        <div class="m-portlet__head">
-            <div class="m-portlet__head-caption">
-                <div class="m-portlet__head-title">
-                    <h3 class="m-portlet__head-text">
-                        Order Sweater
-                    </h3>
-                </div>
-            </div>
-        </div>
-        <div class="m-portlet__body">
-            <div class="tab-content">
-                <div class="tab-pane active" id="m_widget4_tab1_content">
-
-                @foreach($sweater as $sweaterdata)
-                    <div class="m-widget4">
-                        <div class="m-widget4__item">
-                            <div class="m-widget4__info">
-                                <span class="m-widget4__title">
-                                    {{ $sweaterdata->user->name }}, {{ $sweaterdata->created_at->format('l jS F Y') }}
-                                </span>
-                                <br>
-                                <span class="m-widget4__sub">                                   
-                                    Jumlah : {{$sweaterdata->amount}} <br>
-                                    Nomor WA : {{$sweaterdata->wa_number}}
-                                </span>
-                            </div>
-                            <div class="m-widget4__ext">
-                                <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
-                            </div>
-                            <div class="m-widget4__ext">
-                                <form action="#" method="post">
-                                    <button class="m-btn  btn btn-sm btn-info" type="submit">Detail</button>
-                                </form>
-                                <a href="{{ route('admin.detailsweaterorder', $sweaterdata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <br>
-                @endforeach
-                    begin::Widget 14
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<!-- <div class="m-content"> -->
     <div class="m-portlet m-portlet--full-height ">
         <div class="m-portlet__head">
             <div class="m-portlet__head-caption">
@@ -322,13 +283,19 @@
                                     Nomor WA : {{$tshirtdata->wa_number}} <br>
                                 </span>
                             </div>
-                            <div class="m-widget4__ext">
+                            <!-- <div class="m-widget4__ext" style="padding-right:10px;">
                                 <a href="#" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
-                            </div>
-                            <div class="m-widget4__ext">
+                            </div> -->
+                            <div class="m-widget4__ext" style="padding-right:10px;">
                                 <a href="{{ route('admin.detailtshirtorder', $tshirtdata->id) }}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Detail</a>
                             </div>
-                            
+                            <div class="m-widget4__ext">
+                                <form action="{{route('admin.delete.tshirt.order', $tshirtdata->id)}}" method="post">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+                                    <button class="m-btn  btn btn-sm btn-danger" type="submit">Delete</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <br>

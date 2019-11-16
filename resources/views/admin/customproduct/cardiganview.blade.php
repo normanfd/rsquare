@@ -39,7 +39,7 @@
                             <div class="m-widget4__ext">
                                 <a href="{{ route('admin.Editcustomcardigan', $produk->id)}}" class="m-btn m-btn--hover-brand btn btn-sm btn-primary">Edit</a>
                             </div>
-                            <div class="m-widget4__ext">
+                            <div class="m-widget4__ext" style="padding-right:10px;">
                                 <form action="{{ route('admin.Deletecustomcardigan', $produk->id) }}" method="post">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}

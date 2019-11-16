@@ -170,7 +170,12 @@ Route::prefix('admin')->group(function() {
     // delete Available product order
     Route::delete('/availableproductorder/{id}', 'AdminOrderController@DeleteAvailableOrder')->name('admin.delete.available.order');
     //show all custom order
-    Route::get('/allcustomorder', 'AdminOrderController@ShowAllOrder')->name('admin.showallorder');
+    Route::get('/allcustomorder/', 'AdminOrderController@ShowAllOrder')->name('admin.showallorder');
+    Route::delete('/allcustomorder/jacket/{id}', 'AdminOrderController@DeleteJacketOrder')->name('admin.delete.jacket.order');
+    Route::delete('/allcustomorder/shirt/{id}', 'AdminOrderController@DeleteShirtOrder')->name('admin.delete.shirt.order');
+    Route::delete('/allcustomorder/shoes/{id}', 'AdminOrderController@DeleteShoesOrder')->name('admin.delete.shoes.order');
+    Route::delete('/allcustomorder/tshirt/{id}', 'AdminOrderController@DeleteTshirtOrder')->name('admin.delete.tshirt.order');
+
     //detail cardigan order
     Route::get('/allcustomorder/cardigan/{id}', 'AdminOrderController@DetailCardigan')->name('admin.detailcardiganorder');
     //detail Hoodie order
