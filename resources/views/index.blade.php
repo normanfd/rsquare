@@ -66,6 +66,12 @@
                                         
                                     </div>
                                 </li>
+
+                                @if (!Auth::guest())
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('user.order.list', Auth::getUser()->id)}}">My Order</a>
+                                </li>
+                                @endif
                                 <!-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_3"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -298,6 +304,7 @@
             </div>
         </div>
     </section>
+
     <!-- upcoming_event part start-->
 
     <!-- new arrival part here -->
