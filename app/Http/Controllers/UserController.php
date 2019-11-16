@@ -533,4 +533,45 @@ class UserController extends Controller
 
         return redirect()->route('confirmation');
     }
+
+    public function MyOrder($user_id)
+    {
+        $availableorder = AvailableProductOrder::all()->where('user_id', $user_id);
+        $jacket = JacketOrder::all()->where('user_id', $user_id);
+        $shirt = ShirtOrder::all()->where('user_id', $user_id);
+        $shoes = ShoesOrder::all()->where('user_id', $user_id);
+        $tshirt = TshirtOrder::all()->where('user_id', $user_id);
+
+        return view('user.myorder.myorder', compact('availableorder', 'jacket', 'shirt', 'shoes', 'tshirt'));
+    }
+
+    public function DetailOrderAvailableProduct($id)
+    {
+        $single_product = AvailableProductOrder::find($id);
+        return view('user.myorder.availableorderdetail', compact('single_product'));
+    }
+
+    public function DetailOrderJacket($id)
+    {
+        $single_jacket = JacketOrder::find($id);
+        return view('user.myorder.jacketorderdetail', compact('single_jacket'));
+    }
+
+    public function DetailOrderShirt($id)
+    {
+        $single_shirt = ShirtOrder::find($id);
+        return view('user.myorder.shirtorderdetail', compact('single_shirt'));
+    }
+
+    public function DetailOrderShoes($id)
+    {
+        $single_shoes = ShoesOrder::find($id);
+        return view('user.myorder.shoesorderdetail', compact('single_shoes'));
+    }
+
+    public function DetailOrderTshirt($id)
+    {
+        $single_tshirt = TshirtOrder::find($id);
+        return view('user.myorder.tshirtorderdetail', compact('single_tshirt'));
+    }
 }

@@ -16,6 +16,16 @@ use App\AvailableProductOrder;
 //Controller untuk Admin melihat orderan yang masuk dan mengedit orderan sesuai perubahan keputusan user
 class AdminOrderController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
+    
     public function DeleteAvailableOrder($id)
     {
         $single_product = AvailableProductOrder::find($id);
