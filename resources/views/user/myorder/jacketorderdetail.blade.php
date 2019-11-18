@@ -12,9 +12,11 @@
                         <li>
                             <p>Category</p><span>: Jacket</span>
                         </li>
+                        @if ($single_jacket->upload_design != "null")
                         <li>
                             <p>Desain</p><span>: <a href="../../../storage/{{ $single_jacket->upload_design }}">Lihat Desain</a></span>
                         </li>
+                        @endif
                         <li>
                             <p>Order Date</p><span>: {{ $single_jacket -> created_at -> format('l jS F Y') }}</span>
                         </li>
