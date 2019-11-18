@@ -67,8 +67,9 @@ class CustomProductController extends Controller
     public function SaveEditFormCustomCardigan($id, Request $request){
         $cardigan = cardigan::find($id);
         $photo = $request->file('cardigan_image');
+        
         if($photo){
-            $photo->store('cardigan_images');
+            $photo = $request->file('cardigan_image')->store('cardigan_images');
             $cardigan->update([
                 'cardigan_image' => $photo
             ]);
@@ -216,7 +217,7 @@ class CustomProductController extends Controller
         $single_jacket = Jacket::find($id);
         $photo = $request->file('jacket_image');
         if($photo){
-            $photo->store('jacket_images');
+            $photo = $request->file('jacket_image')->store('jacket_images');
             $single_jacket->update(['jacket_image' => $photo]);
         }
         $single_jacket->update([
@@ -288,7 +289,7 @@ class CustomProductController extends Controller
         $single_shirt = Shirt::find($id);
         $photo = $request->file('shirt_image');
         if($photo){
-            $photo->store('shirt_images');
+            $photo = $request->file('shirt_image')->store('shirt_images');
             $single_shirt->update(['shirt_image' => $photo]);
         }
         $single_shirt->update([
@@ -365,7 +366,7 @@ class CustomProductController extends Controller
         $photo = $request->file('shoes_image');
 
         if($photo){
-            $photo->store('shoes_images');
+            $photo = $request->file('shoes_image')->store('shoes_images');
             $single_shoes->update(['shoes_image' => $photo]);
         }
         $single_shoes->update([
@@ -506,7 +507,7 @@ class CustomProductController extends Controller
         $single_tshirt = Tshirt::find($id);
         $photo = $request->file('tshirt_image');
         if($photo){
-            $photo->store('tshirt_images');
+            $photo = $request->file('tshirt_image')->store('tshirt_images');
             $single_tshirt->update(['tshirt_image' => $photo]);
         }
         

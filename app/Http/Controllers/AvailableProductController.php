@@ -83,7 +83,7 @@ class AvailableProductController extends Controller
 
         $photo = $request->file('product_image');
         if($photo){
-            $photo->store('product_images');
+            $photo = $request->file('product_image')->store('product_images');
             $single_product->update([
                 'product_image' => $photo
             ]);
