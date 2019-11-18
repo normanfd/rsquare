@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>RSquare</title>
-    <link rel="icon" href="{{asset('winter/img/favicon.png')}}">
+    <link rel="icon" href="{{asset('winter/img/rsquare.png')}}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('winter/css/bootstrap.min.css')}}">
     <!-- animate CSS -->
@@ -33,7 +33,7 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-11">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="{{ route('index') }}"> <img src="{{asset('winter/img/logo.png')}}" alt="logo"> </a>
+                        <a class="navbar-brand" href="{{ route('index') }}"> <img src="{{asset('winter/img/logorsquare.png')}}" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -45,6 +45,30 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="/">Home</a>
                                 </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('user.availableproduct')}}">Available Product</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Custom Product
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+                                        <a class="dropdown-item" href="{{ route('user.jacket') }}"> Jaket </a>
+                                        <a class="dropdown-item" href="{{ route('user.shirt') }}">Kemeja</a>
+                                        <a class="dropdown-item" href="{{ route('user.shoes') }}">Sepatu</a>
+                                        <a class="dropdown-item" href="{{ route('user.tshirt') }}">Kaos</a>
+                                        
+                                    </div>
+                                </li>
+
+                                @if (!Auth::guest())
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('user.order.list', Auth::getUser()->id)}}">My Order</a>
+                                </li>
+                                @endif
 
                                 <!-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
