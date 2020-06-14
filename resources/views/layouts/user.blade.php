@@ -46,59 +46,26 @@
                                     <a class="nav-link" href="/">Home</a>
                                 </li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route('user.availableproduct')}}">Available Product</a>
-                                </li>
-
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Custom Product
+                                        Product Categories
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                        <a class="dropdown-item" href="{{ route('user.jacket') }}"> Jaket </a>
-                                        <a class="dropdown-item" href="{{ route('user.shirt') }}">Kemeja</a>
-                                        <a class="dropdown-item" href="{{ route('user.shoes') }}">Sepatu</a>
-                                        <a class="dropdown-item" href="{{ route('user.tshirt') }}">Kaos</a>
+                                        <a class="dropdown-item" href="{{route('user.availableproduct')}}"> Non-Custom Product </a>
+                                        <a class="dropdown-item" href="{{ route('user.jacket') }}"> Custom Jacket </a>
+                                        <a class="dropdown-item" href="{{ route('user.shirt') }}"> Custom T-Shirt </a>
+                                        <a class="dropdown-item" href="{{ route('user.shoes') }}"> Custom Shoes </a>
+                                        <a class="dropdown-item" href="{{ route('user.tshirt') }}"> Custom Shirt </a>
                                         
                                     </div>
                                 </li>
 
                                 @if (!Auth::guest())
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{route('user.order.list', Auth::getUser()->id)}}">My Order</a>
+                                    <a class="nav-link" href="{{ route('user.order.list') }}">My Order</a>
                                 </li>
                                 @endif
-
-                                <!-- <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Shop
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                        <a class="dropdown-item" href="category.html"> shop category</a>
-                                        <a class="dropdown-item" href="single-product.html">product details</a>
-                                        
-                                    </div>
-                                </li> -->
-                                <!-- <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_3"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        pages
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        <a class="dropdown-item" href="login.html"> 
-                                            login
-                                            
-                                        </a>
-                                        <a class="dropdown-item" href="tracking.html">tracking</a>
-                                        <a class="dropdown-item" href="checkout.html">product checkout</a>
-                                        <a class="dropdown-item" href="cart.html">shopping cart</a>
-                                        <a class="dropdown-item" href="confirmation.html">confirmation</a>
-                                        <a class="dropdown-item" href="elements.html">elements</a>
-                                    </div>
-                                </li> -->
-                                
                                 
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_2"

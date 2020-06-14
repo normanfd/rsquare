@@ -49,27 +49,24 @@
                                     <a class="nav-link" href="/">Home</a>
                                 </li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route('user.availableproduct')}}">Available Product</a>
-                                </li>
-
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Custom Product
+                                        Product Categories
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                        <a class="dropdown-item" href="{{ route('user.jacket') }}"> Jaket </a>
-                                        <a class="dropdown-item" href="{{ route('user.shirt') }}">Kemeja</a>
-                                        <a class="dropdown-item" href="{{ route('user.shoes') }}">Sepatu</a>
-                                        <a class="dropdown-item" href="{{ route('user.tshirt') }}">Kaos</a>
+                                        <a class="dropdown-item" href="{{route('user.availableproduct')}}"> Non-Custom Product </a>
+                                        <a class="dropdown-item" href="{{ route('user.jacket') }}"> Custom Jacket </a>
+                                        <a class="dropdown-item" href="{{ route('user.shirt') }}"> Custom T-Shirt </a>
+                                        <a class="dropdown-item" href="{{ route('user.shoes') }}"> Custom Shoes </a>
+                                        <a class="dropdown-item" href="{{ route('user.tshirt') }}"> Custom Shirt </a>
                                         
                                     </div>
                                 </li>
 
                                 @if (!Auth::guest())
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{route('user.order.list', Auth::getUser()->id)}}">My Order</a>
+                                    <a class="nav-link" href="{{ route('user.order.list') }}">My Order</a>
                                 </li>
                                 @endif
                                 
@@ -165,12 +162,12 @@
                     <div class="row align-items-center">
                         <div class="col-lg-8">
                             <div class="arrival_tittle">
-                                <h2>Custom Product</h2>
+                                <h2>Product Categories </h2>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-3 col-sm-6">
+                        <div class="col-lg-4 col-sm-6">
                             <div class="single_feature_post_text">
                                 <img src="{{asset('winter/img/home_jacket.png')}}" alt="#">
                                 <div class="hover_text">
@@ -178,27 +175,35 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-sm-6">
+                        <div class="col-lg-4 col-sm-6">
                             <div class="single_feature_post_text">
-                                <img src="{{asset('winter/img/home_shirt.png')}}" alt="#">
+                                <img src="{{asset('winter/img/home_tshirt.png')}}" alt="#">
                                 <div class="hover_text">
                                     <a href="{{ route('user.shirt') }}" class="btn_2">Costum Shirt</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-sm-6">
+                        <div class="col-lg-4 col-sm-6">
                             <div class="single_feature_post_text">
-                            <img src="{{asset('winter/img/home_tshirt.png')}}" alt="#">
+                            <img src="{{asset('winter/img/home_shoes.png')}}" alt="#">
                                 <div class="hover_text">
                                     <a href="{{ route('user.shoes') }}" class="btn_2">Costum Shoes</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-sm-6">
+                        <div class="col-lg-4 col-sm-6">
                             <div class="single_feature_post_text">
-                                <img src="{{asset('winter/img/home_shoes.png')}}" alt="#">
+                                <img src="{{asset('winter/img/home_shirt.png')}}" alt="#">
                                 <div class="hover_text">
                                     <a href="{{ route('user.tshirt') }}" class="btn_2">Costum T-shirt</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single_feature_post_text">
+                                <img src="{{asset('winter/img/feature_1.png')}}" alt="#">
+                                <div class="hover_text">
+                                    <a href="{{route('user.availableproduct')}}" class="btn_2">Non-Custom Product</a>
                                 </div>
                             </div>
                         </div>
@@ -432,28 +437,28 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single_shopping_details">
                         <img src="{{asset('winter/img/icon/icon_1.png')}}" alt="">
-                        <h4>Free shipping</h4>
+                        <h4>QUALITY ASSURANCE PRODUCT</h4>
                         <p>Divided face for bearing the divide unto seed winged divided light Forth.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single_shopping_details">
                         <img src="{{asset('winter/img/icon/icon_2.png')}}" alt="">
-                        <h4>Free shipping</h4>
+                        <h4>PRODUCT WARRANTY 1 YEAR</h4>
                         <p>Divided face for bearing the divide unto seed winged divided light Forth.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single_shopping_details">
                         <img src="{{asset('winter/img/icon/icon_3.png')}}" alt="">
-                        <h4>Free shipping</h4>
+                        <h4>MONEY WARRANTY BACK</h4>
                         <p>Divided face for bearing the divide unto seed winged divided light Forth.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single_shopping_details">
                         <img src="{{asset('winter/img/icon/icon_4.png')}}" alt="">
-                        <h4>Free shipping</h4>
+                        <h4>EXACT GUARANTEE TIME</h4>
                         <p>Divided face for bearing the divide unto seed winged divided light Forth.</p>
                     </div>
                 </div>
