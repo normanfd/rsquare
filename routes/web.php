@@ -66,9 +66,9 @@ Route::prefix('/availableproduct')->group(function(){
     Route::get('/detail/order/{id}', 'UserController@FormAvailable')->name('user.detail.form.available');
     Route::post('/detali/order/{id}', 'UserController@AddFormAvailable')->name('post.user.order.availableproduct');
 });
-
+ 
 // Show Order User
-Route::get('/myorder/{user_id}', 'UserController@MyOrder')->name('user.order.list');
+Route::get('/myorder', 'UserController@MyOrder')->name('user.order.list');
 Route::get('/myorder/detail/{user_id}', 'UserController@MyOrderDetail')->name('user.order.detail');
 // detail order
 Route::get('/myorder/detail/availableproduct/{id}', 'UserController@DetailOrderAvailableProduct')->name('user.order.avail.detail');

@@ -248,7 +248,7 @@
         </div>
     </section>
 
-    <section class="feature_part pt-4">
+    <!-- <section class="feature_part pt-4">
         <div class="container-fluid p-lg-0 overflow-hidden">
             <div class="row align-items-center justify-content-between">
                 <div class="container">
@@ -260,23 +260,23 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-lg-4 col-sm-6">
+                <div class="col-lg-4 col-sm-6">
                     <div class="single_feature_post_text">
                         <img src="{{asset('winter/img/home_jacket.png')}}" alt="#">
                         <div class="hover_text">
                             <a href="{{ route('user.detail.available',1) }}" class="btn_2">Jaket1</a>
                         </div>
                     </div>
-                </div> -->
+                </div>
                 
-                <!-- <div class="col-lg-4 col-sm-6">
+                <div class="col-lg-4 col-sm-6">
                     <div class="single_feature_post_text">
                         <img src="{{asset('winter/img/home_shoes.png')}}" alt="#">
                         <div class="hover_text">
                             <a href="{{ route('user.shoes') }}" class="btn_2">Costum Shoes</a>
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <br>
                 <br>
                 <div class="col-lg-12 text-center">
@@ -285,7 +285,7 @@
                 
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- upcoming_event part start-->
 

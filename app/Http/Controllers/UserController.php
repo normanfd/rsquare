@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use AUTH;
 use App\cardigan;
 use App\Hoodie;
 use App\Jacket;
@@ -534,8 +535,9 @@ class UserController extends Controller
         return redirect()->route('confirmation');
     }
 
-    public function MyOrder($user_id)
+    public function MyOrder()
     {
+        $user_id = Auth::user()->id;
         $availableorder = AvailableProductOrder::all()->where('user_id', $user_id);
         $jacket = JacketOrder::all()->where('user_id', $user_id);
         $shirt = ShirtOrder::all()->where('user_id', $user_id);
@@ -561,7 +563,7 @@ class UserController extends Controller
     {
         $single_shirt = ShirtOrder::find($id);
         return view('user.myorder.shirtorderdetail', compact('single_shirt'));
-    }
+    } 
 
     public function DetailOrderShoes($id)
     {
